@@ -20,4 +20,6 @@ class RegisterController extends Controller
         return redirect()->to('inicio');
 
     }
+
+    
 }

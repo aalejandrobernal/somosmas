@@ -230,5 +230,60 @@
 }
 
 
+.form-body{
+    
+    text-align: left;
+    padding: 20px;
+    width: 500px;
+    min-width: 300px;
+    border-radius: 10px;
+    border: solid 1px;
+    margin: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.form-body input{
+    width: 450px;
+    text-align: center;
+}
 
 
+.form-body button{
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FF0083;
+    font-weight: 500;
+    display: block;
+    margin: auto;
+}
+
+.form-body button:hover{
+    background-color: #a7095b;
+}
+
+.caracteres{
+    font-size: 10px;
+    color: rgb(168, 162, 162);
+    margin: 0px 0px 0px;
+}
+
+#sesion{
+    color: red;
+}
+
+.titulo2{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #ff0080;
+    color: white;
+    border-radius: 50px;
+    width: 400px;
+ }
+
+ 

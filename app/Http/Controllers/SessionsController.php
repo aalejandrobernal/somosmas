@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,21 +15,25 @@ class SessionsController extends Controller
         return view('auth.login');
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request){
 
-        $user = User::where('documento', $request->documento)->first();
+        if($user = User::where('documento', $request->documento)->first()){
 
-        if ($user->password === sha1($request->password)) {
-            Auth::login($user);
-
-            return redirect()->to('inicio');
+            if ($user->password === sha1($request->password)) {
+                Auth::login($user);
+                return redirect()->to('inicio');
+            }else{
+                return back()->withErrors(['message' => 'El usuario y/o contraseña son incorrectos.']);
+            }
+        }else{
+            return back()->withErrors(['message' => 'Usuario no encontrado, contacta al administrador.']);
         }
-        return back()->withErrors([
-            'message' => 'La cédula no existe.'
-        ]);
+        
     }
+       
+        
 
+   
 
 
     public function destroy()
@@ -36,4 +42,7 @@ class SessionsController extends Controller
 
         return redirect()->to('login');
     }
+
+    
 }
+ 

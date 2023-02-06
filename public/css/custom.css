@@ -3071,6 +3071,75 @@ textarea.form-control-lg {
   color: #dc3545;
 }
 
+#cambio{
+  color: rgb(4, 185, 4);
+}
+
+#cambio1{
+  border: none;
+  height: 0px;
+}
+
+.single-input-item{
+  width: 100%;
+  min-height: 50px;
+  position: relative;
+}
+
+.icon-eye1{
+  position: absolute;
+  right: 20px;
+  top: 67%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.icon-eye1:hover{
+  color: #ff0080;
+}
+
+.icon-eye2{
+  position: absolute;
+  right: 20px;
+  top: 72%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.icon-eye2:hover{
+  color: #ff0080;
+}
+
+.icon-eye3{
+  position: absolute;
+  right: 20px;
+  top: 67%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.icon-eye3:hover{
+  color: #ff0080;
+}
+
+.icon-eye{
+  position: absolute;
+  right: 20px;
+  top: 67%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.icon-eye:hover{
+  color: #ff0080;
+}
+
+
+
 .invalid-tooltip {
   position: absolute;
   top: 100%;
@@ -3928,9 +3997,10 @@ fieldset:disabled .btn {
 
 .dropdown-menu[data-bs-popper] {
   top: 100%;
-  left: 0;
+  left: -90px;
   margin-top: 0.125rem;
 }
+
 
 .dropdown-menu-start {
   --bs-position: start;

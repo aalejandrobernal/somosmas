@@ -24,9 +24,11 @@ use Carbon\Carbon;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
+
 
 class IndexController extends Controller
 {
@@ -164,6 +166,51 @@ class IndexController extends Controller
         return view('inicio.noticia', compact('not'));
     }
 
+    public function contrasena()
+    {
+        return view('inicio.contrasena');
+    }
+
+    public function cambiocontrasena(Request $request) {
+        $user           = Auth::user();
+        $userId         = $user->id;
+        $userPassword   = $user->password;
+        
+        $NewPass        = $request->password;
+        $confirPass     = $request->confirm_password;
+        $confirmActual  = sha1($request->password_actual); 
+
+        // Log::info("Entra a cambio contraseña");
+        // Log::info("Usuario:" . $userPassword);
+        // Log::info("Ingreso actual:" . $confirmActual);
+
+        // ($userPassword == $confirmActual) ?  Log::info("Las contraseñas coinciden") :  Log::info("La contraseña es diferente");           
+
+            //valida si la clave actual es la misma del usuario en sesión
+            if ($confirmActual == $userPassword){
+                
+                //valida que la nueva contraseña 1 y 2 sean iguales
+                if ($NewPass == $confirPass){
+                    
+                    //valida que la clave no sea menor a 8 digitos
+                    if(strlen($NewPass) >=8) {
+
+                            $user->password = ($request->password);
+                            $sqlBD = DB::table('users')
+                            ->where('id', $user->id)
+                            ->update(['password' => $user->password]);
+                            return back()->withErrors(['cambio'=>'Felicitaciones, tu clave ha sido cambiada exitosamente.']);
+
+                    }else{
+                        return back()->withErrors(['confirm_password'=>'Por favor verifica: Las claves nuevas deben tener mínimo 8 dígitos.']);
+                    }
+                }else{
+                    return back()->withErrors(['confirm_password'=>'Por favor verifica: La claves nuevas no coinciden.']);
+                }
+            }else{
+                return back()->withErrors(['password_actual'=>'Por favor verifica: La clave actual no coincide.']);
+            }
+    }
 
     public function galeria()
     {

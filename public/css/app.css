@@ -45,11 +45,11 @@ body::-webkit-scrollbar-thumb{
  }
 
  .titulo{
-     text-align: center;
-      background-color: #ff0080;
+    text-align: center;
+    background-color: #ff0080;
     align-items: center;
-     color: white;
-     border-radius: 50px;
+    color: white;
+    border-radius: 50px;
  }
 
 .cuadrado {
