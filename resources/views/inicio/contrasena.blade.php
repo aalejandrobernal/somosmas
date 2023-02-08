@@ -15,7 +15,7 @@
 <div class="block mx-auto my-12 p-8 bg-white w-1/3 border border-gray-200 rounded-lg shadow-">
     <form action="{{ route('inicio.cambiocontrasena')}}" class="needs-validation" method="POST" novalidate>
         @csrf
-        <div class="row">
+        <div class="col-6 offset-3">
             <h2 class="titulo2">Cambio de Contraseña</h2>
         </div>
         <div class="form-body">

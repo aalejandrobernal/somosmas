@@ -3995,9 +3995,11 @@ fieldset:disabled .btn {
   border-radius: 0.25rem;
 }
 
+
+
 .dropdown-menu[data-bs-popper] {
   top: 100%;
-  left: -90px;
+  left: -60px;
   margin-top: 0.125rem;
 }
 
@@ -4231,6 +4233,11 @@ fieldset:disabled .btn {
 
 .dropdown-menu.show {
   display: block;
+  margin-left: -90px;
+}
+
+#sesion{
+  color: red;
 }
 
 .dropdown-header {

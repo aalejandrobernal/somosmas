@@ -12,7 +12,7 @@
 @section('content')
         <section id="actividad" class="">
             <div class="pt-3 col-4 offset-4">
-                <h1 class="titulo">Actividad del mes</h1>
+                <h2 class="titulo">Actividad del mes</h2>
             </div>
 
 

@@ -827,8 +827,12 @@ nuevaa{
 }
 
 .tamaño{
-    width: 100%;
-    height: 200px;
+    width:10rem;
+    height: 10rem;
+    text-align:center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
 }
 
 .tam{
@@ -938,11 +942,6 @@ nuevaa{
     padding-top: 15px;
     border-left:2px solid #ff0083;
     margin-right: 10px;
-
-    margin-right: 10px;
-
-
-
 }
 
 
@@ -954,13 +953,13 @@ nuevaa{
 
 .carrusel-itemsss::-webkit-scrollbar-thumb {
     background-color: #FF0083;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .carrusel-itemmms{
-    padding: 10px;
-    min-width: 40%;
-    max-width: 40%;
+    padding: 5px;
+    min-width: 33%;
+    max-width: 33%;
     text-align: center;
     color: #000;
     font-size: medium;
@@ -972,7 +971,7 @@ nuevaa{
 
 .carrusel-itemmms img {
     display: flex;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -989,14 +988,10 @@ nuevaa{
     overflow-x: scroll;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding-top: 15px;
-    border-right:2px solid #ff0083;
+    /* border-right:2px solid #ff0083; */
     margin-right: 10px;
-
-
-
-
 }
 
 
@@ -1009,28 +1004,25 @@ nuevaa{
 .carrusel-itemsssn::-webkit-scrollbar-thumb {
     background-color: #FF0083;
     border-radius: 10px;
+    max-height: 2px;
 }
-
+.carrusel-itemsssn::-webkit-scrollbar {
+    height: 6px;
+}
 .carrusel-itemmmsn{
-    padding: 10px;
-    min-width: 40%;
-    max-width: 40%;
+    padding: 5px;
+    min-width: 33%;
+    max-width: 33%;
     text-align: center;
     color: #000;
     font-size: medium;
     display: flex;
 
-
-
-
-
-
-
 }
 
 .carrusel-itemmmsn img {
     display: flex;
-    padding: 20px;
+    padding: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;

@@ -78,12 +78,8 @@
                                         hoy están cumpliendo una fecha especial</strong>
                                 </p>
                             </div>
-
                             <div class="row">
                                 <div class="col-6">
-
-
-
                                 @empty($listap)
                                 @else
                                     <div class="col-12">
@@ -93,18 +89,13 @@
                                             </strong>
                                         </p>
                                     </div>
-
-
-
-
-
                                     <div class="carrusel-itemsssn">
                                         @foreach ($listap as $new)
-                                            <div class="carrusel-itemmmsn">
+                                            <div class="carrusel-itemmms">
 
-                                                <div class="card" style="">
+                                                <div class="card" style="height: 28em;">
                                                     <div class="tamaño">
-                                                        @if ($new['foto'])
+                                                        @if (is_file('images/fotos/'.$new['foto']))
                                                             <img src="images/fotos/{{ $new['foto'] }}" alt="">
                                                         @else
                                                             <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
@@ -167,11 +158,13 @@
                                     @foreach ($lista as $fecha)
                                         <div class="carrusel-itemmms">
 
-                                            <div class="card" style="">
+                                            <div class="card" style="height: 28rem;">
                                                 <div class="tamaño">
-                                                    @if ($fecha['foto'])
+                                                    @if (is_file('images/fotos/'.$fecha['foto']))
+                                                       
                                                         <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
                                                     @else
+                                                        
                                                         <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
                                                     @endif
 
@@ -241,7 +234,7 @@
                     @foreach ($lista as $fecha)
                         <div class="carrusel-itemms">
 
-                            <div class="card" style="">
+                            <div class="card" style="height: 28rem;">
                                 <div class="tamaño">
                                     @if ($fecha['foto'])
                                         <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
@@ -310,9 +303,10 @@
                 @foreach ($listap as $new)
                     <div class="carrusel-itemms">
 
-                        <div class="card" style="">
+                        <div class="card" style="height: 28rem;">
                             <div class="tamaño">
                                 @if ($new['foto'])
+                                    @php Log::info($new['foto']); @endphp
                                     <img src="images/fotos/{{ $new['foto'] }}" alt="">
                                 @else
                                     <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
@@ -352,7 +346,7 @@
         @endempty
     </section>
 @endif
-
+<hr>
 
 <section id="NoticiaDestacada" class="pt-4">
     @php $cant = 0; @endphp
