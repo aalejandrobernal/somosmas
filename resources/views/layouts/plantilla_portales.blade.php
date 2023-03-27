@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min-4.6.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fonts/puget.css')}}">
         
     <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -20,9 +21,12 @@
 
 </head>
 
-@yield('contenido')
 
- <li class="nav-item">
+
+@yield('content1')
+
+</li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="#redapoyo">Red De Apoyo</a>
                     </li>
                     <li class="nav-item">
@@ -32,12 +36,8 @@
                 </ul>
 
 
-                <div class="pr-2">
-
-                </div>
-
-                <div class="pr-2">
-                    <a class="text-white" style="text-decoration: none">Bienvenido: <b>
+                <div class="pr-3">
+                    <a class="bienvenido text-white" style="text-decoration: none">Bienvenido: <b>
                             {{ auth()->user()->nombre }}</b></a>
                 </div>
 
@@ -51,80 +51,100 @@
 
 
                 <li class="nav-link dropdown p-0">
-                    <a class="nav-link dropdown-toggle text-white mr-2 pt-2 mt-2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none"></a>
+                    <a class="nav-link dropdown-toggle text-white mr-5 pt-2 mt-2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none"></a>
                         <ul class="dropdown-menu bg" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item mr-3" style="" href="{{ route('inicio.contrasena') }}">
-                            Cambiar Contraseña</a></li>
+                            <li><a class="dropdown-item mr-3" style="" href="{{ route('inicio.editar_perfil') }}">
+                            Mi Perfil</a></li>
                             <li><a class="dropdown-item" id="sesion" style="" href="{{ route('login.destroy') }}">
                             Cerrar Sesión</a></li>
-                        </ul>
+                        </ul>   
                 </li>
+
             </div>
         </div>
     </nav>
 
-@yield('content')
+@yield('content2') 
 
 </body>
 
-<section id="redapoyo" class="d-flex justify-content-center align-items-center rounded">
-    <div class="footer bg-dark text-color:white">
-        <div class="row p-5">
-            <div class="col-4">
-                <h2><strong style="color: #ff0080">Red De Apoyo:</strong> </h2>
-                <p style="color: white">Red de apoyo en caso de emergencia: Navega, Libre, Liwa, Suncoenergy,
-                    Suncolombia. Recuerde: Número general de emergencias: 123
-                    Estamos para servirte cuenta con nosotros
-                    WhatsApp profesionales HSE: Chia-Fusagasuga-Bogota</p>
+<section id="redapoyo" class="section_footer d-flex justify-content-center align-items-center rounded">
+    <div class="footer_bg">
+        <h2 class="footer_red">RED DE APOYO     <i class="fa-solid fa-circle-info"></i></h2>
+            <div class="row p-3">
+            
+                <div class="col-3 ml-5">
+                    
+                <h5 class="emergencia">En caso de emergencias   
+                    <i class="fa-sharp fa-solid fa-phone-volume"></i> </h5>
+                    <br>
+                    <p style="font-size: 14px; text-align: center; color: white"> 
+                    Número general de Emergencias: 123
+                    <br>
+                    Número general Cruz Roja: 132
+                    <br>
+                    Número general Policía: 112
+                    <br>
+                    Número general Bomberos: 119
+                    <br>
+                    <br>
+                    Estamos para servirte, cuenta con nosotros WhatsApp profesionales HSE</p>
+                    <div class="wp">   
+                        <a href="https://wa.me/573118076877" data-bs-toggle="tooltip" data-placement="top" title="Chía"
+                            class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a>
+                        <a href="https://wa.me/573016373640" data-bs-toggle="tooltip" data-placement="top" title="Chía"
+                            class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                            title="Fusagasugá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                            title="Bogotá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                    <br>
+                    <div style="font-size: 14px" class="sedes">
+                        Bogotá - Chía - Fusagasugá 
+                    </div>
+                </div>
+                
+                <div style="font-size: 14px" class="col-4">
+                    <h5><i style="color: #FE3EB2" class="fa-solid fa-location-dot"></i><strong style="color: #FE3EB2">  Direcciones oficinas</strong></h5>
+                    <ul style="color: white">
+                        <li>Oficina Bogotá: Calle 127b bis # 49-48 - Barrio Tierra Linda.</li>
+                        <li>Oficina Navega: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza - Chía, Cundinamarca.</li>
+                        <li>Oficina Libre: Carrera 6 # 07-36 Local 317 C.C. Escorial Center Fusagasugá, Cundinamarca.</li>
+                    </ul>  
+                    
+                    <h5><i style="color: #FE3EB2" class="fa-solid fa-house-medical"></i><strong style="color: #FE3EB2"> Clínicas ARL Sura</strong></h5>
+                    <ul style="color: white">
+                        <li>Cruz Roja: Autopista Norte con calle 145 - Bogotá.</li>
+                        <li>Clínica los Nogales: Calle 95 # 23-61 - Bogotá.</li>
+                        <li>Clínica VIP: Calle 97 # 23-10 - Bogotá.</li>
+                        <li>Hospital San Antonio de Chía: Carrera 10 # 8-24 - Chía, Cundinamarca.</li>
+                        <li>Hospital San Rafael: Diagonal 23 # 12-64 - Fusagasugá, Cundinamarca.</li>
+                        <li>Clínica Belén: Calle 17 # 12-27 - Fusagasugá, Cundinamarca.</li>
+                    </ul> 
+                </div>
 
-                <a href="https://wa.me/573118076877" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                    class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a>
-                <a href="https://wa.me/573016373640" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                    class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
-                    title="Fusagasugá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
-                    title="Bogotá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                <p></p>
-                <button type="button" class="btn btn-outline-light">
-                    Chía - Fusagasugá - Bogotá
-                </button>
+                <div style="font-size: 14px" class="col-4">
+                    <h5><i style="color: #FE3EB2" class="fa-solid fa-phone"></i><strong style="color: #FE3EB2"> Línea de reporte de AT (ARL Sura)</strong></h5>
+                    <ul style="color: white">
+                        <li>Oficina Bogotá, Chía y Fusagasugá: 4055911</li>
+                    </ul>
 
+                    <h5><i style="color: #FE3EB2" class="fa-solid fa-shield-halved"></i><strong style="color: #FE3EB2"> Cuadrantes de Policía</strong></h5>
+                    <ul style="color: white">
+                        <li>Oficina Bogotá: Cuadrante = 3002005460</li>
+                        <li>Oficina Chía: Caí Guaymaral = 3490791 Cuadrantes 3017791812 3212464768</li>
+                        <li>Oficina Fusagasugá: Cuadrante = 3212475311</li>
+                    </ul>
+                    
+                    <h5><i style="color: #FE3EB2" class="fa-solid fa-fire-extinguisher"></i><strong style="color: #FE3EB2"> Bomberos</strong></h5>
+                    <ul style="color: white">
+                        <li>Estación de Bomberos Caobos: 6144105-6143290-3822500 - Bogotá.</li>
+                        <li>Estación de Bomberos Cedritos: 6724913 - Bogotá.</li>
+                        <li>Estación de Bomberos Chía: 8844595-8844587 / 300 1234567</li>
+                        <li>Estación de Bomberos Fusagasugá: 8676736 / 311 5853577</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-4">
-                <h5><strong style="color: #ff0080">Direcciones oficinas: Recuerde número general emergencias: 123/
-                        Numero general Cruz Roja: 132 </strong> </h5>
-                <p style="color: white">Oficina Bogotá de la 127: Barrio tierra linda-Calle 127b bis #49-48.
-                    Oficina Navega Centro comercial Vivenza Plaza: Cra 10 # 0-49 Sur Local 148 Chía, Cundinamarca.
-                    Oficina Libre Centro comercial Escorial Center: Carrera 6 # 07-36 Local 317 Fusagasugá,
-                    Cundinamarca.</p>
-
-                <h5><strong style="color: #ff0080">Clínica más cercanas ARL Sura:</strong></h5>
-                <p style="color: white">Oficina Bogotá de la 127: Cruz roja Norte: Autopista norte con calle 145 /
-                    Clínica los Nogales Calle 95-23-61 / Clínica Vip calle 97#23-10 /
-                    Oficina Navega Chía: Hospital San Antonio de Chía, carrera 10 No. 8-24 Chía-Tel:5140707.
-                    Oficina Libre Fusagasugá: Hospital San Rafael: Diagonal 23 12 - 64 Fusagasugá - Cundinamarca /
-                    Clínica Belén Fusagasugá: Calle 17 # 12-27</p>
-            </div>
-            <div class="col-4">
-                <h5><strong style="color: #ff0080">Línea de reporte de AT (ARL Sura):</strong></h5>
-                <p style="color: white">Oficina Bogotá de la 127: 4055911
-                    Oficina Navega Chía : 4055911
-                    Oficina Libre Fusagasuga: 4055911</p>
-                <h5><strong style="color: #ff0080">Cuadrantes de la policía. Recuerde número general policía
-                        112.</strong></h5>
-                <p style="color: white">Oficina Bogotá de la 127: Cuadrante 3002005460-3002005460
-                    Oficina Navega Chía: Caí Guaymaral 313 3490791 / Cuadrantes: 3017791812 - 3212464768
-                    Oficina Libre Fusagasugá: Cuadrante: 3212475311</p>
-                <h5><strong style="color: #ff0080">Bomberos. Recuerde número general bomberos 119.</strong></h5>
-                <p style="color: white">Oficina Bogotá de la 127: Estación de bomberos Caobos:
-                    6144105-6143290-3822500/ Estación de bomberos Cedritos: 6724913
-                    Oficina Navega Chía: Bomberos Chía: 8844595-8844587 / 300 1234567
-                    Oficina Libre Fusagasugá: 8676736 / 311 5853577</p>
-            </div>
-
-        </div>
-    </div>
-
-    </div>
+    </div>      
 </section>

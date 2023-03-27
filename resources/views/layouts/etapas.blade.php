@@ -1,14 +1,11 @@
-@extends('layouts.plantilla_portales')
+@extends('layouts.plantilla_portales') 
 
-@section('title')
+@section('title', 'Portal Liwa')
 
-@section('contenido')
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
-        <div class="container-fluid">
-
-            <a class="navbar-brand" href="{{ route('admin.index') }}">Liwa</a>
+@section('content1')
+    <body> 
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
+            <a class="navbar-brand p-0" href="{{ route('admin.index') }}"><img class="img_portal" src="{{ asset('images/logos/liwa.png') }}" alt=""></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,8 +32,10 @@
                             <li><a class="dropdown-item" href="{{ route('admin.etapa20liwa') }}">Etapas 20 a la 22</a>
                             </li>
                         </ul>
-                    </li>
-                    
+                        @endsection
+
+@section('content2')             
+                        
+    @yield('content')
+
 @endsection
-                    
-</body> 

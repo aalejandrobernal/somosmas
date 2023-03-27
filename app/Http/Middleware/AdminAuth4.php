@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminAuth
+class AdminAuth4
 {
     /**
      * Handle an incoming request.
@@ -17,7 +17,7 @@ class AdminAuth
     public function handle(Request $request, Closure $next)
     {
         if (auth()->check()){
-            if(auth()->user()->empresa_id == '1')
+            if(auth()->user()->empresa_id == '4')
             {
             return $next($request);
             }
@@ -27,9 +27,9 @@ class AdminAuth
         if (auth()->check()){
             if(auth()->user()->empresa_id == '0')
             {
-            return $next($request);
+            return $next($request); 
             }
-
+            
         }
 
         return redirect()->route('inicio.portales', array ('somosmas'=>'Not found'));

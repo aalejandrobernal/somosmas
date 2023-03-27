@@ -1,8 +1,8 @@
 Swal.fire({
     icon: 'warning',
-   title: 'Oops...',
+    title: 'Acceso Denegado',
     text: 'No perteneces a esta compañía',
-
-
-
   });
+
+
+

@@ -4,7 +4,7 @@
 
 @section('content1')
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
+    <a class="nav-link text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
     role="button" aria-expanded="false">
     Tu SGSST</a>
 @endsection
@@ -13,6 +13,7 @@
     <div class="row">
         <div class="col-4 offset-4 p-4">
             <h2 class="titulo">Galería de fotos</h2>
+            <hr class="line-title">
         </div>
     </div>
     <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
@@ -33,7 +34,7 @@
                             <button type="button" class="ctn"
                                 data-toggle="modal"data-target="#myModal<?php echo $cant; ?>">Ver fotos</button>
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
-                                Actualización: {{ $galerias->updated_at }}
+                                Actualización: {{ $galerias->updated_at->format('d/m/Y') }}
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,6 @@
 
                 </div>
             @endforeach
-
         </div>
     </main>
 

@@ -4,7 +4,7 @@
 
 @section('content1')
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
+    <a class="nav-link  text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
     role="button" aria-expanded="false">
     Tu SGSST</a>
 @endsection
@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-2 offset-5 p-4">
             <h2 class="titulo">Noticias</h2>
+            <hr class="line-title">
         </div>
     </div>
     <div class="container-3">
@@ -29,8 +30,14 @@
             $var = count($imgs); ?>
 
             <div class="row pb-4 card-3">
-                <div class="col-6 pb-5" style="padding-right: 1px;">
-                    <h1>{{ $noticias->titulo }}</h1>
+                <div class="col-6 pb-1" style="padding-right: 1px;">
+                    <h1 class="subtitulo mb-0" >{{ $noticias->titulo }}</h1>
+                    <div class="vermaa">
+                    
+                    Actualización : {{ $noticias->updated_at->format('d/m/Y') }}
+                    
+                    </div>
+                    <br>
                     <div>
                         <p class="nuevaa">
                             {!! Str::limit($noticias->contenido, 800, '...') !!}
@@ -48,7 +55,7 @@
                                             {{-- contenido --}}
                                             {{-- TITULO MODAL --}}
                                             <div class="modal-header">
-                                                <header style="" class="h2">
+                                                <header style="" class="subtitulo h2">
                                                     {{ $noticias->titulo }}</header>
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             </div>
@@ -56,7 +63,7 @@
                                             <div class="modal-body">
 
                                                 <div class="col-auto">
-                                                    <div class="row">
+                                                    <div class="row"> 
                                                         {{-- CUERPO MODAL --}}
                                                         <div class="col-md-8">
                                                             <div>
@@ -81,9 +88,8 @@
                                                                     <div class="splide__track">
                                                                         <ul class="splide__list">
                                                                             @foreach ($imgs as $img)
-                                                                                <li class="splide__slide">
-                                                                                    <img src="../images/noticias/<?php echo $img; ?>"
-                                                                                        alt="">
+                                                                                <li class="splide__slide"> 
+                                                                                    <img src="../images/noticias/<?php echo $img; ?>" alt="">
                                                                                 </li>
                                                                             @endforeach
                                                                         </ul>
@@ -118,11 +124,8 @@
                             </div>
                         @endif
                     </div>
-                    <div class="vermaa" style="padding-top: 10%; padding-left:76%">
-                        {{ $noticias->updated_at }}
-                    </div>
                 </div>
-                <div id="carouselExampleControls{{ $noticias->id }}" class="carousel slide col-6 noticia" data-ride="carousel">
+                <div id="carouselExampleControls{{ $noticias->id }}" style="height: 500px" class="carousel slide col-6 noticia" data-ride="carousel">
                     <div class="carousel-inner">
                         @if ($var > 1)
                             <?php $porciones = explode(',', $noticias->imagenes); ?>

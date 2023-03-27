@@ -147,15 +147,15 @@
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    color: #ff0083;
+    color: #FE3EB2;
     background-color: #fff;
 }
 
 .ctn:hover{
     transition: 0.3s;
-    background-color: #ff0083;
+    background-color: #FE3EB2;
     color: white;
-    border: #FF0083 solid 0.2px;
+    border: #FE3EB2 solid 0.2px;
 }
 
 .cta{
@@ -227,18 +227,42 @@
 .vermaa{
     font-size: small;
     color: gray;
+    width: 600px;
+}
+
+.box1{
+    float: left;
+    margin-top: 20px;
+}
+
+.box2{
+    float: right;
+    margin-right: 50px;
+    margin-top: 6px;
+    margin-bottom: 50px;
 }
 
 
+
 .form-body{
-    
+    float: left;
+    padding: 0px;
+    width: 840px;
+    min-width: 300px;
+    border-radius: 10px;
+    border: solid 1px; color: #FE3EB2;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.form-body2{
     text-align: left;
     padding: 20px;
-    width: 500px;
+    width: 450px;
     min-width: 300px;
     border-radius: 10px;
     border: solid 1px;
-    margin: 10px;
+    margin: 20px;
     display: block;
     margin: auto;
     margin-bottom: 50px;
@@ -246,7 +270,12 @@
 }
 
 .form-body input{
-    width: 450px;
+    width: 340px;
+    text-align: center;
+}
+
+.form-body2 input{
+    width: 400px;
     text-align: center;
 }
 
@@ -255,7 +284,17 @@
     width: 150px;
     border: none;
     border-radius: 10px;
-    background-color: #FF0083;
+    background-color: #FE3EB2;
+    font-weight: 500;
+    display: block;
+    margin: auto;
+}
+
+.form-body2 button{
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FE3EB2;
     font-weight: 500;
     display: block;
     margin: auto;
@@ -266,24 +305,168 @@
 }
 
 .caracteres{
+    margin-top: 10px;
+    margin-left: 35px;
     font-size: 10px;
     color: rgb(168, 162, 162);
-    margin: 0px 0px 0px;
+}
+
+.caracteres1{
+    margin: 0;
+    font-size: 10px;
+    color: rgb(168, 162, 162);
+}
+
+.caracteres2{
+    margin-bottom: 0px;
+    margin-left: 45px;
+    font-size: 10px;
+    color: rgb(168, 162, 162);
+}
+
+.caracteres3{
+    width: 170px;
+    margin-top: 10px;
+    margin-right: 30px;
+    font-size: 10px;
+    color: rgb(168, 162, 162);
 }
 
 #sesion{
     color: red;
 }
 
+.atras{
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    color: #FE3EB2;
+    border-radius: 50px;
+    width: 200px;
+}
+
+.atras:hover{
+    text-decoration: none;
+    color: #FE3EB2;
+}
+
 .titulo2{
     display: block;
     margin: auto;
-    margin-top: 30px;
+    margin-top: -250px;
     text-align: center;
-    background-color: #ff0080;
+    background-color: #FE3EB2;
     color: white;
     border-radius: 50px;
     width: 400px;
  }
 
+ .titulo3{
+        
+    margin-top: -383px;
+    text-align: center;
+    background-color: #FE3EB2;
+    color: white;
+    border-radius: 50px;
+    width: 400px;
+ }
+
+ .titulo4{
+    margin-left: 200px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: xx-large;
+    background-color: #FE3EB2;
+    color: white;
+    border-radius: 50px;
+    width: 400px;
+ }
+
+.file input{
+    display: none;
+}
+
+.file label{
+    display: block;
+    padding: 8px 21px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #FE3EB2;
+    cursor: pointer;
+}
  
+ /* p#texto{
+    text-align: center;
+    color: #ff0080;
+ }
+
+ div#div_file{
+    position: relative;
+    margin: 50px;
+    padding: 10px;
+    width: 150px;
+    background-color: transparent;
+ }
+ 
+ input#btn-enviar{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+ }
+
+ input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: none;
+    display: inline-block;
+   
+    cursor: pointer;
+    color: #ff0080;
+    margin-left: 25px;
+    margin-bottom: 10px;
+} */
+
+ .cambiarfoto{
+    color: #FE3EB2;
+    background-color: transparent;
+    border: none;
+    margin-left: 25px;
+    margin-bottom: 0px;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    font-weight: 500;
+ }
+
+ .cambiarfoto:hover{
+    color: #FE3EB2;
+    text-decoration: none;
+ }
+ 
+ .inputfoto{
+    margin-left: 25px;
+ }
+
+ .actualizarfoto{
+    display: block;
+    margin-left: 45px;
+    font-size: 10px;
+    width: 60px;
+    text-align: center;
+    background-color: #FE3EB2;
+    color: white;
+    border-radius: 50px;
+    border-color: white;
+ }
+
+ .alert-pass{
+    margin-left: 50px;
+ }

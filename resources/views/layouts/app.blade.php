@@ -22,7 +22,7 @@
     <script src="{{ asset('js/jquery.min.js') }}"> </script>
 </head>
 
-<body class="bg-black">
+<body class="bg-dark">
     <nav class="flex py-5 bg-pink-500 text-white">
         <div class="w-1/2 px-12 mr-auto">
             <p class="text-2xl font-bold">Somos Más

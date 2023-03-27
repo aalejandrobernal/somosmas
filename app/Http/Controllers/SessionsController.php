@@ -17,7 +17,9 @@ class SessionsController extends Controller
 
     public function store(Request $request){
 
-        if($user = User::where('documento', $request->documento)->first()){
+        if($user = User::where('documento', $request->documento)
+                        ->where('estado', '1')
+                        ->first()){
 
             if ($user->password === sha1($request->password)) {
                 Auth::login($user);

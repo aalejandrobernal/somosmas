@@ -1,14 +1,12 @@
 @extends('layouts.plantilla_portales')
 
-@section('title')
+@section('title', 'Portal Suncolombia')
 
-@section('contenido')
-
-<body>
+@section('content1')
+<body class="sunco_barra"> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
         <div class="container-fluid">
-
-            <a class="navbar-brand" href="{{ route('admin.sunco') }}">Suncolombia</a>
+            <a class="navbar-brand p-0" href="{{ route('admin.index') }}"><img class="img_portal" src="{{ asset('images/logos/sunco.png') }}" alt=""></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -35,8 +33,10 @@
                             <li><a class="dropdown-item" href="{{ route('admin.etapa20sunco') }}">Etapas 20 a la 22</a>
                             </li>
                         </ul>
-                    </li>
-                   
-@endsection
+                        @endsection
+                    
+@section('content2') 
 
-</body> 
+    @yield('content')
+                   
+@endsection 

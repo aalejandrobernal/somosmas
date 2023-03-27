@@ -4,7 +4,7 @@
 
 @section('content1')
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
+    <a class="nav-link text-white" href="{{route('inicio.index')}}" id="navbarDropdown"
     role="button" aria-expanded="false">
     Tu SGSST</a>
 @endsection
@@ -13,6 +13,8 @@
         <section id="actividad" class="">
             <div class="pt-3 col-4 offset-4">
                 <h2 class="titulo">Actividad del mes</h2>
+                <hr class="line-title">
+                <br>
             </div>
 
 
@@ -20,7 +22,7 @@
 
                 <div class="card-2">
                     <img src="{{ asset('images/nm.jpg') }}" alt="">
-                    <h4>Tus Representantes</h4>
+                    <h4 class="subtitulo">Tus Representantes</h4>
                     <p style="text-align: justify">
                         Selecciona a los compañeros que quieres que te representen en el Copasst y en el comité de convivencia; recuerda que el copasst es el comité que
                          apoya los temas de seguridad y salud en el trabajo en tu empresa y el de convivencia prevenir el riesgo psicosocial.
