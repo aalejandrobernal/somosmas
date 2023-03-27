@@ -42,7 +42,7 @@
     38 => 'App\\Providers\\AuthServiceProvider',
     39 => 'App\\Providers\\EventServiceProvider',
     40 => 'App\\Providers\\RouteServiceProvider',
- ),
+  ),
   'eager' => 
   array (
     0 => 'Illuminate\\Auth\\AuthServiceProvider',
