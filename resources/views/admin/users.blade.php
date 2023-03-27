@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('css')
+@section('adminlte_css')
 <style>
     .btn-enviar{
         background: #F23DB3;
@@ -19,6 +19,7 @@
 @section('content_header')
     <h1>Colaboradores</h1>
     @livewireStyles
+    <link rel="stylesheet" href="{{ asset('css/swiper_noti.css') }}">
 @stop
 
 @section('content')
@@ -27,14 +28,8 @@
             <strong>{{session('info')}}</strong>
         </div>
     @endif
-
-
-
-    <p>@livewire('admin.users-index',['base'=>$users1])</p>
+    <p>@livewire('admin.users-index')</p>
 @stop
-@section('js')
-    <script src="{{ asset('js/sweetalert.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/alerta_admin.js') }}"></script>
-    @livewireScripts
 
-@stop
+
+

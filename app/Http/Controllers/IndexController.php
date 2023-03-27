@@ -44,6 +44,7 @@ class IndexController extends Controller
                 
         $noticia = Noticia::where('id', $id_noti_des)
         ->Limit('1')
+        ->where('estado', '1')
         ->get();
 
         $card = Formacion::where('estado', '1')

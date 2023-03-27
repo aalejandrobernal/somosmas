@@ -22,7 +22,8 @@ class StoreNewRequest extends FormRequest
         if($this->estado ==1){
             $rules = array_merge($rules,[
                 'contenido'=>'required',
-                'imagenes'=>'required|image'
+                'imagenes'=>'required|image',
+            
             ]);
         }
         return $rules;

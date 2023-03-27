@@ -4,11 +4,16 @@
             <input wire:model="search" class="form-control" placeholder="Ingrese Nombre o Documento">
         </div>
         <div class="card-header">
-            <a class="btn btn-enviar" href="{{route('admin.news.create')}}">Agregar Noticia</a>
-            <button type="button" class="btn btn-enviar" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Noticia modal @mdo</button>
-            <button type="button" class="btn btn-enviar" data-toggle="modal" data-target="#exampleModalCenter">
-                Launch demo modal
-              </button>
+            <div class="row">
+                <div class="col-10" >
+                    <a class="btn btn-enviar" href="{{route('admin.news.create')}}">Agregar Noticia</a>
+                </div>
+                {{-- @livewire('admin.create-new') --}}
+                <div class="col-2" >
+                    {!! Form::label('estado', 'Noticias publicadas') !!}
+                    <input wire:model="estado" type="checkbox">
+                </div>
+            </div>
         </div>
         @if ($news->count())
             <div class="card-body">
@@ -16,18 +21,21 @@
                     <thead>
                         <tr>
                             <th>Titulo</th>
-                            {{-- <th>Contenido</th> --}}
+                            <th>Noticia destacada</th>
                             <th>Adjunto</th>
-
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($news as $new)
                             @if ($new->estado == 0)
-                                <tr class="p-3 mb-2 bg-warning text-dark">
+                                <tr class="p-3 mb-2 text-dark">
                                     <td>{{$new->titulo}}</td>
-                                    {{-- <td>{{$new->contenido}}</td> --}}
+                                    @if ($new->id == $destacada->noticias_id)
+                                        <td><input type="radio" name="$new->id" disabled checked></td>
+                                    @else
+                                        <td><input type="radio" name="$new->id" disabled></td>
+                                    @endif
                                     <td>{{$new->adjunto}}</td>
                                     <td width="10px">
                                         <a class="btn btn-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
@@ -35,16 +43,26 @@
                                         </a>
                                     </td>
                                     <td width="10px">
-                                        <form action="{{route('admin.news.show',$new)}}" >
-                                            @csrf
-                                                <button type="submit" class="btn btn-success btn-sm">Habilitar</button>
-                                        </form>
+                                        <button type="submit" class="btn btn-success btn-sm" wire:click="$emit('hab',{{$new->id}})">
+                                            Habilitar
+                                        </button>
+                                    </td>
+                                    <td width="10px">
+                                        <button type="submit" class="btn btn-danger btn-sm" wire:click="$emit('delete',{{$new->id}})">
+                                            Eliminar
+                                        </button>
                                     </td>
                                 </tr>
                             @else
                                 <tr >
                                     <td>{{$new->titulo}}</td>
-                                    {{-- <td>{{$new->contenido}}</td> --}}
+                                    @if ($new->id == $destacada->noticias_id)
+                                        <td><input type="radio" class="dispay:flex" name="$new->id" wire:click=
+                                            "$emit('destacada1',{{$new->id}},{{$destacada->id}})"checked></td>
+                                    @else
+                                        <td><input type="radio" class="text-center" name="$new->id" wire:click=
+                                            "$emit('destacada1',{{$new->id}},{{$destacada->id}})"></td>
+                                    @endif
                                     <td>{{$new->adjunto}}</td>
                                     <td width="10px">
                                         <a class="btn btn-outline-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
@@ -52,10 +70,9 @@
                                         </a>
                                     </td>
                                     <td width="10px">
-                                        <form action="{{route('admin.news.show',$new)}}" >
-                                            @csrf
-                                                <button type="submit" class="btn btn-outline-danger btn-sm">Deshabilitar</button>
-                                        </form>
+                                        <button type="submit" class="btn btn-outline-danger btn-sm" wire:click="$emit('des_hau',{{$new->id}})">
+                                            Deshabilitar
+                                        </button>
                                     </td>
                                 </tr>
                             @endif
@@ -67,131 +84,120 @@
                 {{$news->render()}}
             </div>
         @else
+        <div class="card-header">
             <strong>No hay registros</strong>
+        </div>
         @endif
     </div>
-    {{-- //modal --}}
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" wire:ignore >
-        <div class= "modal-dialog modal-xl " role="document" >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-              
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                {!!Form::open(['route'=>'admin.news.store','enctype'=>'multipart/form-data',''=>''])!!}
-                <div class="card">
-                  <div class="card-body" >
-                      <div class="row">
-                          <div class="form-group col-8">
-                              {!! Form::label('titulo', 'Titulo') !!}
-                              {!! Form::text('titulo',null, ['class'=>'form-control','placeholder'=>'Ingrese título']) !!}
-                              @error('titulo')
-                                  <span class="text-danger">{{$message }}</span>
-                              @enderror
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          {!! Form::label('contenido', 'Contenido') !!}
-                          {!! Form::textarea('contenido',null, ['class'=>
-                              'form-control',
-                              'placeholder'=>'Ingrese la noticia']) !!}
-                              @error('contenido')
-                                  <span class="text-danger">{{$message }}</span>
-                              @enderror
-                      </div>
-                      <div class="row">
-                          <div class="form-group col-4">
-                              {!! Form::label('adjunto', 'Adjuntos') !!}
-                              {!! Form::text('adjunto',null, ['class'=>'form-control','placeholder'=>'Ingrese links de adjuntos']) !!}
-                              @error('adjunto')
-                                  <span class="text-danger">{{$message }}</span>
-                              @enderror
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="form-group col-4">
-                                  <div class="form-group col-4">
-                                      {!! Form::label('imagenes', 'Foto') !!}
-                                      {!! Form::file('imagenes',['accept'=>'image/*','wire:model'=>'imagenes', 'multiple'])!!}
-                                      
-                                      @error('imagenes')
-                                      <span class="text-danger">{{$message }}</span>
-                                      @enderror
-                                  </div>
-                                  @if ($imagenes)
-                                          {{-- <div id="carouselExampleControls" class="carousel slide col-6 noticia" data-ride="carousel">
-                                              <div class="carousel-inner">
-                                                      @php $i = 0; @endphp
-                                                      @foreach ($imagenes as $imagen)
-                                                          <div class="{{ $i == 0 ? 'active' : '' }} carousel-item">
-                                                              <img class="d-block w-100" src="{{$imagen->temporaryURL()}}" class="pl-4">
-                                                          </div>
-                                                          @php
-                                                          Log::info($i);
-                                                          $i=$i+1;
-                                                          @endphp
-                                                      @endforeach
-                                                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                                                          data-slide="prev">
-                                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                          <span class="sr-only">Previous</span>
-                                                      </a>
-                                                      <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                                                          data-slide="next">
-                                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                          <span class="sr-only">Next</span>
-                                                      </a>
-                                                  
-                                              </div>
-                                          </div> --}}
-                                     
-                                          <img src="{{$imagenes->temporaryURL()}}" height="200" width="200" class="img-fluid" alt=""/>
-                                      
-                                      
-                                  @endif
-                              {{-- <div class="form-group col-4">
-                                  {!! Form::label('imagenes', 'Foto') !!}
-                                  {!! Form::file('imagenes',['accept'=>'image/*','wire:model'=>'image'])!!}
-                                  @error('imagenes')
-                                  <span class="text-danger">{{$message }}</span>
-                                   @enderror
-                              </div> --}}
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="form-group col-4" >
-                               {!! Form::radio('estado',1 ,['class'=>'mr-1'])!!}
-                               {!! Form::label('estado', 'Publicado') !!}
-                               {!! Form::radio('estado',0,['class'=>'mr-1'])!!}
-                               {!! Form::label('estado', 'Borrador') !!}
-                          </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-            
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              {!! Form::submit('Crear Noticia', ['class'=>'btn btn btn-enviar']) !!}
-            </div>
-          </div>
-        </div>
-        {!!Form::close()!!}
 </div>
-      @push('js')
-    <script src="{{ asset('ckeditor/build/ckeditor.js') }}"></script>
-     
+
+@push('js')
+<script src="{{ asset('js/sweetalert.js') }}"></script>
+@if (session('info'))
     <script>
-        ClassicEditor
-       .create( document.querySelector( '#contenido' ) )
-       .catch( error => {
-           console.error( error );
-       } );
-   </script>
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '{{session('info')}}',
+            showConfirmButton: false,
+            timer: 3000
+        })
+    </script>
     
+@endif
+<script>
+    Livewire.on('des_hau',posId => {
+    Swal.fire({
+        title: '¿Está seguro(a) de deshabilitar esta noticia?',
+        text: "¡No podrá revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Sí, deshabilitar!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Livewire.emitTo('admin.news-index','deshabilitar',posId);
+                Swal.fire(
+                '¡Perfecto!',
+                'La noticia ha sido deshabilitada.',
+                'success'
+            )
+        }
+    })
+});
+</script>
+<script>
+    Livewire.on('hab',posId => {
+    Swal.fire({
+        title: '¿Está seguro(a) de habilitar esta noticia?',
+        text: "¡No podrá revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Sí, habilitar!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+                Livewire.emitTo('admin.news-index','deshabilitar',posId);
+                Swal.fire(
+                '¡Habilitada!',
+                'La noticia ha sido habilitada.',
+                'success'
+            )
+            
+        }
+    })
+});
+</script>
+<script>
+    Livewire.on('delete',posId => {
+    Swal.fire({
+        title: '¿Está seguro(a) de eliminar este usuario?',
+        text: "¡No podrá revertir esta acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Sí, eliminar!',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+                Livewire.emitTo('admin.news-index','eliminar',posId);
+                Swal.fire(
+                '¡Eliminada!',
+                'La noticia ha sido eliminada.',
+                'success'
+            )
+            
+        }
+    })
+});
+</script>
+<script>
+    Livewire.on('destacada1',(posId,not) => {
+    Swal.fire({
+        title: '¿Noticia destacada?',
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Livewire.emitTo('admin.news-index','destacada',posId,not);
+            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '¡Perfecto!',
+            showConfirmButton: false,
+            timer: 2000
+            })
+        }
+    })
+});
+</script>
 @endpush
-</div>

@@ -13,10 +13,7 @@ class UsersIndex extends Component
     public $search;
     public $estado=1;
     protected $paginationTheme = "bootstrap";
-    public $base;
-
-
-
+    protected $listeners = ['render','deshabilitar','eliminar'];
     public function updatingSearch()
     {
         $this->resetPage();
@@ -35,6 +32,18 @@ class UsersIndex extends Component
 
         return view('livewire.admin.users-index', compact('users'));
     }
-
+    public function deshabilitar(User $user)
+    {
+        if ($user->estado == 1  ){
+            $user->update(['estado' => '0']);
+        }
+        else{
+            $user->update(['estado' => '1']);
+        }
+    }
+    public function eliminar(User $user)
+    {
+        $user->update(['estado' => '2']);
+    }
 
 }

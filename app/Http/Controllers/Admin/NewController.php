@@ -14,25 +14,16 @@ class NewController extends Controller
     {
         return view('admin.news.index');
     }
-
-
     public function create()
     {
         return view('admin.news.create');
     }
-
-
     public function store(StoreNewRequest $request)
     {
         
 
         $imagenes=$request->input('titulo');
-        // $nombre_img=$request->input('id');
-        // $extension= $request->file('imagenes')->getClientOriginalExtension();
-        // $nombre_foto=$nombre_img.'.'.$extension;
-
-        // $request->merge(['imagenes'=>$nombre_foto]);
-
+       
 
         // Image::make($request->file('imagenes'))
         //  ->resize(1000, null, function ($constraint) {
@@ -40,8 +31,15 @@ class NewController extends Controller
         // })
         // ->save('images\ensayo/'.$nombre_foto);
 
-        return $imagenes;
-        $new=Noticia::create($request->all());
+        // return $request->all();
+        // Noticia::create([
+        //         'titulo' => $request->input('titulo'),
+        //         'contenido' => $request->input('contenido'),
+        //         'adjunto' => $request->input('adjunto'),
+        //         'estado' => $request->input('estado'),
+        //     ]);
+        // $new=Noticia::create($request->all());
+        // return $request->all();
 
         // return redirect()->route('admin.news.edit',$new)->with('info','Los datos han sido actualizados');
     }

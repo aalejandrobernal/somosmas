@@ -39,24 +39,3 @@ $('#btn2').on('click', function(d) {
           $(this).closest('#form2').submit();}
       })
 });
-
-// $('#btn3').on('click', function(b) {
-//     b.preventDefault();
-//     Swal.fire({
-//         title: '¿Estas seguro de eliminar la información ?',
-//         text: "¡No podrás revertir esto!",
-//         icon: 'warning',
-//         showCancelButton: true,
-//         confirmButtonColor: '#3085d6',
-//         cancelButtonColor: '#d33',
-//         confirmButtonText: 'Si'
-//       }).then((result) => {
-//         if (result.isConfirmed) {
-//           Swal.fire(
-//             'Informacion Actualizada!',
-//             'La información ha sido actulizada exitosamente.',
-//             'success'
-//           )
-//           $(this).closest('#form3').submit();}
-//       })
-// });

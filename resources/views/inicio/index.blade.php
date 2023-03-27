@@ -434,7 +434,7 @@
                                                                             <ul class="splide__list">
                                                                                 @foreach ($imgs as $img)
                                                                                     <li class="splide__slide">
-                                                                                        <img src="../images/noticias/<?php echo $img; ?>" alt="">
+                                                                                        <img src="../storage/images/noticias/<?php echo $img; ?>" alt="">
                                                                                     </li>
                                                                                 @endforeach
                                                                             </ul>
@@ -444,7 +444,7 @@
                                                                     <div class="dos">
                                                                         <img style="max-width: 100%;
                                                                             max-height: 100%;"
-                                                                            src="../images/noticias/{{ $noticias->imagenes }}"
+                                                                            src="../storage/images/noticias/{{ $noticias->imagenes }}"
                                                                             alt="">
                                                                     </div>
                                                                 @endif
@@ -485,7 +485,7 @@
                         <?php $porciones = explode(',', $noticias->imagenes); ?>
                         @for ($i = 0; $i < count($porciones); $i++)
                             <div class="{{ $i == 0 ? 'active' : '' }} carousel-item">
-                                <img class="d-block w-100" src="images/noticias/{{ $porciones[$i] }}" class="pl-4">
+                                <img class="d-block w-100" src="storage/images/noticias/{{ $porciones[$i] }}" class="pl-4">
                             </div>
                         @endfor
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
@@ -500,28 +500,25 @@
                         </a>
                     @else
                         <div class="carousel-item active">
-                            <img class="img_noticia"src="images/noticias/{{ $noticias->imagenes }}"
+                            <img class="img_noticia"src="storage/images/noticias/{{ $noticias->imagenes }}"
                                 alt=""class="">
                         </div>
                     @endif
                 </div>
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>
+                        <br> 
+                        <hr>
+                    </p>
+                </div>
+            </div>
     @endforeach
-
 </section>
 
 
 
-<section id="induccion">
-    <div class="row">
-        <div class="col-12">
-            <p>
-                <br> 
-                <hr>
-            </p>
-        </div>
-    </div>
-</section>
 
 <p></p>
 <section id="Induccion" class="">
@@ -976,6 +973,10 @@
 <script src="{{ asset('js/new.js') }}"></script>
 <script src="{{ asset('js/swiper.js') }}"></script>
 <script src="{{ asset('js/splider.js') }}"></script>
+<<<<<<< HEAD
+
+=======
+>>>>>>> pruebas2
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 

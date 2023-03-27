@@ -21,17 +21,16 @@
 @stop
 
 @section('content')
-    @if (session('info'))
+    {{-- @if (session('info'))
         <div class="alert alert-success">
             <strong>{{session('info')}}</strong>
         </div>
-    @endif
+    @endif --}}
     <p>@livewire('admin.news-index')</p>
 @stop
 
 
 
 @section('js')
-    @livewireScripts
-    <script></script>
+
 @stop

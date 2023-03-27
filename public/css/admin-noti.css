@@ -1,0 +1,49 @@
+.btn-personal{
+    background: fuchsia;
+    color: azure;
+}
+.btn-personal:hover {
+    background: rgb(201, 1, 201);
+    color: azure;
+}
+.img_noti .active img{
+    height: 30rem;
+
+}
+.img_noti img{
+    height: 30rem;
+
+}
+.adjunto{
+    height: 30rem;
+}
+
+@supports(object-fit: fill){
+    .img_noti .active img{
+      
+      object-fit: cover;
+      object-position: center center;
+    
+    }
+    .img_noti img{
+      
+        object-fit: cover;
+        object-position: center center;
+      
+      }
+}
+
+@media only screen and (max-width: 1400px) {
+    .img_noti .active img{
+        height: 20rem;
+    
+    }
+    .img_noti img{
+        height: 20rem;
+    
+    }
+     .adjunto{
+        height: 20rem;
+    }
+    
+  }
