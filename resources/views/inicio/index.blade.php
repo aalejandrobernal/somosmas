@@ -723,7 +723,7 @@
                             <span><i class="fa-solid fa-virus-covid"></i></span>
                             <h5 class="card-title">Encuesta de prevención COVID-19</h5>
                             <p class="card-text h6">Debes realizarla mínimo 1 vez por semana. Tiempo estimado 1 minuto.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -740,7 +740,7 @@
                             <span><i class="fa-solid fa-user-pen"></i></span>
                             <h5 class="card-title">Encuesta de perfil sociodemográfico</h5>
                             <p class="card-text h6">Debes realizarla en Enero 2022. Tiempo estimado 5 minutos.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -757,7 +757,7 @@
                             <span><i class="fa-solid fa-people-carry-box"></i></span>
                             <h5 class="card-title">Gestión de riesgos ergonómicos</h5>
                             <p class="card-text h6">Enfoque cargas y posturas. Tiempo estimado 5 minutos.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -800,7 +800,7 @@
                             <span><i class="fa-solid fa-file-pen"></i></span>
                             <h5 class="card-title">Reportes de peligros y riesgos</h5>
                             <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos; aplica para todos los colaboradores.</p> 
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -817,7 +817,7 @@
                             <span><i class="fa-solid fa-hand-holding-heart"></i></span>
                             <h5 class="card-title">Como es tu gestión frente al SGSST</h5>
                             <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos; aplica para todos los colaboradores.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -830,11 +830,11 @@
                             <span class="hover"></span>
                             <span class="hover"></span>
                             <span class="hover"></span>
-                            <span class="hover"></span>                     
+                            <span class="hover"></span>
                             <span><i class="fa-solid fa-mug-hot"></i></span>
                             <h5 class="card-title">Tomémonos un <br> café</h5>
                             <p class="card-text h6">Requieres atención o apoyo frente algún peligro. <br> Solicítalo aquí.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div> 
                     </button>
                 </a>
@@ -869,15 +869,15 @@
             <div class="cajon col-3 p-2">
                 <a href="https://forms.gle/xBF7h7eCq8fBxD5z8" target="_blank">
                     <button class="botonn">
-                        <div>     
+                        <div>
                             <span class="hover"></span>
                             <span class="hover"></span>
                             <span class="hover"></span>
-                            <span class="hover"></span>                   
+                            <span class="hover"></span>
                             <span><i class="fa-solid fa-car"></i></span>
                             <h5 class="card-title">Encuesta De Seguridad <br> Vial</h5>
                             <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos; aplica para todos los colaboradores.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -886,7 +886,7 @@
             <div class="cajon col-3 p-2">
                 <a href="https://forms.gle/YDDPqcozj3B8cYoB8" target="_blank">
                     <button class="botonn">
-                        <div>  
+                        <div>
                             <span class="hover"></span>
                             <span class="hover"></span>
                             <span class="hover"></span>
@@ -894,7 +894,7 @@
                             <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
                             <h5 class="card-title">Formación teórica para conductores</h5>
                             <p class="card-text h6">Dirigida a conductores que se desplazan en ellos con fines de la actividad económica de la empresa.</p> 
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
@@ -911,7 +911,7 @@
                             <span><i class="fa-solid fa-road"></i></span>
                             <h5 class="card-title">Reportes de riesgos en la vía</h5>
                             <p class="card-text h6">Es importante que conozcas los peligros con el fin de prevenir accidentes. Tiempo estimado 5 minutos; aplica para todos.</p>
-                            <span class="btn-ingresa">Ingresa</span>
+                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i> Ingresa</span>
                         </div>
                     </button>
                 </a>
