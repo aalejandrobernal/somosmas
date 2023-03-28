@@ -331,10 +331,16 @@ return [
         ['header' => 'Gestor de contenido'],
         [
             'text'        => 'Noticias',
-            'route'         => 'admin.news.index',
+            'route'       => 'admin.news.index',
             'icon'        => 'fas fa-solid fa-newspaper',
             'label_color' => 'success',
 
+        ],
+        [
+            'text'        => 'Salir',
+            'url'         => 'inicio',
+            'icon'        => 'fas fa-solid fa-circle',
+            'label_color' => 'success',
         ],
         // [
         //     'text' => 'profile',

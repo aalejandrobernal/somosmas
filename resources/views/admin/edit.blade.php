@@ -39,17 +39,17 @@
                     <hr>
                     <div class="row">
                         <div class="form-group col-4">
-                            {!! Form::label('documento', 'Documento') !!}
+                            {!! Form::label('documento', 'Documento de Identidad') !!}
                             {!! Form::number('documento',
                                                 null,
                                                 ['class'=>'form-control',
-                                                'placeholder'=>'Ingrese documento']) !!}
+                                                'placeholder'=>'Ingrese número de documento']) !!}
                             @error('documento')
                                 <span class="text-danger">{{$message }}</span>
                             @enderror
                         </div>
                         <div class="form-group col-8">
-                            {!! Form::label('nombre', 'Nombre y Apellidos') !!}
+                            {!! Form::label('nombre', 'Nombres y Apellidos') !!}
                             {!! Form::text('nombre',
                                             null,
                                             ['class'=>'form-control',

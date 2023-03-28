@@ -40149,11 +40149,11 @@ select.form-control-sm ~ .select2-container--default .select2-selection--multipl
 
 .swal2-icon.swal2-success {
   border-color: ligthen(#28a745, 20%);
-  color: #28a745;
+  color: #FE3EB2;
 }
 
 .swal2-icon.swal2-success .swal2-success-ring {
-  border-color: ligthen(#28a745, 20%);
+  border-color: ligthen(#FE3EB2, 20%);
 }
 
 .swal2-icon.swal2-success [class^='swal2-success-line'] {

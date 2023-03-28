@@ -5,9 +5,10 @@ $('#btn1').on('click', function(e) {
         text: "¡No podrás revertir esto!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Aceptar'
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar',
       }).then((result) => {
         if (result.isConfirmed) {
           // Swal.fire(
@@ -26,9 +27,10 @@ $('#btn2').on('click', function(d) {
         text: "¡No podrás revertir esto!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Si'
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
+        confirmButtonText: 'Aceptar',
+        cancelButtonText: 'Cancelar',
       }).then((result) => {
         if (result.isConfirmed) {
           // Swal.fire(

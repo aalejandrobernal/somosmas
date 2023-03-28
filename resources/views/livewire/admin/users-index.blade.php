@@ -39,12 +39,12 @@
                                     <td>{{$user->fecha_nacimiento}}</td>
                                     <td>{{$user->fecha_ingreso}}</td>
                                     <td >
-                                        <a class="btn btn-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
+                                        <a style="background: #FE3EB2; border-color: #FE3EB2" class="btn btn-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td >
-                                        <button type="submit" class="btn btn-success d-block mx-auto"  wire:click="$emit('hab',{{$user->id}})">
+                                        <button style="background: #343a40; border-color: #343a40" type="submit" class="btn btn-success d-block mx-auto"  wire:click="$emit('hab',{{$user->id}})">
                                             Habilitar
                                         </button>
                                     </td>
@@ -63,12 +63,12 @@
                                     <td>{{$user->fecha_nacimiento}}</td>
                                     <td>{{$user->fecha_ingreso}}</td>
                                     <td >
-                                        <a class="btn btn-outline-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
+                                        <a style="color: white; background: #FE3EB2; border-color: #FE3EB2" class="btn btn-outline-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td >
-                                        <button type="submit" class="btn btn-outline-danger d-block mx-auto"  wire:click="$emit('des_ha',{{$user->id}})">
+                                        <button style="color: white; background: #343a40; border-color: #343a40" type="submit" class="btn btn-outline-danger d-block mx-auto"  wire:click="$emit('des_ha',{{$user->id}})">
                                             Deshabilitar
                                         </button>
                                     </td>
@@ -99,8 +99,8 @@
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, deshabilitar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
@@ -123,15 +123,15 @@
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, habilitar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
                 Livewire.emitTo('admin.users-index','deshabilitar',posId);
                 Swal.fire(
-                '¡Deshabilitado!',
+                '¡Habilitado!',
                 'El usuario ha sido habilitado.',
                 'success'
             )
@@ -147,8 +147,8 @@
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, eliminar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {

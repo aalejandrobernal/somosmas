@@ -1,7 +1,7 @@
 <div>
     <div class="card">
         <div class="card-header">
-            <input wire:model="search" class="form-control" placeholder="Ingrese Nombre o Documento">
+            <input wire:model="search" class="form-control" placeholder="Ingrese nombre o palabra clave">
         </div>
         <div class="card-header">
             <div class="row">
@@ -20,7 +20,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Titulo</th>
+                            <th>Título</th>
                             <th>Noticia destacada</th>
                             <th>Adjunto</th>
                             <th></th>
@@ -38,12 +38,12 @@
                                     @endif
                                     <td>{{$new->adjunto}}</td>
                                     <td width="10px">
-                                        <a class="btn btn-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
+                                        <a style="background: #FE3EB2; border-color: #FE3EB2" class="btn btn-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td width="10px">
-                                        <button type="submit" class="btn btn-success btn-sm" wire:click="$emit('hab',{{$new->id}})">
+                                        <button style="background: #343a40; border-color: #343a40" type="submit" class="btn btn-success btn-sm" wire:click="$emit('hab',{{$new->id}})">
                                             Habilitar
                                         </button>
                                     </td>
@@ -65,12 +65,12 @@
                                     @endif
                                     <td>{{$new->adjunto}}</td>
                                     <td width="10px">
-                                        <a class="btn btn-outline-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
+                                        <a style="color: white; background: #FE3EB2; border-color: #FE3EB2" class="btn btn-outline-primary btn-sm" href="{{route('admin.news.edit',$new)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td width="10px">
-                                        <button type="submit" class="btn btn-outline-danger btn-sm" wire:click="$emit('des_hau',{{$new->id}})">
+                                        <button style="color: white; background: #343a40; border-color: #343a40" type="submit" class="btn btn-outline-danger btn-sm" wire:click="$emit('des_hau',{{$new->id}})">
                                             Deshabilitar
                                         </button>
                                     </td>
@@ -96,7 +96,7 @@
 @if (session('info'))
     <script>
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: '{{session('info')}}',
             showConfirmButton: false,
@@ -108,19 +108,19 @@
 <script>
     Livewire.on('des_hau',posId => {
     Swal.fire({
-        title: '¿Está seguro(a) de deshabilitar esta noticia?',
+        title: '¿Estás seguro(a) de deshabilitar esta noticia?',
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, deshabilitar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
         if (result.isConfirmed) {
             Livewire.emitTo('admin.news-index','deshabilitar',posId);
                 Swal.fire(
-                '¡Perfecto!',
+                'Proceso Ejecutado!',
                 'La noticia ha sido deshabilitada.',
                 'success'
             )
@@ -131,12 +131,12 @@
 <script>
     Livewire.on('hab',posId => {
     Swal.fire({
-        title: '¿Está seguro(a) de habilitar esta noticia?',
+        title: '¿Estás seguro(a) de habilitar esta noticia?',
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, habilitar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
@@ -155,12 +155,12 @@
 <script>
     Livewire.on('delete',posId => {
     Swal.fire({
-        title: '¿Está seguro(a) de eliminar este usuario?',
+        title: '¿Estás seguro(a) de eliminar esta noticia?',
         text: "¡No podrá revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: '¡Sí, eliminar!',
         cancelButtonText: 'Cancelar'
     }).then((result) => {
@@ -179,20 +179,22 @@
 <script>
     Livewire.on('destacada1',(posId,not) => {
     Swal.fire({
-        title: '¿Noticia destacada?',
+        title: 'Noticia destacada',
         icon: 'question',
+        text: '¿Estás seguro(a) de seleccionar esta noticia como la destacada?',
+        footer: 'Se visualizará en el inicio del portal.',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: '#FE3EB2',
+        cancelButtonColor: '#343a40',
         confirmButtonText: 'Si',
         cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
             Livewire.emitTo('admin.news-index','destacada',posId,not);
             Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
-            title: '¡Perfecto!',
+            title: '¡Proceso finalizado correctamente!',
             showConfirmButton: false,
             timer: 2000
             })
