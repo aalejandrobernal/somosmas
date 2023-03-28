@@ -480,8 +480,7 @@
 
             {{-- imagenes noticias --}}
             <div id="carouselExampleControls" style="height: 500px" class="carousel slide col-6 noticia" data-ride="carousel">
-                <div class="carousel-inner">
-                    @if ($var > 1)
+                <div class="carousel-inner">                    
                         <?php $porciones = explode(',', $noticias->imagenes); ?>
                         @for ($i = 0; $i < count($porciones); $i++)
                             <div class="{{ $i == 0 ? 'active' : '' }} carousel-item">
@@ -498,12 +497,6 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    @else
-                        <div class="carousel-item active">
-                            <img class="img_noticia"src="storage/images/noticias/{{ $noticias->imagenes }}"
-                                alt=""class="">
-                        </div>
-                    @endif
                 </div>
             </div>
             <div class="row">

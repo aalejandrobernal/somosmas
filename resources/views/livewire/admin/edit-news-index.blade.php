@@ -29,7 +29,10 @@
             <div class="form-group col-4">
                 <div class="row" style="margin: 3rem 0 4rem 0">
                     {!! Form::label('adjunto', 'Adjuntos') !!}
-                    {!! Form::text('adjunto',null, ['class'=>'form-control','placeholder'=>'Ingrese links de adjuntos']) !!}
+                    {!! Form::text('adjunto',null, ['class'=>
+                    'form-control',
+                    'wire:model'=>'new.adjunto',
+                    'placeholder'=>'Ingrese links de adjuntos']) !!}
                     @error('adjunto')
                         <span class="text-danger">{{$message }}</span>
                     @enderror
@@ -111,11 +114,13 @@
                 </label>
             </div>
         </div>
+        <hr>
+        <button type="submit" class="btn btn-personal" wire:click="$emit('save')">
+            Actualizar
+         </button>
     </div>
   </div>
-  <button type="submit" class="btn btn-personal" wire:click="$emit('save')">
-    Actualizar
- </button>
+  
   <hr>
 {!!Form::close()!!}
 @push('js')

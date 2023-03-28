@@ -18,12 +18,14 @@ class EditNewsIndex extends Component
     public $estado;
     public $contenido;
     public $adjunto ;
+    PUBLIC $a;
    
     protected $rules = [
         'new.titulo' => 'required',
         'new.estado' => 'required',
         'new.contenido' => 'required',
         'new.imagenes' => 'max:2048',
+        'new.adjunto' => '',
     ];
 
     public function mount(Noticia $new){
@@ -58,12 +60,16 @@ class EditNewsIndex extends Component
         }
         if($this->contenido){
             $this->new->contenido = $this->contenido;
+            
         }
+        $this->new->imagenes = $a;
+        Log::info($a);
             $this->new->save([
             'titulo' => $this->titulo,
             'estado' => $this->estado,
             'contenido' => $this->contenido,
-            'imagenes' => $a,
+            'imagenes' => $this->imagenes,
+            
         ]);
         return redirect()->route('admin.news.index')->with('info','La Noticia ha sido actualizada con éxito');
     }

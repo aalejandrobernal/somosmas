@@ -109,11 +109,14 @@
                  {!! Form::label('estado', 'Borrador') !!} --}}
             </div>
         </div>
+        <hr>
+        <button type="submit" class="btn btn-personal" wire:click="$emit('save')">
+            Enviar
+         </button>
     </div>
+    
   </div>
-<button type="submit" class="btn btn-personal" wire:click="$emit('save')">
-   Enviar
-</button>
+
 {!!Form::close()!!}
  
 <hr>

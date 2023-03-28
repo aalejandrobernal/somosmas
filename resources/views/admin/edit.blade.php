@@ -113,7 +113,7 @@
                     <div class="row">
                         <div class="form-group col-4">
                             {!! Form::label('fecha_ingreso', 'Fecha de Ingreso') !!}
-                            {!! Form::date('fecha_ingreso',\Carbon\Carbon::now(), ['class'=>'form-control']) !!}
+                            {!! Form::date('fecha_ingreso',null, ['class'=>'form-control']) !!}
                             @error('fecha_ingreso')
                                 <span class="text-danger">{{$message }}</span>
                             @enderror
