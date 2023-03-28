@@ -1,7 +1,7 @@
 <div>
     <div class="card">
         <div class="card-header">
-            <input wire:model="search" class="form-control" placeholder="Ingrese nombre o palabra clave">
+            <input wire:model="search" class="form-control" placeholder="Ingrese título de la noticia">
         </div>
         <div class="card-header">
             <div class="row">
@@ -109,7 +109,7 @@
     Livewire.on('des_hau',posId => {
     Swal.fire({
         title: '¿Estás seguro(a) de deshabilitar esta noticia?',
-        text: "¡No podrá revertir esta acción!",
+        text: "¡No podrás revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#FE3EB2',
@@ -132,7 +132,7 @@
     Livewire.on('hab',posId => {
     Swal.fire({
         title: '¿Estás seguro(a) de habilitar esta noticia?',
-        text: "¡No podrá revertir esta acción!",
+        text: "¡No podrás revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#FE3EB2',
@@ -156,7 +156,7 @@
     Livewire.on('delete',posId => {
     Swal.fire({
         title: '¿Estás seguro(a) de eliminar esta noticia?',
-        text: "¡No podrá revertir esta acción!",
+        text: "¡No podrás revertir esta acción!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#FE3EB2',

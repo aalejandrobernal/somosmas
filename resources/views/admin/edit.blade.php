@@ -31,8 +31,11 @@
         <strong>{{session('info')}}</strong>
     </div>
 @endif
-    {!!Form::model($user,['route'=> ['admin.users.update',$user],'method'=>'put','id'=>'form2'])!!}
-
+    {!!Form::model($user,[
+        'route'=> ['admin.users.update',$user],
+        'enctype'=>'multipart/form-data',
+        'method'=>'put',
+        'id'=>'form2'])!!}
             <div class="card">
                 <div class="card-body" >
                     <h5 class="card-title">DATOS PERSONALES</h5>

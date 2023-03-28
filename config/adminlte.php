@@ -212,7 +212,7 @@ return [
     */
 
     'sidebar_mini' => 'lg',
-    'sidebar_collapse' => true,
+    'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
@@ -254,7 +254,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/',
+    'dashboard_url' => '/admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -294,7 +294,7 @@ return [
         // Navbar items:
         [
             'type'         => 'navbar-search',
-            'text'         => 'search',
+            'text'         => 'Buscar',
             'topnav_right' => true,
         ],
         [
@@ -306,7 +306,7 @@ return [
         // Sidebar items:
         [
             'type' => 'sidebar-menu-search',
-            'text' => 'search',
+            'text' => 'Buscar',
         ],
         [
             'text' => 'blog',
@@ -321,6 +321,7 @@ return [
         //     'label_color' => 'success',
 
         // ],
+        ['header' => 'Gestor de contenido'],
         [
             'text'        => 'Colaboradores',
             'url'         => 'admin/users',
@@ -328,7 +329,6 @@ return [
             'label_color' => 'success',
 
         ],
-        ['header' => 'Gestor de contenido'],
         [
             'text'        => 'Noticias',
             'route'       => 'admin.news.index',
@@ -339,7 +339,7 @@ return [
         [
             'text'        => 'Salir',
             'url'         => 'inicio',
-            'icon'        => 'fas fa-solid fa-circle',
+            'icon'        => 'fas fa-solid fa-times-circle',
             'label_color' => 'success',
         ],
         // [

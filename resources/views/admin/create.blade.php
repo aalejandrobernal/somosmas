@@ -16,7 +16,7 @@
 @section('title', 'Crear Colaborador')
 
 @section('content_header')
-    <h1>Nuevo Colaboador</h1>
+    <h1>Nuevo Colaborador</h1>
     @livewireStyles
 @stop
 

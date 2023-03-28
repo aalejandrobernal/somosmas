@@ -37,33 +37,36 @@ use PhpParser\Node\Stmt\Return_;
 
         $request->validate([
             'documento'=>'required|unique:users',
-            'nombre'=>'required',
+            'nombre'=>'required|unique:users',
             'fecha_nacimiento'=>'required',
             'fecha_ingreso'=>'required',
             'cargo'=>'required',
             'empresa_id'=>'required',
-            'imagen'=>'image|required'
+            'imagen'=>'image'
         ]);
 
-         $nombre_img=$request->input('documento');
-         $extension= $request->file('imagen')->getClientOriginalExtension();
-         $nombre_foto=$nombre_img.'.'.$extension;
+        $request->merge(['cargo'=>mb_strtoupper($request->cargo)]);
+        $request->merge(['nombre'=>mb_strtoupper($request->nombre)]);
+        $request->merge(['email'=>strtolower($request->email)]);
+        $request->merge(['estado'=>1]);
+        $request->merge(['password'=>$request->documento]);
 
-         $request->merge(['cargo'=>mb_strtoupper($request->cargo)]);
-         $request->merge(['nombre'=>mb_strtoupper($request->nombre)]);
-         $request->merge(['email'=>strtolower($request->email)]);
-         $request->merge(['foto'=>$nombre_foto]);
-         $request->merge(['password'=>$nombre_img]);
-         $request->merge(['estado'=>1]);
-         Log::info($request->file('imagen'));
-
-         Image::make($request->file('imagen'))
-         ->resize(1000, null, function ($constraint) {
-            $constraint->aspectRatio();
-         })
-         ->save('images\fotos/'.$nombre_foto);
+        if($request->hasFile('imagen')){
+            $nombre_img=$request->input('documento');
+            $extension= $request->file('imagen')->getClientOriginalExtension();
+            $nombre_foto=$nombre_img.'.'.$extension;
+            $request->merge(['foto'=>$nombre_foto]);
+            $request->merge(['password'=>$nombre_img]);
+            Image::make($request->file('imagen'))
+            ->resize(1000, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })
+            ->save('images\fotos/'.$nombre_foto);
+        }
         User::create($request->all());
         return redirect()->route('admin.users.index')->with('info','El colaborador se creó con exito');
+        
+
     }
     public function edit(User $user)
     {
@@ -76,13 +79,26 @@ use PhpParser\Node\Stmt\Return_;
     {
         $request->validate([
             "documento'=>'required|unique:users,documento,$user->id",
-            'nombre'=>'required',
+            "nombre'=>'required|unique:users,nombre,$user->id",
             'fecha_nacimiento'=>'required',
             'fecha_ingreso'=>'required',
             'cargo'=>'required',
             'empresa_id'=>'required:',
-            "imagen'=>'image:users,imagen,$user->id"
+            "imagen'=>'image"
         ]);
+        
+        if($request->hasFile('imagen')){
+            $nombre_img=$request->input('documento');
+            $extension= $request->file('imagen')->getClientOriginalExtension();
+            $nombre_foto=$nombre_img.'.'.$extension;
+            $request->merge(['foto'=>$nombre_foto]);
+            $request->merge(['password'=>$nombre_img]);
+            Image::make($request->file('imagen'))
+            ->resize(1000, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })
+            ->save('images\fotos/'.$nombre_foto);
+        }
 
         $request->merge(['cargo'=>mb_strtoupper($request->cargo)]);
         $request->merge(['nombre'=>mb_strtoupper($request->nombre)]);
@@ -97,6 +113,6 @@ use PhpParser\Node\Stmt\Return_;
     public function restpassword(User $user)
     {
         $user->update(['password' => $user->documento]);
-        return redirect()->route('admin.users.edit',$user)->with('info','Los datos han sido actualizados');
+        return redirect()->route('admin.users.edit',$user)->with('info','La contraseña se han restablecido');
     }
 }
