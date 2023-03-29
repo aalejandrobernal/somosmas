@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Intervention\Image\Facades\Image;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Storage;
+
 
 use Illuminate\Support\Facades\Log;
 use PhpParser\Node\Stmt\Return_;
@@ -26,7 +28,8 @@ use PhpParser\Node\Stmt\Return_;
 
     public function create()
     {
-        $empresas=Empresa::pluck('nombre', 'id');
+        $empresas=Empresa::where('estado', '1')
+        ->get();
         $roles = Role::all();
         return view('admin.create',compact('roles','empresas'));
     }
@@ -70,9 +73,11 @@ use PhpParser\Node\Stmt\Return_;
     }
     public function edit(User $user)
     {
-        $empresas=Empresa::pluck('nombre', 'id');
+        $empresas=Empresa::where('estado', '1')
+        ->get();
         $roles = Role::all();
-        return view ('admin.edit',compact('user','roles','empresas'));
+         return view ('admin.edit',compact('user','roles','empresas'));
+        
     }
     
     public function update(Request $request,User $user)
@@ -86,7 +91,6 @@ use PhpParser\Node\Stmt\Return_;
             'empresa_id'=>'required:',
             "imagen'=>'image"
         ]);
-        
         if($request->hasFile('imagen')){
             $nombre_img=$request->input('documento');
             $extension= $request->file('imagen')->getClientOriginalExtension();
@@ -99,20 +103,19 @@ use PhpParser\Node\Stmt\Return_;
             })
             ->save('images\fotos/'.$nombre_foto);
         }
-
         $request->merge(['cargo'=>mb_strtoupper($request->cargo)]);
         $request->merge(['nombre'=>mb_strtoupper($request->nombre)]);
         $request->merge(['email'=>strtolower($request->email)]);
         
         $user->roles()->sync($request->roles);
         $user->update($request->all());
-        return redirect()->route('admin.users.edit',$user)->with('info','Los datos han sido actualizados');
+        return redirect()->route('admin.users.edit',$user)->with('info','Los datos han sido actualizados.');
     }
 
 
     public function restpassword(User $user)
     {
         $user->update(['password' => $user->documento]);
-        return redirect()->route('admin.users.edit',$user)->with('info','La contraseña se han restablecido');
+        return redirect()->route('admin.users.edit',$user)->with('info','La contraseña ha sido restablecida al número de cédula.');
     }
 }

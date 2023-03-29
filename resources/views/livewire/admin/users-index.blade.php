@@ -1,16 +1,18 @@
 <div>
     <div class="card">
         <div class="card-header">
-            <input wire:model="search" class="form-control" placeholder="Ingrese Nombre o Documento">
+            <input wire:model="search" class="form-control" placeholder="Busca por Nombre o Documento">
         </div>
         <div class="card-header">
             <div class="row">
                 <div class="col-10" >
-                    <a class="btn btn-enviar " href="{{route('admin.users.create')}}">Agregar Colaborador</a>
+                    <a class="btn btn-magenta" href="{{route('admin.users.create')}}">Agregar Colaborador</a>
                 </div>
+                
                 <div class="col-2" >
                     {!! Form::label('estado', 'Activos') !!}
-                    <input wire:model="estado" type="checkbox">
+                    {{-- <input wire:model="estado" type="checkbox"> --}}
+                    <input type="checkbox" wire:model="estado"  wire:click="$emit('noti_pub')" >
                 </div>
             </div>
         </div>
@@ -39,17 +41,17 @@
                                     <td>{{$user->fecha_nacimiento}}</td>
                                     <td>{{$user->fecha_ingreso}}</td>
                                     <td >
-                                        <a style="background: #FE3EB2; border-color: #FE3EB2" class="btn btn-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
+                                        <a class="btn btn-magenta" href="{{route('admin.users.edit',$user)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td >
-                                        <button style="background: #343a40; border-color: #343a40" type="submit" class="btn btn-success d-block mx-auto"  wire:click="$emit('hab',{{$user->id}})">
+                                        <button type="submit" class="btn btn-gris"  wire:click="$emit('hab',{{$user->id}})">
                                             Habilitar
                                         </button>
                                     </td>
                                     <td >
-                                        <button type="submit" class="btn btn-danger d-block mx-auto" wire:click="$emit('delete',{{$user->id}})">
+                                        <button type="submit" class="btn btn-rojo" wire:click="$emit('delete',{{$user->id}})">
                                             Eliminar
                                         </button>
                                     </td>
@@ -63,12 +65,12 @@
                                     <td>{{$user->fecha_nacimiento}}</td>
                                     <td>{{$user->fecha_ingreso}}</td>
                                     <td >
-                                        <a style="color: white; background: #FE3EB2; border-color: #FE3EB2" class="btn btn-outline-primary d-block mx-auto" href="{{route('admin.users.edit',$user)}}">
+                                        <a class="btn btn-magenta" href="{{route('admin.users.edit',$user)}}">
                                             Editar
                                         </a>
                                     </td>
                                     <td >
-                                        <button style="color: white; background: #343a40; border-color: #343a40" type="submit" class="btn btn-outline-danger d-block mx-auto"  wire:click="$emit('des_ha',{{$user->id}})">
+                                        <button type="submit" class="btn btn-gris"  wire:click="$emit('des_ha',{{$user->id}})">
                                             Deshabilitar
                                         </button>
                                     </td>
@@ -161,6 +163,16 @@
             )
             
         }
+    })
+});
+</script>
+<script>
+    Livewire.on('noti_pub',() => {
+    Swal.fire({
+        position: 'center',
+            title: 'Cargando, por favor no cierres la ventana',
+            showConfirmButton: false,
+            timer: 3000
     })
 });
 </script>

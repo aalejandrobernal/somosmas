@@ -20,28 +20,7 @@ class NewController extends Controller
     }
     public function store(StoreNewRequest $request)
     {
-        
-
-        $imagenes=$request->input('titulo');
-       
-
-        // Image::make($request->file('imagenes'))
-        //  ->resize(1000, null, function ($constraint) {
-        //     $constraint->aspectRatio();
-        // })
-        // ->save('images\ensayo/'.$nombre_foto);
-
-        // return $request->all();
-        // Noticia::create([
-        //         'titulo' => $request->input('titulo'),
-        //         'contenido' => $request->input('contenido'),
-        //         'adjunto' => $request->input('adjunto'),
-        //         'estado' => $request->input('estado'),
-        //     ]);
-        // $new=Noticia::create($request->all());
-        // return $request->all();
-
-        // return redirect()->route('admin.news.edit',$new)->with('info','Los datos han sido actualizados');
+        //
     }
 
 

@@ -1,5 +1,5 @@
 <div>
-    <button type="button" class="btn btn-enviar" data-toggle="modal" data-target="#exampleModalCenter">
+    <button type="button" class="btn btn-magenta" data-toggle="modal" data-target="#exampleModalCenter">
         Nueva Noticia
       </button>
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" wire:ignore >
@@ -112,7 +112,7 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              {!! Form::submit('Crear Noticia', ['class'=>'btn btn btn-enviar']) !!}
+              {!! Form::submit('Crear Noticia', ['class'=>'btn btn btn-magenta']) !!}
             </div>
           </div>
         </div>

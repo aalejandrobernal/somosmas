@@ -19,6 +19,8 @@ class EditNewsIndex extends Component
     public $contenido;
     public $adjunto ;
     PUBLIC $a;
+
+    
    
     protected $rules = [
         'new.titulo' => 'required',

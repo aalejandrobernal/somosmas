@@ -1,10 +1,21 @@
+.btn-gris{
+    color: white;
+    background: #343a40;
+    border-color: #343a40;
+}
+.btn-gris:hover{
+    color: white;
+    background: #343a40a2;
+    border-color: #343a40a2;
+}
+
 .btn-personal{
-    background: fuchsia;
-    color: azure;
+    background: #FE3EB2;
+    color: white;
 }
 .btn-personal:hover {
-    background: rgb(201, 1, 201);
-    color: azure;
+    background: #d10b82;
+    color: white;
 }
 .img_noti .active img{
     height: 30rem;

@@ -2,9 +2,11 @@
 
 namespace App\Http\Livewire\Admin;
 
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use App\Models\Noticia;
 use App\Models\Noticia_destacada;
+use Facade\Ignition\ErrorPage\Renderer;
 use Livewire\WithPagination;
 use Livewire\WithFileUploads;
 
@@ -15,14 +17,19 @@ class NewsIndex extends Component
     protected $paginationTheme = "bootstrap";
     public $estado=1;
     public $destacado;
+    public $destacada2  ;
     public $search;
-    protected $listeners = ['render','deshabilitar','eliminar','destacada'];
+    protected $listeners = ['mount','deshabilitar','eliminar','destacada_nuevo1'];
     public function updatingSearch()
     {
         $this->resetPage();
     }
+    public function mount()
+    {
+        $this->destacada2 = Noticia_destacada::pluck('noticias_id');
+    }
     public function render()
-    {   
+    {
         $destacada=Noticia_destacada::first();
         $news = Noticia::
         where(function($search){
@@ -31,6 +38,7 @@ class NewsIndex extends Component
         })
         ->where('estado',$this->estado)
         ->paginate(20);
+        
         return view('livewire.admin.news-index',compact('news','destacada'));
     }
     
@@ -47,8 +55,11 @@ class NewsIndex extends Component
     {
         $news->update(['estado' => '2']);
     }
-    public function destacada(Noticia $news,Noticia_destacada $destacada)
+
+    public function destacada_nuevo1(Noticia_destacada $destacada)
     {
-        $destacada->update(['noticias_id' => $news->id]);
+        $destacada = Noticia_destacada::find(1);
+        $destacada->noticias_id = $this->destacada2;
+        $destacada->save();
     }
 }

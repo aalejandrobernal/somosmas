@@ -99,15 +99,16 @@
                             </div>
                         </div>
                     </div>
-                </div>                
+                </div>
             @endif
         </div>
         <div class="row">
             <div class="form-group col-4" >
                  <label>
                     <input type="radio" name="estado" value="1" wire:model=new.estado checked>
-                    Publicado
+                    Publicado      
                 </label>
+                
                 <label>
                     <input type="radio" name="estado" value="0"wire:model=new.estado>
                     Borrador
@@ -115,9 +116,17 @@
             </div>
         </div>
         <hr>
-        <button type="submit" class="btn btn-personal" wire:click="$emit('save')">
-            Actualizar
-         </button>
+        <div class="row">
+            <div class="col-1"> 
+                <a class="btn btn-gris" href="{{ url('admin/news') }}">Volver</a>
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-personal" wire:click="$emit('save1',{{$new->id}})">
+                Actualizar
+                </button>
+            </div>
+            
+        </div>
     </div>
   </div>
   
@@ -125,6 +134,7 @@
 {!!Form::close()!!}
 @push('js')
     <script src="{{ asset('ckeditor/build/ckeditor.js') }}"></script>
+    <script src="{{ asset('js/sweetalert.js') }}"></script>
     <script>
         ClassicEditor
        .create( document.querySelector( '#contenido' ) )
@@ -137,5 +147,17 @@
            console.error( error );
        } );
    </script>
+   <script>
+    Livewire.on('save1',posId => {
+        Swal.fire({
+            position: 'center',
+            title: 'Cargando.... Por favor no cierres la ventana',
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            timer: 3000
+            })
+});
+</script>
 @endpush
 </div>
