@@ -28,6 +28,24 @@
       'Invoice' => 'Genert\\BBCode\\Facades\\BBCode',
     ),
   ),
+  'intervention/image' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Intervention\\Image\\ImageServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Image' => 'Intervention\\Image\\Facades\\Image',
+    ),
+  ),
+  'jeroennoten/laravel-adminlte' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'JeroenNoten\\LaravelAdminLte\\AdminLteServiceProvider',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 
@@ -49,6 +67,29 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
+  'laravelcollective/html' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Collective\\Html\\HtmlServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Form' => 'Collective\\Html\\FormFacade',
+      'Html' => 'Collective\\Html\\HtmlFacade',
+    ),
+  ),
+  'livewire/livewire' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Livewire\\LivewireServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Livewire' => 'Livewire\\Livewire',
+    ),
+  ),
   'nesbot/carbon' => 
   array (
     'providers' => 
@@ -61,6 +102,13 @@
     'providers' => 
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
+  'spatie/laravel-permission' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\Permission\\PermissionServiceProvider',
     ),
   ),
 );

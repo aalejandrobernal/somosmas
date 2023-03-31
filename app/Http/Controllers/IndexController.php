@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Banner;
 use App\Models\Content;
 use App\Models\Formacion;
@@ -14,10 +13,11 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Imports\UsersImport;
 use App\Models\Noticia;
 use App\Models\Noticia_destacada;
+use App\Models\Etapa;
+use App\Models\Evidencia;
 use Illuminate\Http\RedirectResponse;
 
 use Genert\BBCode\BBCode;
-
 
 use Carbon\Carbon;
 
@@ -25,10 +25,10 @@ use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
-
 
 class IndexController extends Controller
 {
@@ -38,16 +38,14 @@ class IndexController extends Controller
         $contenido = Banner::where('estado', '1')
         ->get();
        
-
         $id_noti_des = Noticia_destacada::where('id', '1')
         ->first()
         ->noticias_id;
                 
-
         $noticia = Noticia::where('id', $id_noti_des)
         ->Limit('1')
+        ->where('estado', '1')
         ->get();
-         
 
         $card = Formacion::where('estado', '1')
             ->where('categoria_id', '3')
@@ -55,13 +53,10 @@ class IndexController extends Controller
             ->where('orden', '1')
             ->get();
         
-
         $formacion = Formacion::where('estado', '1')
             ->where('categoria_id', '3')
             ->orderBy('created_at', 'desc')
             ->get();
-
-       
 
         $now = Carbon::now();
         $currentDate = $now->toDateString();
@@ -97,14 +92,13 @@ class IndexController extends Controller
 
         $fecha_ingreso = Carbon::now();
 
-
         $cumplep = User::join('empresas', 'empresas.id', '=', 'users.empresa_id')
             ->select('users.nombre as nombre',
-             'empresas.nombre as empresa', 
+             'empresas.nombre as empresa',
              'users.foto as foto',
-             'users.cargo as cargo', 
-             'users.fecha_nacimiento', 
-             'users.fecha_ingreso', 
+             'users.cargo as cargo',
+             'users.fecha_nacimiento',
+             'users.fecha_ingreso',
              'users.fecha_ingreso as inicio')
             ->where('empresas.estado', '1')
             ->get();
@@ -127,23 +121,21 @@ class IndexController extends Controller
             }
         }
 
-        $fecha_hoy = Carbon::now();
+        $fecha_hoy= Carbon::now();
         $fecha_hoy = $fecha_hoy->format('m-d');
 
         $formatos = $formato == $formato1;
 
-
         return view('inicio.index',compact('contenido','noticia', 'card',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
+
+        
     }
 
     public function cultura()
     {
-
-
         return view('inicio.cultura');
     }
-
 
     public function actividad()
     {
@@ -152,7 +144,6 @@ class IndexController extends Controller
 
     public function portales()
     {
-
         $portal = Empresa::where('estado', '1')
             ->get();
         return view('inicio.portales', compact(('portal')));
@@ -161,17 +152,29 @@ class IndexController extends Controller
     public function noticia()
     {
         $not = Noticia::where('estado', '1')
+        ->orderBy('updated_at', 'desc')
         ->get();
-        Log::info(gettype($not));
         return view('inicio.noticia', compact('not'));
     }
 
-    public function contrasena()
+    public function editar_perfil()
     {
-        return view('inicio.contrasena');
+        $empresas = DB::table('users')
+            ->join('empresas', 'empresas.id', '=', 'users.empresa_id')
+            ->select('empresas.nombre')
+            ->where('users.documento', auth()->user()->documento)
+            ->get();                     
+                      
+        return view('inicio.editar_perfil', compact('empresas'));
+    }
+
+    public function cambio_foto()
+    {
+        return view('inicio.cambio_foto');
     }
 
     public function cambiocontrasena(Request $request) {
+        
         $user           = Auth::user();
         $userId         = $user->id;
         $userPassword   = $user->password;
@@ -181,10 +184,8 @@ class IndexController extends Controller
         $confirmActual  = sha1($request->password_actual); 
 
         // Log::info("Entra a cambio contraseña");
-        // Log::info("Usuario:" . $userPassword);
-        // Log::info("Ingreso actual:" . $confirmActual);
-
-        // ($userPassword == $confirmActual) ?  Log::info("Las contraseñas coinciden") :  Log::info("La contraseña es diferente");           
+        // Log::info("Usuario:" . $userPassword);php
+        // Log::info($userEmpresa);          
 
             //valida si la clave actual es la misma del usuario en sesión
             if ($confirmActual == $userPassword){
@@ -199,19 +200,76 @@ class IndexController extends Controller
                             $sqlBD = DB::table('users')
                             ->where('id', $user->id)
                             ->update(['password' => $user->password]);
-                            return back()->withErrors(['cambio'=>'Felicitaciones, tu clave ha sido cambiada exitosamente.']);
+                            return back()->withErrors(['cambio'=>'Tu clave ha sido cambiada exitosamente.']);
 
                     }else{
-                        return back()->withErrors(['confirm_password'=>'Por favor verifica: Las claves nuevas deben tener mínimo 8 dígitos.']);
+                        return back()->withErrors(['confirm_password'=>'Las claves nuevas deben tener mínimo 8 dígitos.']);
                     }
                 }else{
-                    return back()->withErrors(['confirm_password'=>'Por favor verifica: La claves nuevas no coinciden.']);
+                    return back()->withErrors(['confirm_password'=>'La claves nuevas no coinciden.']);
                 }
             }else{
-                return back()->withErrors(['password_actual'=>'Por favor verifica: La clave actual no coincide.']);
+                return back()->withErrors(['password_actual'=>'La clave actual no coincide.']);
             }
     }
 
+    public function cambiofoto(Request $request) {
+        
+        $user           = Auth::user();
+        $userId         = $user->id;
+        $userFoto       = $user->foto;
+        $userDoc        = $user->documento;
+
+        // Log::info($UserDoc);
+
+        $request->validate([
+            'foto' => "image|mimes:jpeg,jpg,png|max:150|"
+        ]);
+
+        if($request->hasfile('foto')){
+            $destino = '../public/images/fotos/'.$userFoto;
+
+            if(File::exists($destino)){
+                File::delete($destino);
+            }
+            $archivo = $request->file('foto');
+            $extension = $archivo ->getClientOriginalExtension();
+            $nombrearchivo = $userDoc.'.'.$extension;
+            $archivo->move('../public/images/fotos/', $nombrearchivo);
+            $userFoto = $nombrearchivo;
+            
+            $sqlBD = DB::table('users')
+            ->where('id', $userId)
+            ->update(['foto' => $userFoto]);
+            
+            return back()->withErrors(['foto1'=>'Felicitaciones, tu foto ha sido cambiada exitosamente.']);
+        }else{
+            return back()->withErrors(['foto2'=>'No se ha seleccionado ningún archivo']);
+        }
+        
+    }
+
+    // public function cambiodatos(Request $request) {
+        
+    //     $user           = Auth::user();
+    //     $userId         = $user->id;
+    //     $userNombre     = $user->nombre;
+    //     $userDoc        = $user->documento;
+    //     $userNacimiento = $user->fecha_nacimiento;
+    //     $userIngreso    = $user->fecha_ingreso;
+    //     $userCargo      = $user->cargo;
+
+    //     // Log::info($request);
+
+    //     $user->nombre = $request->get('nombre');
+    //     $user->documento = $request->get('documento');
+    //     $user->fecha_nacimiento = $request->get('fecha_nacimiento');
+    //     $user->fecha_ingreso = $request->get('fecha_ingreso');
+    //     $user->save();
+
+    //     return back()->withErrors(['fecha_ingreso'=>'Tus datos han sido actualizado correctamente']);
+    // }
+    
     public function galeria()
     {
         $galeria = Galeria::where('estado', '1')
@@ -242,8 +300,6 @@ class IndexController extends Controller
         return view('inicio.portalliwa');
     }
 
-
-
     public function portalsunco()
     {
         return view('inicio.portalsunco');
@@ -263,76 +319,157 @@ class IndexController extends Controller
 
     public function etapa5liwa()
     {
-        return view('admin.etapa5');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view ('admin.etapa5',[
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
+
     public function etapa10liwa()
     {
-        return view('admin.etapa10');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa10', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa15liwa()
     {
-        return view('admin.etapa15');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa15', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa20liwa()
     {
-        return view('admin.etapa20');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa20', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
 
     /*vistas portal navega */
 
     public function etapa5navega()
     {
-        return view('admin.etapa5n');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa5n', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa10navega()
     {
-        return view('admin.etapa10n');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa10n', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa15navega()
     {
-        return view('admin.etapa15n');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa15n', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa20navega()
     {
-        return view('admin.etapa20n');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa20n', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
 
     /*vistas portal Libre */
 
     public function etapa5libre()
     {
-        return view('admin.etapa5l');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa5l', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa10libre()
     {
-        return view('admin.etapa10l');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa10l', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa15libre()
     {
-        return view('admin.etapa15l');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa15l', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa20libre()
     {
-        return view('admin.etapa20l');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa20l', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
 
     /*vistas portal SuncoEnergy */
 
     public function etapa5sunco()
     {
-        return view('admin.etapa5s');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa5s', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa10sunco()
     {
-        return view('admin.etapa10s');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa10s', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa15sunco()
     {
-        return view('admin.etapa15s');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa15s', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
     public function etapa20sunco()
     {
-        return view('admin.etapa20s');
+        $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+        return view('admin.etapa20s', [
+            'etapas' => $etapas,
+            'evidencias' => $evidencias
+        ]);
     }
   
     public function importUsers()

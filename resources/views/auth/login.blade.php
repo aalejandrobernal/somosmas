@@ -21,6 +21,7 @@
             <label for="cedula" >Contraseña</label>
             <span class="icon-eye1"><i class="fa-solid fa-eye-slash"></i></span>
             <input type="password" class="border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-2 my-2 focus:bg-white" placeholder="Ingresa tu contraseña" id="password" name="password">
+        
         </div>
     
     @error('message')

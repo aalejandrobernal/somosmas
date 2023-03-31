@@ -25,7 +25,7 @@ return [
     'before_or_equal'      => 'El campo :attribute debe ser una fecha anterior o igual a :date.',
     'between'              => [
         'numeric' => 'El campo :attribute debe ser un valor entre :min y :max.',
-        'file'    => 'El archivo :attribute debe pesar entre :min y :max kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar entre :min y :max Kb.',
         'string'  => 'El campo :attribute debe contener entre :min y :max caracteres.',
         'array'   => 'El campo :attribute debe contener entre :min y :max elementos.',
     ],
@@ -46,13 +46,13 @@ return [
     'filled'               => 'El campo :attribute debe tener un valor.',
     'gt'                   => [
         'numeric' => 'El campo :attribute debe ser mayor a :value.',
-        'file'    => 'El archivo :attribute debe pesar más de :value kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar más de :value Kb.',
         'string'  => 'El campo :attribute debe contener más de :value caracteres.',
         'array'   => 'El campo :attribute debe contener más de :value elementos.',
     ],
     'gte'                  => [
         'numeric' => 'El campo :attribute debe ser mayor o igual a :value.',
-        'file'    => 'El archivo :attribute debe pesar :value o más kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar :value o más Kb.',
         'string'  => 'El campo :attribute debe contener :value o más caracteres.',
         'array'   => 'El campo :attribute debe contener :value o más elementos.',
     ],
@@ -66,19 +66,19 @@ return [
     'json'                 => 'El campo :attribute debe ser una cadena de texto JSON válida.',
     'lt'                   => [
         'numeric' => 'El campo :attribute debe ser menor a :value.',
-        'file'    => 'El archivo :attribute debe pesar menos de :value kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar menos de :value Kb.',
         'string'  => 'El campo :attribute debe contener menos de :value caracteres.',
         'array'   => 'El campo :attribute debe contener menos de :value elementos.',
     ],
     'lte'                  => [
         'numeric' => 'El campo :attribute debe ser menor o igual a :value.',
-        'file'    => 'El archivo :attribute debe pesar :value o menos kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar :value o menos Kb.',
         'string'  => 'El campo :attribute debe contener :value o menos caracteres.',
         'array'   => 'El campo :attribute debe contener :value o menos elementos.',
     ],
     'max'                  => [
         'numeric' => 'El campo :attribute no debe ser mayor a :max.',
-        'file'    => 'El archivo :attribute no debe pesar más de :max kilobytes.',
+        'file'    => 'El archivo :attribute no debe pesar más de :max Kb.',
         'string'  => 'El campo :attribute no debe contener más de :max caracteres.',
         'array'   => 'El campo :attribute no debe contener más de :max elementos.',
     ],
@@ -86,7 +86,7 @@ return [
     'mimetypes'            => 'El campo :attribute debe ser un archivo de tipo: :values.',
     'min'                  => [
         'numeric' => 'El campo :attribute debe ser al menos :min.',
-        'file'    => 'El archivo :attribute debe pesar al menos :min kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar al menos :min Kb.',
         'string'  => 'El campo :attribute debe contener al menos :min caracteres.',
         'array'   => 'El campo :attribute debe contener al menos :min elementos.',
     ],
@@ -106,7 +106,7 @@ return [
     'same'                 => 'Los campos :attribute y :other deben coincidir.',
     'size'                 => [
         'numeric' => 'El campo :attribute debe ser :size.',
-        'file'    => 'El archivo :attribute debe pesar :size kilobytes.',
+        'file'    => 'El archivo :attribute debe pesar :size Kb.',
         'string'  => 'El campo :attribute debe contener :size caracteres.',
         'array'   => 'El campo :attribute debe contener :size elementos.',
     ],

@@ -36,7 +36,7 @@
   },
   "homepage": "https://gitlab.com/johan.morales20/somosmas#readme",
   "dependencies": {
+    "sweetalert2": "^11.7.3",
     "swiper": "^8.4.6"
   }
-  
 }
