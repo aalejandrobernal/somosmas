@@ -10,7 +10,6 @@
         .btn-magenta{
             background: #FE3EB2;
             color: azure;
-            margin-right: 15px;
         }
         .btn-magenta:hover {
             background: #d10b82;
@@ -150,10 +149,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-0" >
+                        <div class="col-2" >
                             <a class="btn btn-gris" href="{{ url('admin/users') }}">Volver</a>
                         </div>
-                        <div class="col-2" >
+                        <div class="col-3" >
                             {!! Form::submit('Actualizar Colaborador', ['id'=>'btn2','class'=>'btn btn-magenta']) !!}
                             {!!Form::close()!!}
                         </div>

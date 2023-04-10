@@ -44,7 +44,7 @@
                             <label class="label" for="documento">Documento</label>
                             <input disabled type="text" value="{{ auth()->user()->documento }}" id="documento" name="documento" class="input border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-1 my-1">
                             </div>
-                    
+                     
                             <div class="single-input-item">
                             <label class="label" for="fecha_nacimiento" class="required">Fecha de Nacimiento</label>
                             <input disabled type="text" value="{{ auth()->user()->fecha_nacimiento }}" class="input border border-gray-200 rounded-md bg-gray-200 w-full text-lg placeholder-gray-900 p-1 my-1" id="fecha_nacimiento" name="fecha_nacimiento">                
