@@ -24,7 +24,7 @@
                     <span class="text-danger">{{$message }}</span>
                 @enderror
         </div>
-        
+
         <div class="row">
             <div class="form-group col-4">
                 <div class="row" style="margin: 3rem 0 4rem 0">
@@ -32,19 +32,19 @@
                     {!! Form::text('adjunto',null, ['class'=>
                     'form-control',
                     'wire:model'=>'new.adjunto',
-                    'placeholder'=>'Ingrese links de adjuntos']) !!}
+                    'placeholder'=>'Ingrese link de adjunto']) !!}
                     @error('adjunto')
                         <span class="text-danger">{{$message }}</span>
                     @enderror
                 </div>
                 <div class="row" style="margin: 3rem 0 4rem 0">
-                   
+
                         {!! Form::label('imagenes', 'Foto') !!}
                         {!! Form::file('imagenes',['accept'=>'image/*','wire:model'=>'imagenes', 'multiple'])!!}
                         @error('imagenes')
                         <span class="text-danger">{{$message }}</span>
                     @enderror
-                    
+
                 </div>
             </div>
             @if ($imagenes)
@@ -58,7 +58,7 @@
                                         <img class="d-block w-100" src="{{$imagen->temporaryURL()}}">
                                     </div>
                                         @php $i=$i+1; @endphp
-                                @endforeach 
+                                @endforeach
                                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                                         data-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -106,9 +106,9 @@
             <div class="form-group col-4" >
                  <label>
                     <input type="radio" name="estado" value="1" wire:model=new.estado checked>
-                    Publicado      
+                    Publicado
                 </label>
-                
+
                 <label>
                     <input type="radio" name="estado" value="0"wire:model=new.estado>
                     Borrador
@@ -117,7 +117,7 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-1"> 
+            <div class="col-1">
                 <a class="btn btn-gris" href="{{ url('admin/news') }}">Volver</a>
             </div>
             <div class="col-2">
@@ -125,11 +125,11 @@
                 Actualizar
                 </button>
             </div>
-            
+
         </div>
     </div>
   </div>
-  
+
   <hr>
 {!!Form::close()!!}
 @push('js')

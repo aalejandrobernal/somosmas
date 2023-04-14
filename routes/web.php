@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GestorAdmin;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\NewController;
+use App\Http\Controllers\Admin\BannerController;
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware('auth');
@@ -82,9 +83,17 @@ Route::put('admin/user/{user}/edit', [UserController::class, 'delete'])
 //Interfaz Admin Noticias
 
 Route::resource('admin/news',NewController::class)
-    ->only('index','edit','create','store','update','show')
+    ->only('index','edit','create')
     ->middleware('can:admin')
     ->names('admin.news');
+
+//Interfaz Admin Banners
+
+Route::resource('admin/banners',BannerController::class)
+->only('index','edit','create','store','update','show')
+->middleware('can:admin')
+->names('admin.banners');
+
 
 //Interfaz De Inicio
 

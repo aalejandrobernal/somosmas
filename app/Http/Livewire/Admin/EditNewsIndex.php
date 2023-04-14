@@ -19,6 +19,7 @@ class EditNewsIndex extends Component
     public $contenido;
     public $adjunto ;
     PUBLIC $a;
+    
 
     
    
@@ -65,7 +66,6 @@ class EditNewsIndex extends Component
             
         }
         $this->new->imagenes = $a;
-        Log::info($a);
             $this->new->save([
             'titulo' => $this->titulo,
             'estado' => $this->estado,

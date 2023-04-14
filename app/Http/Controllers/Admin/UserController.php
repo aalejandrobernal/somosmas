@@ -66,7 +66,8 @@ use PhpParser\Node\Stmt\Return_;
             })
             ->save('images\fotos/'.$nombre_foto);
         }
-        User::create($request->all());
+        $user=User::create($request->all());
+        $user->roles()->sync($request->roles);
         return redirect()->route('admin.users.index')->with('info','El colaborador se creó con exito');
         
 

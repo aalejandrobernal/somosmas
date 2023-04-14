@@ -94,7 +94,7 @@
                 </div>
                 <div class="form-group col-4">
                         {!! Form::label('empresa_id', 'Empresa') !!}
-                        {!! Form::select('empresa_id', $empresas->pluck('nombre')
+                        {!! Form::select('empresa_id', $empresas->pluck('nombre','id')
                             ,null, ['class'=>'form-control','placeholder'=>'Ingrese empresa']) !!}
                         @error('empresa_id')
                             <span class="text-danger">{{$message }}</span>

@@ -29,14 +29,14 @@
         @error('contenido')
                     <span class="text-danger">{{$message }}</span>
                 @enderror
-        
+
         <div class="row" >
             <div class="col-4 adjunto">
                 <div class="row" style="margin: 3rem 0 4rem 0">
                     {!! Form::label('adjunto', 'Adjuntos') !!}
                     {!! Form::text('adjunto',null, ['class'=>
                     'form-control',
-                    'placeholder'=>'Ingrese links de adjuntos',
+                    'placeholder'=>'Ingrese link de adjunto',
                     'wire:model'=>'adjunto',]) !!}
                     @error('adjunto')
                         <span class="text-danger">{{$message }}</span>
@@ -62,7 +62,7 @@
                                     <img class="d-block w-100" src="{{$imagen->temporaryURL()}}">
                                 </div>
                                     @php $i=$i+1; @endphp
-                            @endforeach 
+                            @endforeach
                                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
                                     data-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -90,7 +90,7 @@
 
 
                     @endif
-                
+
         </div>
         <div class="row">
             <div class="form-group col-4" >
@@ -106,13 +106,13 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col-1"> 
+            <div class="col-1">
                 <a class="btn btn-gris" href="{{ url('admin/news') }}">Volver</a>
             </div>
             <div class="col-2">
                <button type="submit" class="btn btn-personal" wire:click="$emit('save')">
                 Enviar
-                </button> 
+                </button>
             </div>
         </div>
         <div wire:loading wire:target="save1">
@@ -122,13 +122,13 @@
             {{-- <button type="submit" class="btn btn-personal" disabled>
                 Enviar
              </button> --}}
-         </div>        
+         </div>
     </div>
-    
+
   </div>
 
 {!!Form::close()!!}
- 
+
 <hr>
 
 @push('js')

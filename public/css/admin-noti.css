@@ -1,3 +1,29 @@
+.btn-magenta{
+    background: #FE3EB2;
+    color: azure;
+}
+.btn-magenta:hover {
+    background: #d10b82;
+    color: azure;
+}
+.btn-gris{
+    color: white;
+    background: #343a40;
+    border-color: #343a40;
+}
+.btn-gris:hover{
+    color: white;
+    background: #343a40a2;
+    border-color: #343a40a2;
+}
+.btn-rojo{
+    background: #fd0101;
+    color: azure;
+}
+.btn-rojo:hover{
+    background: #c20101;
+    color: azure;
+}
 .btn-gris{
     color: white;
     background: #343a40;
@@ -29,7 +55,7 @@
     height: 30rem;
 }
 
-@supports(object-fit: fill){
+@supports(object-fit: contain){
     .img_noti .active img{
       
       object-fit: cover;
@@ -46,8 +72,7 @@
 
 @media only screen and (max-width: 1400px) {
     .img_noti .active img{
-        height: 20rem;
-    
+        max-height: 20rem;
     }
     .img_noti img{
         height: 20rem;
