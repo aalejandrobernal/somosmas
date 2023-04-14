@@ -43,7 +43,15 @@
         <div class="carousel-inner">
             @foreach ($contenido as $banner)
                 <div class="carousel-item @if ($loop->index == 0) active @endif" data-bs-interval="4000">
-                    <img src="images/banners/{{ $banner->ruta }}" class="d-block w-100" alt="...">
+                    @if ($banner->adjunto != null)
+                        <a href="{{ $banner->adjunto }}" target="_blank">
+                            <img src="storage/images/banners/{{ $banner->ruta }}" class="d-block w-100" alt="...">
+                        </a>
+                    @else
+                        <img src="storage/images/banners/{{ $banner->ruta }}" class="d-block w-100" alt="...">
+                    @endif
+                    
+                    {{-- <img src="storage/images/banners/{{ $banner->ruta }}" class="d-block w-100" alt="..."> --}}
                     <div class="carousel-caption d-none d-md-block">
                         <!--h5 style="color: black">{{ $banner->nombre }}</h5>
                                         <p style="color : black">

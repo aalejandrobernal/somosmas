@@ -10,6 +10,7 @@
 @stop
 
 @section('content')
+{{ $news }}
 <p>@livewire('admin.edit-news-index',['new' => $news] , key($news->id))</p>
 @stop
 

@@ -36,6 +36,7 @@ class IndexController extends Controller
     public function index()
     {
         $contenido = Banner::where('estado', '1')
+        ->orderBy('orden', 'asc')
         ->get();
        
         $id_noti_des = Noticia_destacada::where('id', '1')
@@ -49,7 +50,6 @@ class IndexController extends Controller
 
         $card = Formacion::where('estado', '1')
             ->where('categoria_id', '3')
-            ->where('nombre', 'card')
             ->where('orden', '1')
             ->get();
         

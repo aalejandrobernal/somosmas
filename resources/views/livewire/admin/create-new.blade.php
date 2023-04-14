@@ -44,7 +44,7 @@
                       <div class="row">
                           <div class="form-group col-4">
                               {!! Form::label('adjunto', 'Adjuntos') !!}
-                              {!! Form::text('adjunto',null, ['class'=>'form-control','placeholder'=>'Ingrese links de adjuntos','wire:model'=>'adjunto']) !!}
+                              {!! Form::text('adjunto',null, ['class'=>'form-control','placeholder'=>'Ingrese link de adjunto','wire:model'=>'adjunto']) !!}
                               {{$adjunto}}
                               @error('adjunto')
                                   <span class="text-danger">{{$message }}</span>
