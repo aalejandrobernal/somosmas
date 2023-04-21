@@ -77,294 +77,306 @@
         <div class="row">
             <div class="col-12">
 
-                {{-- @if (!@empty($listap) && !@empty($lista))
-                    <section id="aniversario_cumpleaños" class="">
+                @if (!@empty($listap) && !@empty($lista))
+                <section id="aniversario_cumpleaños" class="">
 
-                                <div class="contenedores">
-                                    <div class="col-12 pasti h5">
-                                        <p> <strong>Felicitamos a los colaboradores que
-                                                hoy están cumpliendo una fecha especial.</strong>
-                                        </p>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                        @empty($listap)
-                                        @else
-                                            <div class="col-12">
-                                                <p class="aniversario" style="text-align: center; ">
-                                                    <strong>
-                                                        Aniversario
-                                                    </strong>
+                    <div class="contenedores">
+                        <div class="col-12 pasti h5">
+                            <p> <strong>Felicitamos a los colaboradores que
+                                    hoy están cumpliendo una fecha especial.</strong>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                            @empty($listap)
+                            @else
+                                <div class="col-12">
+                                    <p class="aniversario" style="text-align: center; ">
+                                        <strong>
+                                            Aniversario
+                                        </strong>
+                                        
+                                    </p>
+                                </div>
+                                <div class="carrusel-itemsssn">
+                                    @foreach ($listap as $new)
+                                        <div class="carrusel-itemmms">
 
-                                                </p>
-                                            </div>
-                                            <div class="carrusel-itemsssn">
-                                                @foreach ($listap as $new)
-                                                    <div class="carrusel-itemmms">
+                                            <div class="card" style="height: 28em;">
+                                                <div class="tamaño">
+                                                    @if (is_file('images/fotos/'.$new['foto']))
+                                                        <img src="images/fotos/{{ $new['foto'] }}" alt="">
+                                                    @else
+                                                        <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
+                                                    @endif
 
-                                                        <div class="card" style="height: 28em;">
-                                                            <div class="tamaño">
-                                                                @if (is_file('images/fotos/' . $new['foto']))
-                                                                    <img src="images/fotos/{{ $new['foto'] }}" alt="">
-                                                                @else
-                                                                    <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
-                                                                @endif
-
-                                                            </div>
-
-                                                            <div class="card-body pt-0">
-                                                                <div class="nombre">
-                                                                    <p class="card-title" style="font-size:medium;">
-                                                                        <strong>{{ $new['nombre'] }}</strong>
-                                                                    </p>
-                                                                </div>
-                                                                <div>
-                                                                    <p style="color: #FE3EB2">
-                                                                        <strong>{{ $new['empresa'] }}</strong>
-                                                                    </p>
-                                                                </div>
-                                                                <div>
-                                                                    <p style="color: #707b7c" class="cargo">
-                                                                        <strong>{{ $new['cargo'] }}</strong>
-                                                                    </p>
-                                                                </div>
-                                                                <div>
-                                                                    <p class="años" style="color: #FE3EB2">
-                                                                        <strong>
-                                                                            {{ $new['ann'] }}
-                                                                            @if ($new['ann'] <= 1)
-                                                                                año
-                                                                            @else
-                                                                                años
-                                                                            @endif
-                                                                        </strong>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        @endempty
-                                    </div>
-
-
-
-
-                                    <div class="col-6">
-
-                                    @empty($lista)
-                                    @else
-                                        <div class="col-12">
-                                            <p class="aniversario" style="text-align: center; ">
-                                                <strong>
-                                                    Cumpleaños
-                                                </strong>
-
-                                            </p>
-                                        </div>
-
-                                        <div class="carrusel-itemsss">
-                                            @foreach ($lista as $fecha)
-                                                <div class="carrusel-itemmms">
-
-                                                    <div class="card" style="height: 28rem;">
-                                                        <div class="tamaño">
-                                                            @if (is_file('images/fotos/' . $fecha['foto']))
-                                                                <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
-                                                            @else
-                                                                <img src="{{ asset('images/fotonone.jpeg') }}"
-                                                                    alt="">
-                                                            @endif
-
-                                                        </div>
-
-                                                        <div class="card-body pt-0">
-                                                            <div class="nombre">
-                                                                <p class="card-title" style="font-size:medium;">
-                                                                    <strong>{{ $fecha['nombre'] }}</strong>
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p style="color: #FE3EB2">
-                                                                    <strong>{{ $fecha['empresa'] }}</strong>
-                                                                </p>
-                                                            </div>
-                                                            <div>
-                                                                <p style="color: #707b7c" class="cargo">
-                                                                    <strong>{{ $fecha['cargo'] }}</strong>
-                                                                </p>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
                                                 </div>
-                                            @endforeach
+
+                                                <div class="card-body pt-0">
+                                                    <div class="nombre">
+                                                        <p class="card-title" style="font-size:medium;">
+                                                            <strong>{{ $new['nombre'] }}</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p style="color: #FE3EB2">
+                                                            <strong>{{ $new['empresa'] }}</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p style="color: #707b7c" class="cargo">
+                                                            <strong>{{ $new['cargo'] }}</strong>
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="años" style="color: #FE3EB2">
+                                                            <strong>
+                                                            {{ $new['ann'] }}
+                                                            @if ($new['ann'] <= 1)
+                                                                año
+                                                            @else
+                                                                años
+                                                            @endif
+                                                            </strong>
+                                                        </p>
+                                                    </div>   
+                                                </div>
+                                            </div>
                                         </div>
-                                    @endempty
+                                    @endforeach
                                 </div>
-                            </div>
-                            </div>
-                    </section>
-                @endif --}}
-
-                @if (!@empty($lista) && @empty($listap))
-                    <section id="cumpleaños" class="">
-
-                    @empty($lista)
-                    @else
-                        <div class="row">
-                            <div class="col-4 offset-4">
-                                <h2 class="titulo">Cumpleaños!</h2>
-                                <hr class="line-title">
-                            </div>
+                            @endempty
                         </div>
 
-                        <div class="col-12">
-                            <p class="texto">
-                                Felicitamos a los colaboradores que hoy
-                                <script>
-                                    var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-                                        "Octubre", "Noviembre", "Diciembre");
-                                    var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
-                                    var f = new Date();
-                                    document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f
-                                        .getFullYear());
-                                </script>
-                                están cumpliendo años.
-                            </p>
-                        </div>
-                        <div class="carrusel-itemss">
-                            @foreach ($lista as $fecha)
-                                <div class="carrusel-itemms">
 
-                                    <div class="card" style="height: 28rem;">
-                                        <div class="tamaño">
-                                            @if ($fecha['foto'])
-                                                <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
-                                            @else
-                                                <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
-                                            @endif
+                        {{-- Cumpleaños --}}
 
-                                        </div>
+                        <div class="col-6">
 
-                                        <div class="card-body pt-0">
-                                            <div clas="nombre">
-                                                <p class="card-title" style="font-size:medium;">
-                                                    <strong>{{ $fecha['nombre'] }}</strong>
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p style="color: #FE3EB2">
-                                                    <strong>
-                                                        {{ $fecha['empresa'] }}
-                                                    </strong>
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p style="color: #707b7c" class="cargo">
-                                                    <strong>{{ $fecha['cargo'] }}</strong>
-                                                </p>
+                        @empty($lista)
+                        @else
+                            <div class="col-12">
+                                <p class="aniversario" style="text-align: center; ">
+                                    <strong>
+                                        Cumpleaños
+                                    </strong>
+                                    
+                                </p>
+                            </div>
+
+                            <div class="carrusel-itemsss">
+                                @foreach ($lista as $fecha)
+                                    <div class="carrusel-itemmms">
+
+                                        <div class="card" style="height: 28rem;">
+                                            <div class="tamaño">
+                                                @if (is_file('images/fotos/'.$fecha['foto']))
+                                                   
+                                                    <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
+                                                @else
+                                                    
+                                                    <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
+                                                @endif
+
                                             </div>
 
-
-
+                                            <div class="card-body pt-0">
+                                                <div class="nombre">
+                                                    <p class="card-title" style="font-size:medium;">
+                                                        <strong>{{ $fecha['nombre'] }}</strong>
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <p style="color: #FE3EB2">
+                                                        <strong>{{ $fecha['empresa'] }}</strong>  
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <p style="color: #707b7c" class="cargo">
+                                                        <strong>{{ $fecha['cargo'] }}</strong> 
+                                                    </p>
+                                                </div>
+                                                
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <p>
+                                @endforeach
+                            </div>
+                        @endempty
+                    </div>
+                    {{-- <p>
                             <hr>
-                        </p>
-                    @endempty
-                    </section>
-                @endif
+                        </p> --}}
+                </div>
+            </div>
+        </section>
+    @endif
 
-                @if (!@empty($listap) && @empty($lista))
-                    <section id="aniversario" class="">
+    @if (!@empty($lista) && @empty($listap))
+        <section id="cumpleaños" class="">
 
-                    @empty($listap)
-                    @else
-                        <div class="row">
-                            <div class="col-4 offset-4">
-                                <h2 class="titulo">Aniversario</h2>
-                                <hr class="line-title">
+        @empty($lista)
+        @else
+            <div class="row">
+                <div class="col-4 offset-4">
+                    <h2 class="titulo">Cumpleaños!</h2>
+                    <hr class="line-title">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <p class="texto">
+                    Felicitamos a los colaboradores que hoy
+                    <script>
+                        var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+                            "Octubre", "Noviembre", "Diciembre");
+                        var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+                        var f = new Date();
+                        document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f
+                            .getFullYear());
+                    </script>
+                    están cumpliendo años.
+                </p>
+            </div>
+
+
+
+
+
+            <div class="carrusel-itemss">
+                @foreach ($lista as $fecha)
+                    <div class="carrusel-itemms">
+
+                        <div class="card" style="height: 28rem;">
+                            <div class="tamaño">
+                                @if ($fecha['foto'])
+                                    <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
+                                @else
+                                    <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
+                                @endif
+
+                            </div>
+
+                            <div class="card-body pt-0">
+                                <div clas="nombre">
+                                    <p class="card-title" style="font-size:medium;">
+                                        <strong>{{ $fecha['nombre'] }}</strong>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p style="color: #FE3EB2">
+                                        <strong>
+                                            {{ $fecha['empresa'] }}
+                                        </strong>
+                                     </p>
+                                </div>
+                                <div>
+                                    <p style="color: #707b7c" class="cargo">
+                                        <strong>{{ $fecha['cargo'] }}</strong>
+                                    </p>
+                                </div>
+                                
+
+                                
                             </div>
                         </div>
-                        <br>
-                        <div class="col-12">
-                            <p class="texto">
-                                Felicitamos a los colaboradores que el dia de hoy
-                                <script>
-                                    var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
-                                        "Octubre", "Noviembre", "Diciembre");
-                                    var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
-                                    var f = new Date();
-                                    document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f
-                                        .getFullYear());
-                                </script>
-                                estan cumpliendo su aniversario.
-                                {{-- CAmbiar el texto bien --}}
-                            </p>
+                    </div>
+                @endforeach
+            </div>
+            <p>
+                <hr>
+            </p>
+        @endempty
+
+
+    </section>
+@endif
+
+@if (!@empty($listap) && @empty($lista))
+    <section id="aniversario" class="">
+
+    @empty($listap)
+    @else
+        <div class="row">
+            <div class="col-4 offset-4">
+                <h2 class="titulo">Aniversario</h2>
+                <hr class="line-title">
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            <p class="texto">
+                Felicitamos a los colaboradores que el dia de hoy
+                <script>
+                    var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
+                        "Octubre", "Noviembre", "Diciembre");
+                    var diasSemana = new Array("Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado");
+                    var f = new Date();
+                    document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f
+                        .getFullYear());
+                </script>
+                estan cumpliendo su aniversario.
+                {{-- CAmbiar el texto bien --}}
+            </p>
+        </div>
+        <div class="carrusel-itemss">
+            @foreach ($listap as $new)
+                <div class="carrusel-itemms">
+
+                    <div class="card" style="height: 28rem;">
+                        <div class="tamaño">
+                            @if ($new['foto'])
+                                
+                                <img src="images/fotos/{{ $new['foto'] }}" alt="">
+                            @else
+                                <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
+                            @endif
+
                         </div>
-                        <div class="carrusel-itemss">
-                            @foreach ($listap as $new)
-                                <div class="carrusel-itemms">
 
-                                    <div class="card" style="height: 28rem;">
-                                        <div class="tamaño">
-                                            @if ($new['foto'])
-                                                <img src="images/fotos/{{ $new['foto'] }}" alt="">
-                                            @else
-                                                <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
-                                            @endif
+                        <div class="card-body pt-0">
+                            <div class="nombre">
+                                <p class="card-title" style="font-size:medium;">
+                                    <strong>{{ $new['nombre'] }}</strong>
+                                </p>
+                            </div>
+                            <div>
+                                <p style="color: #FE3EB2">
+                                    <strong>{{ $new['empresa'] }}</strong>
+                                </p>
+                            </div>
+                            <div>
+                                <p class="cargo" style="color: #707b7c">
+                                    <strong>{{ $new['cargo'] }}</strong>
+                                </p>
+                            </div>
+                            <div>
+                                <p style="color: #FE3EB2">
+                                    <strong>
+                                        {{ $new['ann'] }}
+                                        @if ($new['ann'] <= 1)
+                                            año
+                                        @else
+                                            años
+                                        @endif
+                                    </strong>
+                                </p>
+                            </div>
 
-                                        </div>
+                            
 
-                                        <div class="card-body pt-0">
-                                            <div class="nombre">
-                                                <p class="card-title" style="font-size:medium;">
-                                                    <strong>{{ $new['nombre'] }}</strong>
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p style="color: #FE3EB2">
-                                                    <strong>{{ $new['empresa'] }}</strong>
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p class="cargo" style="color: #707b7c">
-                                                    <strong>{{ $new['cargo'] }}</strong>
-                                                </p>
-                                            </div>
-                                            <div>
-                                                <p style="color: #FE3EB2">
-                                                    <strong>
-                                                        {{ $new['ann'] }}
-                                                        @if ($new['ann'] <= 1)
-                                                            año
-                                                        @else
-                                                            años
-                                                        @endif
-                                                    </strong>
-                                                </p>
-                                            </div>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
+                            
                         </div>
-                        <p>
-                            <hr>
-                        </p>
-                    @endempty
-                    </section>
-                @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
+        <p>
+            <hr>
+        </p>
+    @endempty
+</section>
+@endif
 
                 <br>
                 <section id="NoticiaDestacada" class="pt-4">
