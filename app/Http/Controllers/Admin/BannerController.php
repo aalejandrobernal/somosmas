@@ -70,7 +70,7 @@ class BannerController extends Controller
     }
 
     public function ordenar_sin()
-    {   
+    {
         return max(json_decode(json_encode(Banner::pluck('orden')), true))+1;
         //le suma 1 al valor maximo de la conversion del objeto a array del valor de orden de la tabla banners
     }

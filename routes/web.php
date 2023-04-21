@@ -11,6 +11,7 @@ use App\Http\Controllers\GestorAdmin;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\NewController;
 use App\Http\Controllers\Admin\BannerController;
+use App\Http\Controllers\Admin\FormationsController;
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware('auth');
@@ -93,6 +94,12 @@ Route::resource('admin/banners',BannerController::class)
 ->only('index','edit','create','store','update','show')
 ->middleware('can:admin')
 ->names('admin.banners');
+//Interfaz Admin Banners
+
+Route::resource('admin/formations',FormationsController::class)
+->only('index')
+->middleware('can:admin')
+->names('admin.formations');
 
 
 //Interfaz De Inicio

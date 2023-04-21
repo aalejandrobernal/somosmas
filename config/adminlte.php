@@ -365,6 +365,13 @@ return [
 
         ],
         [
+            'text'        => 'Formaciones',
+            'url'         => 'admin/formations',
+            'icon'        => 'fas fa-solid fa-book',
+            'label_color' => 'success',
+
+        ],
+        [
             'text'        => 'Salir',
             'url'         => 'inicio',
             'icon'        => 'fas fa-solid fa-times-circle',

@@ -31,8 +31,9 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $galerias->titulo }}</h5>
                             <br>
-                            <button type="button" class="ctn"
-                                data-toggle="modal"data-target="#myModal<?php echo $cant; ?>">Ver fotos</button>
+                            <button type="button" class="ctn"data-toggle="modal"data-target="#myModal<?php echo $cant; ?>">
+                                Ver fotos
+                            </button>
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
                                 Actualización: {{ $galerias->updated_at->format('d/m/Y') }}
                             </div>

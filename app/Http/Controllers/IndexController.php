@@ -47,15 +47,9 @@ class IndexController extends Controller
         ->Limit('1')
         ->where('estado', '1')
         ->get();
-
-        $card = Formacion::where('estado', '1')
-            ->where('categoria_id', '3')
-            ->where('orden', '1')
-            ->get();
         
         $formacion = Formacion::where('estado', '1')
-            ->where('categoria_id', '3')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('orden', 'asc')
             ->get();
 
         $now = Carbon::now();
@@ -126,7 +120,7 @@ class IndexController extends Controller
 
         $formatos = $formato == $formato1;
 
-        return view('inicio.index',compact('contenido','noticia', 'card',
+        return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
 
         

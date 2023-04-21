@@ -29,7 +29,7 @@
                     <div class="col-12">
 
                         <a href="https://youtu.be/d1drzgRUekY" class="glightbox play-btn" target="_blank">
-                            <img style="width: 100%; height:100%" src="{{ asset('images/banners/mujer.png') }}" alt="">
+                            <img style="width: 100%; height:100%" src="{{ asset('../storage/images/banners/mujer.png') }}" alt="">
                         </a>
 
                     </div>
@@ -609,5 +609,5 @@
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/modal_cultura.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/modal_cultura2.js') }}"></script>
+        {{-- <script type="text/javascript" src="{{ asset('js/modal_cultura2.js') }}"></script> --}}
     @endsection
