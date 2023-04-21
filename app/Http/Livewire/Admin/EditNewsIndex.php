@@ -65,7 +65,7 @@ class EditNewsIndex extends Component
             $this->new->contenido = $this->contenido;
             
         }
-        $this->new->imagenes = $a;
+            $this->new->imagenes = $a;
             $this->new->save([
             'titulo' => $this->titulo,
             'estado' => $this->estado,
