@@ -593,7 +593,7 @@
                                             <div class="card" style="width: 16rem;" >
                                                 <img src="{{ asset('../storage/images/formaciones/' . $formaciones->imagen) }}"
                                                     alt="">
-                                                <a data-toggle="tooltip" data-placement="right" title="{{strip_tags($formaciones->cuerpo)}}">
+                                                <a data-toggle="tooltip" data-html="true" title="{{strip_tags($formaciones->cuerpo)}}">
                                                 <div class="card-body" style="width: 245px ;height:304px;" >
                                                     <h5 class="card-title" style="width: 204px ;height:48px;">{{ $formaciones->titulo }}</h5>
                                                     <div class="card-text" >
@@ -997,12 +997,16 @@
 <script src="{{ asset('js/swiper.js') }}"></script>
 <script src="{{ asset('js/splider.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script>
+{{-- <script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
+</script> --}}
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
-
 
 @endsection
