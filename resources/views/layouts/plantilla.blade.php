@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper-9.0.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/tootip.css')}}">
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
     
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
