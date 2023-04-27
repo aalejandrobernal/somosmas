@@ -33,7 +33,7 @@
             <p class="navbar-logo"><strong style="color: #FE3EB2">Somos</strong>Más</p>
         </div>
     </div>
-    
+
     <div class="contenedor-formulario">
         <div class="img-formu">
             <img class="imagen-formulario" src="{{ asset('images/somosmas/working.jpg') }}" alt="">
@@ -76,7 +76,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ asset('js/password.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"> </script>
 
 </body>
 

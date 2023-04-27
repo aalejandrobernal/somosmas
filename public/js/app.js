@@ -30173,7 +30173,7 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("section", { attrs: { id: "galleryy" } }, [
             _c("div", { staticClass: "carrusel1" }, [
-              _c("div", { staticClass: "carrusel-items1" }, [
+              _c("div", { staticClass: "carrusel-items2" }, [
                 _c("div", { staticClass: "carrusel-item" }, [
                   _c("img", {
                     attrs: { src: "/images/galeria/0.jpg", alt: "" }

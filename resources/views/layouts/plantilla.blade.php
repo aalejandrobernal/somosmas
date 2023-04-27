@@ -116,20 +116,15 @@
 
         </div>
     </nav>
-    <div id="app">
         @yield('content')
-    </div>
-    <script src="{{ asset('js/app.js') }}"> </script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/modal_cultura.js') }}"></script>   
+
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
-    
+
 
 </body>
 

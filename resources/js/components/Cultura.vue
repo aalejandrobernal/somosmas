@@ -491,7 +491,7 @@
 
             <section id="galleryy">
                 <div class="carrusel1">
-                    <div class="carrusel-items1">
+                    <div class="carrusel-items2">
                         <div class="carrusel-item">
                             <img src="/images/galeria/0.jpg" alt="">
                         </div>
@@ -591,7 +591,7 @@
         </div>
     </main>
 
-    
+
 </template>
 
   <script>
