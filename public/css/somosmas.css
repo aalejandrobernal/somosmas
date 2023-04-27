@@ -473,7 +473,8 @@ hr.line-title-sunco {
 }
 
 .fondo img{
-    margin-top: 20px;
+    width: 90%;
+    margin: 20px 0;
     border: 1px solid #FE3EB2;
 }
 
@@ -843,6 +844,25 @@ hr.line-title-sunco {
 }
 
 .carrusel-items1::-webkit-scrollbar-track{
+    background-color: #6a6a6a27;
+}
+
+.carrusel-items2{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.carrusel-items2::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel-items2::-webkit-scrollbar-thumb {
+    background-color: #acabab;
+    border-radius: 10px;
+}
+
+.carrusel-items2::-webkit-scrollbar-track{
     background-color: #6a6a6a27;
 }
 

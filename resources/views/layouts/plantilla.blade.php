@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.8.css')}}">
     <link rel="stylesheet" href="{{ asset('css/somosmas.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/splider-js.css') }}">
@@ -39,9 +40,29 @@
             <a class="navbar-brand" href="{{ route('inicio.index') }}">
                 <strong style="color: #FE3EB2">Somos</strong>Más</a>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                    @yield('content1')
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Tu SGSST</a>
+                        <ul class="dropdown-menu bg" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" style="" href="/inicio#formaciones">
+                                    Programas De Formación</a></li>
+                            <li><a class="dropdown-item" style="" href="/inicio#medicina">
+                                    Medicina Preventiva</a></li>
+                            <li><a class="dropdown-item" style="" href="/inicio#seguridadindustrial">
+                                    Seguridad Industrial</a></li>
+                            <li><a class="dropdown-item" style="" href="/inicio#seguridadvial">
+                                    Seguridad Vial</a></li>
+                            <li><a class="dropdown-item" style="" href="/inicio#avance">
+                                    Avance Del SGSST</a></li>
+                            <li><a class="dropdown-item" style="" href="{{ route('inicio.actividad') }}">
+                                    Actividad Del Mes</a></li>
+                            <li><a class="dropdown-item" style="" href="{{ route('inicio.portales') }}">
+                                    Portales SGSST</a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{ route('inicio.cultura') }}">Cultura</a>
                     </li>
@@ -95,6 +116,7 @@
 
         </div>
     </nav>
+        @yield('content')
 
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -103,7 +125,6 @@
         })
     </script>
 
-@yield('content')
 
 </body>
 
