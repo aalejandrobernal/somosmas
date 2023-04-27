@@ -95,7 +95,7 @@
                                         <strong>
                                             Aniversario
                                         </strong>
-                                        
+
                                     </p>
                                 </div>
                                 <div class="carrusel-itemsssn">
@@ -139,7 +139,7 @@
                                                             @endif
                                                             </strong>
                                                         </p>
-                                                    </div>   
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@
                                     <strong>
                                         Cumpleaños
                                     </strong>
-                                    
+
                                 </p>
                             </div>
 
@@ -171,10 +171,10 @@
                                         <div class="card" style="height: 28rem;">
                                             <div class="tamaño">
                                                 @if (is_file('images/fotos/'.$fecha['foto']))
-                                                   
+
                                                     <img src="images/fotos/{{ $fecha['foto'] }}" alt="">
                                                 @else
-                                                    
+
                                                     <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
                                                 @endif
 
@@ -188,15 +188,15 @@
                                                 </div>
                                                 <div>
                                                     <p style="color: #FE3EB2">
-                                                        <strong>{{ $fecha['empresa'] }}</strong>  
+                                                        <strong>{{ $fecha['empresa'] }}</strong>
                                                     </p>
                                                 </div>
                                                 <div>
                                                     <p style="color: #707b7c" class="cargo">
-                                                        <strong>{{ $fecha['cargo'] }}</strong> 
+                                                        <strong>{{ $fecha['cargo'] }}</strong>
                                                     </p>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -275,9 +275,9 @@
                                         <strong>{{ $fecha['cargo'] }}</strong>
                                     </p>
                                 </div>
-                                
 
-                                
+
+
                             </div>
                         </div>
                     </div>
@@ -326,7 +326,7 @@
                     <div class="card" style="height: 28rem;">
                         <div class="tamaño">
                             @if ($new['foto'])
-                                
+
                                 <img src="images/fotos/{{ $new['foto'] }}" alt="">
                             @else
                                 <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
@@ -363,9 +363,9 @@
                                 </p>
                             </div>
 
-                            
 
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -575,7 +575,7 @@
                 </section>
 
                 <hr>
-                
+
                 <section id="formaciones" class="">
                     <div class="row">
                             <div class="col-6 offset-3">
@@ -589,29 +589,29 @@
                             <div class="carrusel-itemss">
                                 @foreach ($formacion as $formaciones)
                                     <div class="carrusel-itemm">
-                                        
+
                                             <div class="card" style="width: 16rem;" >
                                                 <img src="{{ asset('../storage/images/formaciones/' . $formaciones->imagen) }}"
                                                     alt="">
-                                                <a data-toggle="tooltip" data-html="true" title="{{strip_tags($formaciones->cuerpo)}}">
+                                                <a data-toggle="tooltip" data-placement="right" title="{{strip_tags($formaciones->cuerpo)}}">
                                                 <div class="card-body" style="width: 245px ;height:304px;" >
                                                     <h5 class="card-title" style="width: 204px ;height:48px;">{{ $formaciones->titulo }}</h5>
                                                     <div class="card-text" >
                                                         {!! Str::limit($formaciones->cuerpo, 160, '...') !!}
                                                     </div>
-                                                    
+
                                                     <a style="position: absolute;top: 88%"href="{{ $formaciones->adjunto }}" class="btn btn-outline-dark"
                                                         target="_blank"><i class="bi bi-arrow-right"></i> Ingresa</a>
                                                 </div>
                                                 </a>
                                             </div>
-                                        
+
                                     </div>
                                 @endforeach
                             </div>
                     </div>
                 </section>
-                
+
                 <hr>
 
                 <section id="formaciones Comites" class="d-flex justify-content-center align-items-center p-2">
@@ -997,16 +997,12 @@
 <script src="{{ asset('js/swiper.js') }}"></script>
 <script src="{{ asset('js/splider.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-{{-- <script>
+<script>
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-</script> --}}
-<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
 </script>
+
 
 @endsection
