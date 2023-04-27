@@ -33,9 +33,7 @@
             <p class="navbar-logo"><strong style="color: #FE3EB2">Somos</strong>Más</p>
         </div>
     </div>
-    <div id="app">
-        <example-component></example-component>
-    </div>
+    
     <div class="contenedor-formulario">
         <div class="img-formu">
             <img class="imagen-formulario" src="{{ asset('images/somosmas/working.jpg') }}" alt="">

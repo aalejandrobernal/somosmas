@@ -5301,6 +5301,611 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ (() => {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -5364,6 +5969,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', (__webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]));
+Vue.component('cultura-component', (__webpack_require__(/*! ./components/Cultura.vue */ "./resources/js/components/Cultura.vue")["default"]));
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28065,6 +28671,48 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./resources/js/components/Cultura.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Cultura.vue ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true& */ "./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true&");
+/* harmony import */ var _Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Cultura.vue?vue&type=script&lang=js& */ "./resources/js/components/Cultura.vue?vue&type=script&lang=js&");
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "b4b2cbe2",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Cultura.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue":
 /*!******************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue ***!
@@ -28104,6 +28752,26 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/Cultura.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Cultura.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cultura.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default())); 
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -28120,6 +28788,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Cultura_vue_vue_type_template_id_b4b2cbe2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*************************************************************************************!*\
   !*** ./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -28133,6 +28818,1557 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExampleComponent.vue?vue&type=template&id=299e239e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Cultura.vue?vue&type=template&id=b4b2cbe2&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "main",
+      {
+        staticClass:
+          "container d-flex justify-content-center align-items-center p-5"
+      },
+      [
+        _c("div", { staticClass: "container text-center aling-items-center" }, [
+          _c("div", { staticClass: "row aling-items-center" }, [
+            _c("div", { staticClass: "col-6 offset-3" }, [
+              _c("h1", { staticClass: "titulo" }, [
+                _vm._v("Fechas Especiales")
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "line-title" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12" }, [
+              _c("p", [
+                _vm._v(
+                  "Un pequeño homenaje para las mujeres que hacen parte de nuestro ecosistema. !!!Feliz día para todas ustedes!!!"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "glightbox play-btn",
+                  attrs: {
+                    href: "https://youtu.be/d1drzgRUekY",
+                    target: "_blank"
+                  }
+                },
+                [
+                  _c("img", {
+                    staticStyle: { width: "100%", height: "100%" },
+                    attrs: { src: "/storage/images/banners/mujer.png", alt: "" }
+                  })
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-12 p-3" }, [
+              _c("p", [
+                _vm._v(
+                  "Descubre a continuación la versión completa de cada uno de los videos de nuestras compañeras. Haz\n                    clic sobre el video que quieras visualizar."
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("section", { attrs: { id: "momentos" } }, [
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal01",
+                  "aria-hidden": "true",
+                  id: "modal01"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/bleidy.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal02",
+                  "aria-hidden": "true",
+                  id: "modal02"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/catalina.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal03",
+                  "aria-hidden": "true",
+                  id: "modal03"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/claudiap.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal04",
+                  "aria-hidden": "true",
+                  id: "modal04"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/liliana.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal05",
+                  "aria-hidden": "true",
+                  id: "modal05"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/maribel.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal06",
+                  "aria-hidden": "true",
+                  id: "modal06"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "modal-dialog modal-lg modal-dialog-center" },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/monica.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "modal fade",
+                attrs: {
+                  tabindex: "-1",
+                  "aria-labelledby": "modal07",
+                  "aria-hidden": "true",
+                  id: "modal07"
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "modal-dialog modal-lg modal-dialog-centered"
+                  },
+                  [
+                    _c("div", { staticClass: "modal-content" }, [
+                      _c("div", { staticClass: "modal-header" }, [
+                        _c("button", {
+                          staticClass: "btn-close",
+                          attrs: {
+                            type: "button",
+                            "data-bs-dismiss": "modal",
+                            "aria-label": "Close"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("video", {
+                        staticClass: "video",
+                        attrs: {
+                          id: "video",
+                          src:
+                            "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/olga.mp4",
+                          title: "",
+                          allowfullscreen: "",
+                          type: "video/mp4",
+                          controls: ""
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("section", { attrs: { id: "prueba" } }, [
+            _c("div", { staticClass: "carrusel1" }, [
+              _c("div", { staticClass: "carrusel-items1" }, [
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal01"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/bleidy.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal02"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/catalina.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal03"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/claudia.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal04"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/liliana.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal05"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/maribel.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal06"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/monica.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item1" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "#!",
+                        "data-bs-toggle": "modal",
+                        "data-bs-target": "#modal07"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "w-100 mb-4 rounded nn",
+                        attrs: { src: "/images/galeriav/olga.jpg", alt: "" }
+                      })
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "section",
+            {
+              staticClass:
+                "d-flex justify-content-center align-items-center pt-4",
+              attrs: { id: "podcast" }
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-4 offset-4" }, [
+                  _c("h2", { staticClass: "titulo" }, [_vm._v("Tus Podcast")]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "line-title" })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-12" }, [
+                    _c("p", { staticClass: "texto" }, [
+                      _vm._v(
+                        "Te gustaría escuchar desde la voz de los diferentes lideres de cada una\n                        de las empresas, las últimas novedades y lanzamientos. ¡¡Tus Podcast te esperan!!"
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "container-4" }, [
+                  _c("div", { staticClass: "card-4" }, [
+                    _c("img", {
+                      attrs: { src: "/images/logos/spotify.png", alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", { staticStyle: { "text-align": "justify" } }, [
+                      _vm._v("Ahora Somos Liwa.")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticStyle: { "text-align": "justify" } }, [
+                      _vm._v(
+                        "\n                        Nacimos digitales, somos digitales. Liwa significa acceso y conexión. Liwa es donde el\n                        propósito se encuentra con la innovación.\n\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "bordes" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn-spotify",
+                          attrs: {
+                            href:
+                              "https://open.spotify.com/episode/31wpAQW8tTaMMQYWdwE2FT",
+                            target: "_blank"
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "bi bi-arrow-right" }),
+                          _vm._v("Ingresar")
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-4" }, [
+                    _c("img", {
+                      attrs: { src: "/images/logos/spotify.png", alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _c("h4", { staticStyle: { "text-align": "justify" } }, [
+                      _vm._v("¿Por que cebra y no unicornio?")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticStyle: { "text-align": "justify" } }, [
+                      _vm._v(
+                        "\n                        En este episodio invitamos a Juan Diego Gomez uno de los lideres del ecosistema Liwa,\n                        quien nos aclara ¿Por que cebra y no unicornio?\n                    "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "bordes" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn-spotify",
+                          attrs: {
+                            href:
+                              "https://open.spotify.com/episode/6PQZIHp9RfUZiEB0sCXBOT",
+                            target: "_blank"
+                          }
+                        },
+                        [
+                          _c("i", { staticClass: "bi bi-arrow-right" }),
+                          _vm._v(" Ingresar")
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "section",
+            {
+              staticClass:
+                "d-flex justify-content-center align-items-center p-2",
+              attrs: { id: "comite" }
+            },
+            [
+              _c("div", { staticClass: "row aling items center" }, [
+                _c("div", { staticClass: "col-8 offset-2" }, [
+                  _c("h2", { staticClass: "titulo" }, [
+                    _vm._v("Conoce tu comité de diversidad e inclusión.")
+                  ]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "line-title" }),
+                  _vm._v(" "),
+                  _c("br")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 texto" }, [
+                  _c("p", [
+                    _vm._v(
+                      "En nuestra organización celebramos la Diversidad y le apostamos a la inclusión; es por eso\n                        que desde el segundo semestre del 2021 se creó un comité que tiene como objetivo\n                        principal “Garantizar y promover al interior de la organización la correcta valoración de la\n                        diversidad de pensamiento, creencias e identidades, fomentando ambientes y formas de\n                        expresión equitativas e igualitarias que logren un mayor bienestar en la compañía."
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-5 fondo" }, [
+                  _c("img", { attrs: { src: "/images/juanma.jpg", alt: "" } }),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "h1 juan" }, [_vm._v("Juan Manuel")]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticStyle: { color: "black", "font-size": "150%" } },
+                    [
+                      _vm._v(" Presidente del comité de "),
+                      _c("br"),
+                      _vm._v(
+                        "\n                        diversidad e inclusión."
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("span", [
+                    _c("i", {
+                      staticClass: "fa-solid fa-people-group",
+                      staticStyle: { "font-size": "60px" }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 hola fondo1" }, [
+                  _c("h3", { staticStyle: { "text-align": "center" } }, [
+                    _vm._v("Comité de diversidad e inclusion.")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticStyle: { "text-align": "justify" } }, [
+                    _vm._v(
+                      "¿Quiénes hacen parte de nuestro comité?\n                        Somos un grupo de personas, que creemos que fomentar la empatía nos ayuda a reconocer la\n                        diversidad, creemos en el respeto y valoramos la diferencia.\n                    "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "list-group" }, [
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item active",
+                        attrs: { id: "list-item-active" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Presidente: Juan M. Sanchez\n                            – Sunco Energy"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item",
+                        attrs: { id: "list-item-1" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Secretaria: Catalina\n                            Gallego – Suncolombia"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item active",
+                        attrs: { id: "list-item-active" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Promotor: Ivon Romero –\n                            Liwa"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item",
+                        attrs: { id: "list-item-1" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Contenidos: Irana Carrión –\n                            Suncolombia"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item active",
+                        attrs: { id: "list-item-active" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Integrante: Liliana Ravelo\n                            – Suncolombia"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item",
+                        attrs: { id: "list-item-1" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Integrante: Juan Diego\n                            Gómez - Suncolombia"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item active",
+                        attrs: { id: "list-item-active" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Integrante: Catalina\n                            Jiménez – Suncolombia"
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "li",
+                      {
+                        staticClass: "list-group-item",
+                        attrs: { id: "list-item-1" }
+                      },
+                      [
+                        _c("i", { staticClass: "fa-solid fa-circle-check" }),
+                        _vm._v(
+                          " Integrante: Iván Diaz -\n                            Suncolombia"
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "h6 mt-5 p-1",
+                      staticStyle: {
+                        "background-color": "#FE3EB21A",
+                        height: "9%",
+                        "border-radius": "10px"
+                      }
+                    },
+                    [
+                      _c(
+                        "p",
+                        {
+                          staticClass: "h6",
+                          staticStyle: { "text-align": "center" }
+                        },
+                        [
+                          _c("i", { staticClass: "fa-solid fa-angle-right" }),
+                          _c("i", { staticClass: "fa-solid fa-angle-right" }),
+                          _c("i", { staticClass: "fa-solid fa-angle-right" }),
+                          _vm._v(
+                            " Pronto conocerás mas sobre nosotros, algunas de las actividades que\n                            hemos realizado y como puedes hacer parte de ellas."
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c(
+            "section",
+            {
+              staticClass:
+                "d-flex justify-content-center align-items-center p-2",
+              attrs: { id: "mantentevisible" }
+            },
+            [
+              _c("div", { staticClass: "row aling items center" }, [
+                _c("div", { staticClass: "col-4 offset-4" }, [
+                  _c("h2", { staticClass: "titulo" }, [
+                    _vm._v("Mantente Visible")
+                  ]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "line-title" }),
+                  _vm._v(" "),
+                  _c("br")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 texto" }, [
+                  _c("p", [
+                    _c("b", [_vm._v("Participa!!")]),
+                    _vm._v(
+                      " Compártenos tus opiniones, películas, fotografías favoritas, libros, planes\n                        de fin de semana, entre miles de temáticas más. "
+                    ),
+                    _c("br"),
+                    _vm._v(
+                      ' Pronto vendrán concursos, foros, donde\n                        premiaremos el contenido con más likes, apoya a tus compañeros y también atrévete a ser parte\n                        de "Likes", mes a mes premiaremos el mejor contenido. '
+                    ),
+                    _c("br"),
+                    _vm._v(" "),
+                    _c("b", [
+                      _vm._v(
+                        "¿Cuál contenido será el más popular?\n                        ¡¡Descubrámoslo juntos, no te los pierdas!!"
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/Jhon.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos pt-2" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Jhon López")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Suncolombia")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("jlopez@suncolombia.com")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '“Hola un saludo y abrazo muy especial para todos, hoy les\n                                quiero compartir el valor de la experiencia en la vida profesional lo cual\n                                podrás comprender a través de un libro que te recomiendo mucho. Además te\n                                brindare unos tips de crecimiento personal y laboral. Descúbrelos !!"'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/Jhon.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/carlos.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos pt-2" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Carlos Herrada")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Liwa")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("carlos.herrada@cellvoz.com.co")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '“Hola estoy muy feliz de compartir con ustedes a través de\n                                este canal, una película basada en hechos reales muy especial para esta época de\n                                fin de año y unión familiar que nos invita a trabajar por nuestros sueños y a\n                                superar cualquier limitación que en muchos casos pueden ser oportunidades, un\n                                abrazo a todos. Descúbrela !!"'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/carlos.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/ximena.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos pt-2" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Ximena González")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Libre")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("xifagori@hotmail.com")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '“Hola estoy muy feliz de saludarlos a todos y compartirles mis\n                                mejores recomendados; conocerán paisajes maravillosos, un libro que me envolvió\n                                con su historia y una película que te invita a valorar un gran tesoro como es tu\n                                familia. Regálame muchos likes !!"'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/ximena.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/paula.jpeg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos pt-2" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Paula Oviedo")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Liwa")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("paula.oviedo@cellvoz.com.co")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '"Hola! que alegría saludarlos soy Paula y a través de "Somos\n                                más" les quiero recomendar dos excelentes libros desarrollados en\n                                ambientaciones históricas y llenas de misterio que estoy segura los conectarán\n                                con sus personajes. Les envió un fuerte abrazo a todos."'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/paula.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/vanesa.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos pt-2" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Vanesa Pinzón")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Suncoenergy")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("vanesa.pinzon@suncoenergy.com.co")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '"Vengo con unos recomendados que te van a encantar; estoy\n                                segura de que no conocías lugares hermosos y llenos de historias de piratas,\n                                también descubriremos un lugar para que practiques tus deportes extremos y unos\n                                libros fascinantes. Se que me darás tu like.”'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/vanesa.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6 p-3" }, [
+                  _c("article", { staticClass: "card h-100" }, [
+                    _c("div", { staticClass: "card-body visible" }, [
+                      _c("div", { staticClass: "d-flex mb-3" }, [
+                        _c("img", {
+                          staticClass: "foto-video",
+                          attrs: { src: "/images/anamaria.jpg", alt: "" }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "datos" }, [
+                          _c("h5", { staticStyle: { color: "black" } }, [
+                            _vm._v("Ana Maria")
+                          ]),
+                          _vm._v(" "),
+                          _c("h5", { staticStyle: { color: "gray" } }, [
+                            _vm._v("Navega")
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "h5",
+                            {
+                              staticStyle: {
+                                "font-size": "12px",
+                                color: "rgb(181, 179, 179)"
+                              }
+                            },
+                            [_vm._v("ana.mondragon@navega.com.co")]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "line-title2" }),
+                      _vm._v(" "),
+                      _c("br"),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "fs-6 lh-1",
+                          staticStyle: { "text-align": "justify" }
+                        },
+                        [
+                          _vm._v(
+                            '"Hola soy Ana María y espero sorprenderte con mis\n                                recomendados, un lugar maravilloso con una energía única y al que me gustaría\n                                invitarlos, un excelente libro de crecimiento personal y una película\n                                inolvidable. Espero tus corazones!!"'
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "padrevideo1" }, [
+                        _c("div", { staticClass: "video1" }, [
+                          _c("div", { staticClass: "ratio ratio-16x9" }, [
+                            _c("video", {
+                              attrs: {
+                                src:
+                                  "https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/anamaria.mp4",
+                                title: "",
+                                allowfullscreen: "",
+                                type: "video/mp4",
+                                controls: ""
+                              }
+                            })
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "section",
+            {
+              staticClass:
+                "d-flex justify-content-center align-items-center p-2",
+              attrs: { id: "#momentos" }
+            },
+            [
+              _c("div", { staticClass: "row aling items center" }, [
+                _c("div", { staticClass: "col-4 offset-4" }, [
+                  _c("h2", { staticClass: "titulo" }, [_vm._v("Momentos")]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "line-title" })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-12 texto" }, [
+                  _c("p", [
+                    _vm._v(
+                      "Quien dijo que el tiempo no se puede detener, disfruta de esta galería."
+                    )
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("section", { attrs: { id: "galleryy" } }, [
+            _c("div", { staticClass: "carrusel1" }, [
+              _c("div", { staticClass: "carrusel-items1" }, [
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/0.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/1.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/2.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/3.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/4.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/5.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/6.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/7.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/8.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/9.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/10.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/11.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/12.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/13.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/14.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/15.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/16.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/17.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/18.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/19.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/20.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/21.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/22.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/23.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/24.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/25.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/26.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/27.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/28.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/29.jpg", alt: "" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "carrusel-item" }, [
+                  _c("img", {
+                    attrs: { src: "/images/galeria/30.jpg", alt: "" }
+                  })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
 
 
 /***/ }),
@@ -40311,6 +42547,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
 /******/ 		};
 /******/ 	})();
 /******/ 	

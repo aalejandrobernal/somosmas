@@ -473,7 +473,8 @@ hr.line-title-sunco {
 }
 
 .fondo img{
-    margin-top: 20px;
+    width: 90%;
+    margin: 20px 0;
     border: 1px solid #FE3EB2;
 }
 
