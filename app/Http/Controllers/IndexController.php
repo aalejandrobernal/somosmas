@@ -150,6 +150,13 @@ class IndexController extends Controller
         ->get();
         return view('inicio.noticia', compact('not'));
     }
+    public function noticiaVue() // -------> Vue
+    {
+        $not = Noticia::where('estado', '1')
+        ->orderBy('updated_at', 'desc')
+        ->get();
+        return response()->json($not);
+    }
 
     public function editar_perfil()
     {

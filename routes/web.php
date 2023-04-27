@@ -128,6 +128,10 @@ Route::get('inicio/noticia', [IndexController::class, 'noticia'])
     ->middleware('auth')
     ->name('inicio.noticia');
 
+Route::get('noticiaVue', [IndexController::class, 'noticiaVue'])// ---------> VISTA Vue
+    ->middleware('auth')
+    ->name('noticiaVue');
+
 Route::get('inicio/import-users', [IndexController::class, 'importUsers'])
     ->middleware('auth')
     ->name('inicio.import');
