@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "ckeditor/ckeditor": "4.*",
         "fruitcake/laravel-cors": "^2.0",
         "genert/bbcode": "^1.1",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -14,11 +15,11 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.4",
         "laravelcollective/html": "^6.3",
         "livewire/livewire": "^2.11",
         "spatie/laravel-permission": "^5.9",
-        "twbs/bootstrap-icons": "^1.10",
-        "ckeditor/ckeditor": "4.*"
+        "twbs/bootstrap-icons": "^1.10"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

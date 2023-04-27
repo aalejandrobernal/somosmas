@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.8.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/somosmas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/splider-js.css') }}">
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper-9.0.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/tootip.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/tooltip.css')}}">
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
-    
+
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
     <script src="{{ asset('js/splide.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-5.1.bundle.min.js') }}"></script>
@@ -33,7 +33,7 @@
 
 </head>
 
-<body> 
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('inicio.index') }}">
@@ -56,14 +56,14 @@
                     </li>
                 </ul>
 
-            
+
                 <div class="pr-2">
-                
+
                     <a class="text-white" style="text-decoration: none">Bienvenido: <b>
                             {{ auth()->user()->nombre }}</b></a>
-                            
+
                 </div>
-                
+
                 <div class="pr-0">
                     @if (auth()->user()->foto)
                     <img src="../images/fotos/{{auth()->user()->foto}}" alt="" class="usuario">
@@ -83,11 +83,11 @@
                             @endcan
                             <li><a class="dropdown-item" id="sesion" style="" href="{{ route('login.destroy') }}">
                             Cerrar Sesión</a></li>
-                        </ul>   
+                        </ul>
                 </li>
 
             </div>
-            
+
             <a href="https://api.whatsapp.com/send?phone=57{{ env('NUMBER_WHASTAPP') }}" class="bt-wsp"
                 target="_blank">
                 <i class="bi bi-whatsapp"></i>
@@ -103,7 +103,7 @@
         })
     </script>
 
-@yield('content') 
+@yield('content')
 
 </body>
 
@@ -111,13 +111,13 @@
     <div class="footer_bg">
         <h2 class="footer_red">RED DE APOYO     <i class="fa-solid fa-circle-info"></i></h2>
             <div class="row p-3">
-            
+
                 <div class="col-3 ml-5">
-                    
-                    <h5 class="emergencia">En caso de emergencias   
-                    <i class="fa-sharp fa-solid fa-phone-volume"></i> </h5>  
+
+                    <h5 class="emergencia">En caso de emergencias
+                    <i class="fa-sharp fa-solid fa-phone-volume"></i> </h5>
                     <br>
-                    <p style="font-size: 14px; text-align: center; color: white"> 
+                    <p style="font-size: 14px; text-align: center; color: white">
                     Número general de Emergencias: 123
                     <br>
                     Número general Cruz Roja: 132
@@ -128,30 +128,30 @@
                     <br>
                     <br>
                     Estamos para servirte, cuenta con nosotros WhatsApp profesionales HSE</p>
-                    <div class="wp">   
+                    <div class="wp">
                         <a href="https://wa.me/573118076877" data-bs-toggle="tooltip" data-placement="top" title="Chía"
                             class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a>
                         <a href="https://wa.me/573016373640" data-bs-toggle="tooltip" data-placement="top" title="Chía"
                             class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                        <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
                             title="Fusagasugá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                        <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
                             title="Bogotá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     </div>
                     <br>
                     <div style="font-size: 14px" class="sedes">
-                        Bogotá - Chía - Fusagasugá 
+                        Bogotá - Chía - Fusagasugá
                     </div>
                 </div>
-                
+
                 <div style="font-size: 14px" class="col-4 ml-3">
                     <h5><i style="color: #FE3EB2" class="fa-solid fa-location-dot"></i><strong style="color: #FE3EB2">  Direcciones oficinas</strong></h5>
                     <ul style="color: white">
                         <li>Oficina Bogotá: Calle 127b bis # 49-48 - Barrio Tierra Linda.</li>
                         <li>Oficina Navega: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza - Chía, Cundinamarca.</li>
                         <li>Oficina Libre: Carrera 6 # 07-36 Local 317 C.C. Escorial Center Fusagasugá, Cundinamarca.</li>
-                    </ul>  
-                    
+                    </ul>
+
                     <h5><i style="color: #FE3EB2" class="fa-solid fa-house-medical"></i><strong style="color: #FE3EB2"> Clínicas ARL Sura</strong></h5>
                     <ul style="color: white">
                         <li>Cruz Roja: Autopista Norte con calle 145 - Bogotá.</li>
@@ -160,7 +160,7 @@
                         <li>Hospital San Antonio de Chía: Carrera 10 # 8-24 - Chía, Cundinamarca.</li>
                         <li>Hospital San Rafael: Diagonal 23 # 12-64 - Fusagasugá, Cundinamarca.</li>
                         <li>Clínica Belén: Calle 17 # 12-27 - Fusagasugá, Cundinamarca.</li>
-                    </ul> 
+                    </ul>
                 </div>
 
                 <div style="font-size: 14px" class="col-4">
@@ -175,7 +175,7 @@
                         <li>Oficina Chía: Caí Guaymaral = 3490791 Cuadrantes 3017791812 3212464768</li>
                         <li>Oficina Fusagasugá: Cuadrante = 3212475311</li>
                     </ul>
-                    
+
                     <h5><i style="color: #FE3EB2" class="fa-solid fa-fire-extinguisher"></i><strong style="color: #FE3EB2"> Bomberos</strong></h5>
                     <ul style="color: white">
                         <li>Estación de Bomberos Caobos: 6144105-6143290-3822500 - Bogotá.</li>
@@ -185,7 +185,7 @@
                     </ul>
                 </div>
             </div>
-    </div>      
+    </div>
 </section>
 
 
