@@ -31,7 +31,7 @@
                             <div class="col-3" v-if="noticia.adjunto">
                                 <div class="col-3">
                                 <div class="contenedor-textos2">
-                                    <a class="cta" href="{noticia->adjunto}" target="_blank">Ver adjunto</a>
+                                    <a class="cta" :href="noticia.adjunto" target="_blank">Ver adjunto</a>
                                 </div>
                             </div>
                             </div>
