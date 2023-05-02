@@ -18,17 +18,6 @@ class NewController extends Controller
     {
         return view('admin.news.create');
     }
-    public function store(StoreNewRequest $request)
-    {
-        //
-    }
-
-
-    public function show($id)
-    {
-        //
-    }
-
 
     public function edit(Noticia $news)
     {
@@ -36,14 +25,4 @@ class NewController extends Controller
     }
 
 
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-
-    public function destroy($id)
-    {
-        //
-    }
 }

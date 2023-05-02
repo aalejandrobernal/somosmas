@@ -1,5 +1,5 @@
-var hi = document.getElementsByClassName( 'splide' );
-		
-		for ( var i = 0; i < hi.length; i++ ) {
-		new Splide( hi[ i ] ).mount();
-		}
+var elms = document.getElementsByClassName( 'splide' );
+
+for ( var i = 0; i < elms.length; i++ ) {
+  new Splide( elms[ i ] ).mount();
+}

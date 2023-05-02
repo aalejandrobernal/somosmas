@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/swiper-9.0.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
     <link rel="stylesheet" href="{{ asset('css/tooltip.css')}}">
+    
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
 
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
@@ -118,12 +119,7 @@
     </nav>
         @yield('content')
 
-    <script>
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    </script>
+    
 
 
 </body>

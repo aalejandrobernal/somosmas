@@ -155,6 +155,9 @@ class IndexController extends Controller
         $not = Noticia::where('estado', '1')
         ->orderBy('updated_at', 'desc')
         ->get();
+        foreach ($not as $item ) {
+            $item->fecha = Carbon::parse($item->updated_at)->toFormattedDateString();
+        }
         return response()->json($not);
     }
 
