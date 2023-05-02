@@ -48,6 +48,7 @@
                             <div class="col-3">
                                 <button type="button" class="ctn"
                                     data-toggle="modal"data-target="#myModal<?php echo $cant; ?>">Ver más</button>
+                                    
                                 <div class="modal fade bd-example-modal-lg" id="myModal<?php echo $cant; ?>" tabindex="-1"
                                     role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-xl">

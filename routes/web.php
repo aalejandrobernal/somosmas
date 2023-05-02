@@ -229,4 +229,14 @@ Route::get('inicio/portales/portal-navega/etapa20n', [IndexController::class, 'e
 ->middleware('auth.admin4')
 ->name('admin.etapa20navega');
 
+Route::get('userdata', [IndexController::class, 'userdata'])
+    ->middleware('auth')
+    ->name('userdata');
 
+Route::get('galeriaVue', [IndexController::class, 'galeriaVue'])
+    ->middleware('auth')
+    ->name('galeriaVue');
+
+    Route::get('galeriaFotoVue', [IndexController::class, 'galeriaFotoVue'])
+    ->middleware('auth')
+    ->name('galeriaFotoVue');

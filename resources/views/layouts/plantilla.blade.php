@@ -116,7 +116,8 @@
 
         </div>
     </nav>
-        @yield('content')
+    
+    
 
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -124,8 +125,9 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
     </script>
-
-
+   @yield('content')
+    
+    
 </body>
 
 <section id="redapoyo" class="section_footer d-flex justify-content-center align-items-center rounded">

@@ -495,6 +495,37 @@ class IndexController extends Controller
 
         }
     }*/
+    public function userdata(Request $request) // -------> Vue
+    {
+        $user = Auth::user();
+        return $user;
+    }
+    
+    public function galeriaVue() // -------> Vue
+    {
+        $galeria = Galeria::where('estado', '1')
+        ->orderBy('updated_at', 'desc')
+        ->get();
 
+        return $galeria;
+    }
+
+    public function galeriaFotoVue() // -------> Vue
+    {
+        $imagen = Galeria::where('estado', '1')
+        ->select('imagenes')
+        ->orderBy('updated_at', 'desc')
+        ->get();
+        $foto =[];
+        foreach ($imagen as $imagenes)
+        {
+           $a=explode(",", $imagenes->imagenes);
+           $b=$a[0];
+           array_push($foto,$b);
+        }
+        
+        return $foto;
+
+    }
 }
     
