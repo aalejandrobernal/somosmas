@@ -6,14 +6,13 @@
                 <hr class="line-title">
             </div>
         </div>
-        
+
         <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
             <div class="carrusel-itemss">
                 <div class="carrusel-itemm" v-for="(galeria,index) in galerias" :key="index">
                     <div class="card">
-                        <div class="card_img">
-                            
-                            <img src="" >
+                        <div class="card_img"> {{  }}
+                            <img :src="galeria.inicial">
                         </div>
 
                         <div class="card-body">
@@ -25,11 +24,11 @@
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
                                 Actualización: {{ galeria.updated_at | formato }}
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="modal fade bd-example-modal-xl" id="myModal" tabindex="-1" role="dialog"
                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
@@ -40,13 +39,13 @@
                                 <div id="carouselExampleControls"
                                     class="carousel slide col-6 noticia" data-ride="carousel">
                                     <div class="carousel-inner" v-for="(item,index) in galerias.imagenes" :key="index">
-                                            
+
                                         <div class="carousel-item">
                                             <img class="d-block w-100 pl-4"
                                             src="/images/galeria1/amor1.jpg"
                                             style="max-height: 750px" alt="">
                                         </div>
-                                        
+
                                         <a class="carousel-control-prev"
                                             href="#carouselExampleControls"
                                             role="button"
@@ -68,7 +67,7 @@
                     </div>
                 </div>
             </div>
-        </main>   
+        </main>
     </div>
 </template>
 
@@ -92,8 +91,13 @@ import moment from 'moment'
         consultaBase() {
             axios.get('/galeriaVue').then((res) => {
                 if(res.status == 200) {
-                    // console.log(res.data)
+                    //console.log(res.data)
                     this.galerias = res.data
+                    this.galerias.forEach(elemento => {
+                        console.log(elemento.imagenes.split(','));
+                        elemento['inicial'] = '/images/galeria1/' + elemento.imagenes.split(',')[0];
+                    });
+                    console.log(this.galerias)
                 }
             })
             .catch((res) => {
@@ -105,9 +109,9 @@ import moment from 'moment'
         consultaBase2() {
             axios.get('/galeriaFotoVue').then((res) => {
                 if(res.status == 200) {
-                    console.log(res.data)
+                    //console.log(res.data)
                     this.imgs = res.data
-                    
+
                 }
             })
             .catch((res) => {
