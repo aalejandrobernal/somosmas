@@ -38,16 +38,16 @@ class IndexController extends Controller
         $contenido = Banner::where('estado', '1')
         ->orderBy('orden', 'asc')
         ->get();
-       
+
         $id_noti_des = Noticia_destacada::where('id', '1')
         ->first()
         ->noticias_id;
-                
+
         $noticia = Noticia::where('id', $id_noti_des)
         ->Limit('1')
         ->where('estado', '1')
         ->get();
-        
+
         $formacion = Formacion::where('estado', '1')
             ->orderBy('orden', 'asc')
             ->get();
@@ -95,6 +95,7 @@ class IndexController extends Controller
              'users.fecha_ingreso',
              'users.fecha_ingreso as inicio')
             ->where('empresas.estado', '1')
+            ->where('users.estado', '1')
             ->get();
 
         $listap = [];
@@ -123,7 +124,7 @@ class IndexController extends Controller
         return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
 
-        
+
     }
 
     public function cultura()
@@ -157,8 +158,8 @@ class IndexController extends Controller
             ->join('empresas', 'empresas.id', '=', 'users.empresa_id')
             ->select('empresas.nombre')
             ->where('users.documento', auth()->user()->documento)
-            ->get();                     
-                      
+            ->get();
+
         return view('inicio.editar_perfil', compact('empresas'));
     }
 
@@ -168,25 +169,25 @@ class IndexController extends Controller
     }
 
     public function cambiocontrasena(Request $request) {
-        
+
         $user           = Auth::user();
         $userId         = $user->id;
         $userPassword   = $user->password;
-        
+
         $NewPass        = $request->password;
         $confirPass     = $request->confirm_password;
-        $confirmActual  = sha1($request->password_actual); 
+        $confirmActual  = sha1($request->password_actual);
 
         // Log::info("Entra a cambio contraseña");
         // Log::info("Usuario:" . $userPassword);php
-        // Log::info($userEmpresa);          
+        // Log::info($userEmpresa);
 
             //valida si la clave actual es la misma del usuario en sesión
             if ($confirmActual == $userPassword){
-                
+
                 //valida que la nueva contraseña 1 y 2 sean iguales
                 if ($NewPass == $confirPass){
-                    
+
                     //valida que la clave no sea menor a 8 digitos
                     if(strlen($NewPass) >=8) {
 
@@ -208,7 +209,7 @@ class IndexController extends Controller
     }
 
     public function cambiofoto(Request $request) {
-        
+
         $user           = Auth::user();
         $userId         = $user->id;
         $userFoto       = $user->foto;
@@ -231,20 +232,20 @@ class IndexController extends Controller
             $nombrearchivo = $userDoc.'.'.$extension;
             $archivo->move('../public/images/fotos/', $nombrearchivo);
             $userFoto = $nombrearchivo;
-            
+
             $sqlBD = DB::table('users')
             ->where('id', $userId)
             ->update(['foto' => $userFoto]);
-            
+
             return back()->withErrors(['foto1'=>'Felicitaciones, tu foto ha sido cambiada exitosamente.']);
         }else{
             return back()->withErrors(['foto2'=>'No se ha seleccionado ningún archivo']);
         }
-        
+
     }
 
     // public function cambiodatos(Request $request) {
-        
+
     //     $user           = Auth::user();
     //     $userId         = $user->id;
     //     $userNombre     = $user->nombre;
@@ -263,7 +264,7 @@ class IndexController extends Controller
 
     //     return back()->withErrors(['fecha_ingreso'=>'Tus datos han sido actualizado correctamente']);
     // }
-    
+
     public function galeria()
     {
         $galeria = Galeria::where('estado', '1')
@@ -274,7 +275,7 @@ class IndexController extends Controller
         ->select('imagenes')
         ->orderBy('updated_at', 'desc')
         ->get();
-        
+
         $foto =[];
         foreach ($imagen as $imagenes)
         {
@@ -282,7 +283,7 @@ class IndexController extends Controller
            $b=$a[0];
            array_push($foto,$b);
         }
-       
+
         return view('inicio.galeria', compact('galeria','foto'));
     }
 
@@ -465,7 +466,7 @@ class IndexController extends Controller
             'evidencias' => $evidencias
         ]);
     }
-  
+
     public function importUsers()
     {
         return view('inicio.import');
@@ -497,4 +498,3 @@ class IndexController extends Controller
     }*/
 
 }
-    
