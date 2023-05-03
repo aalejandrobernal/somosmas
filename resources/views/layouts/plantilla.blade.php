@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
     <link rel="stylesheet" href="{{ asset('css/tooltip.css')}}">
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
-    
+
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
     <script src="{{ asset('js/splide.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap-5.1.bundle.min.js') }}"></script>
@@ -33,7 +33,7 @@
 
 </head>
 
-<body> 
+<body>
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('inicio.index') }}">
@@ -56,14 +56,14 @@
                     </li>
                 </ul>
 
-            
+
                 <div class="pr-2">
-                
+
                     <a class="text-white" style="text-decoration: none">Bienvenido: <b>
                             {{ auth()->user()->nombre }}</b></a>
-                            
+
                 </div>
-                
+
                 <div class="pr-0">
                     @if (auth()->user()->foto)
                     <img src="../images/fotos/{{auth()->user()->foto}}" alt="" class="usuario">
@@ -83,11 +83,11 @@
                             @endcan
                             <li><a class="dropdown-item" id="sesion" style="" href="{{ route('login.destroy') }}">
                             Cerrar Sesión</a></li>
-                        </ul>   
+                        </ul>
                 </li>
 
             </div>
-            
+
             <a href="https://api.whatsapp.com/send?phone=57{{ env('NUMBER_WHASTAPP') }}" class="bt-wsp"
                 target="_blank">
                 <i class="bi bi-whatsapp"></i>
@@ -103,7 +103,7 @@
         })
     </script>
 
-@yield('content') 
+@yield('content')
 
 </body>
 
@@ -111,20 +111,20 @@
     <div class="footer_bg">
         <h2 class="footer_red">RED DE APOYO     <i class="fa-solid fa-circle-info"></i></h2>
             <div class="row p-3">
-            
+
                 <div class="col-3 pl-5">
-                    
+
                     <h5 class="emergencia"><i class="fa-sharp fa-solid fa-phone-volume"></i>
-                    <strong>En caso de emergencias</strong></h5> 
+                    <strong>En caso de emergencias</strong></h5>
                     <ul style="font-size: 14px; color: white">
                         <li>Número general de Emergencias: 123</li>
                         <li>Número general Cruz Roja: 132</li>
                         <li>Número general Policía: 112</li>
                         <li>Número general Bomberos: 119</li>
-                    </ul> 
-                    
+                    </ul>
+
                     <h5 class="emergencia"><i class="fa-sharp fa-solid fa-phone-volume"></i>
-                    <strong>Líneas gratuitas de atención <br> en salud mental</strong></h5>
+                    <strong>Líneas gratuitas de atención en salud mental</strong></h5>
                     <ul style="font-size: 14px; color: white">
                         <li>Línea 106 y su chat 300 754 8933 (ciudadanía en general).</li>
                         <li>Línea Psicoactiva 01 8000 112 439 (Prevención y riesgo de consumo de sustancias psicoactivas).</li>
@@ -132,25 +132,25 @@
                         <li>Línea Calma 01 8000 423 614 (Hombres).</li>
                         <li>Línea Diversa 310 864 4214 (Población LGBTI).</li>
                     </ul>
-                    
+
                 </div>
                 <div class="col-3">
                     <p style="font-size: 16px; text-align: center; color: white">
                     Estamos para servirte, <br> cuenta con nosotros. WhatsApp</p><br>
                     <h5 style="text-align: center; color: white"><strong>Gestión Humana LIWA</strong></h5>
-                    <div style="font-size: 14px; color: white"class="wp"> 
+                    <div style="font-size: 14px; color: white"class="wp">
                         <div class="icon">
                             <a href="https://wa.me/573112537491" data-bs-toggle="tooltip" data-placement="top" title="Lizeth Ortega"
                             class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a> Lizeth Ortega <br>
                             <a href="https://wa.me/573132203908" data-bs-toggle="tooltip" data-placement="top" title="Paula Hernandez"
-                                class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Paula Hernandez  
+                                class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Paula Hernandez
                         </div><br>
                         <h5 style="text-align: center; color: white"> <strong>Profesionales HSE</strong></h5>
                         <div class="icon">
-                           
-                            <a href="https://wa.me/57{{ env('CHIA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+
+                            <a href="https://wa.me/57{{ env('CHIA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
                                 title="Daniela Cortés-Chía" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Daniela Cortés-Chía<br>
-                            <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                            <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top"
                                 title="Dennis Tello-Fusa" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>    Dennis Tello-Fusa
                         </div>
                     </div>
@@ -171,7 +171,7 @@
                         <li>Hospital San Antonio de Chía: Carrera 10 # 8-24 - Chía, Cundinamarca.</li>
                         <li>Hospital San Rafael: Diagonal 23 # 12-64 - Fusagasugá, Cundinamarca.</li>
                         <li>Clínica Belén: Calle 17 # 12-27 - Fusagasugá, Cundinamarca.</li>
-                    </ul> 
+                    </ul>
                 </div>
 
                 <div style="font-size: 14px; color: white" class="col-3">
@@ -186,7 +186,7 @@
                         <li>Oficina Chía: Caí Guaymaral = 3490791 Cuadrantes 3017791812 3212464768</li>
                         <li>Oficina Fusagasugá: Cuadrante = 3212475311</li>
                     </ul>
-                    
+
                     <h5><i style="color: white" class="fa-solid fa-fire-extinguisher"></i><strong> Bomberos</strong></h5>
                     <ul style="color: white">
                         <li>Estación de Bomberos Caobos: 6144105-6143290-3822500 - Bogotá.</li>
@@ -196,7 +196,7 @@
                     </ul>
                 </div>
             </div>
-    </div>      
+    </div>
 </section>
 
 
