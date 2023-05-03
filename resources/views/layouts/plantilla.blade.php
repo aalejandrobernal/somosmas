@@ -159,8 +159,8 @@
                     <h5><i style="color: white" class="fa-solid fa-location-dot"></i><strong>  Direcciones oficinas</strong></h5>
                     <ul style="color: white">
                         <li>Oficina Bogotá: Calle 163a # 20 - 15 Piso 5 - Toberin.</li>
-                        <li>Oficina Navega: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza - Chía, Cundinamarca.</li>
-                        <li>Oficina Libre: Carrera 6 # 07-36 Local 317 C.C. Escorial Center Fusagasugá, Cundinamarca.</li>
+                        <li>Oficina Chía: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza</li>
+                        <li>Oficina Fusagasugá: Carrera 6 # 07-36 Local 317 C.C. Escorial Center</li>
                     </ul>  
                     
                     <h5><i style="color: white" class="fa-solid fa-house-medical"></i><strong> Clínicas ARL Sura</strong></h5>
