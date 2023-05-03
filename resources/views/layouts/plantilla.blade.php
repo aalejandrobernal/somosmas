@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper-9.0.bundle.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
-    <link rel="stylesheet" href="{{ asset('css/tootip.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/tooltip.css')}}">
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
     
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
@@ -116,7 +116,6 @@
                     
                     <h5 class="emergencia">En caso de emergencias   
                     <i class="fa-sharp fa-solid fa-phone-volume"></i> </h5>  
-                    <br>
                     <p style="font-size: 14px; text-align: center; color: white"> 
                     Número general de Emergencias: 123
                     <br>
@@ -126,28 +125,49 @@
                     <br>
                     Número general Bomberos: 119
                     <br>
+                    <br></p>
+                    <h5 style="text-align: center; color: white">Líneas gratuitas de atención <br> en salud mental
+                    <i class="fa-sharp fa-solid fa-phone-volume"></i></h5>
+                    <p style="font-size: 14px; text-align: center; color: white"> 
+                    Línea 106 y su chat 300 754 8933 (ciudadanía en general).
                     <br>
-                    Estamos para servirte, cuenta con nosotros WhatsApp profesionales HSE</p>
-                    <div class="wp">   
-                        <a href="https://wa.me/573118076877" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                            class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/573016373640" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                            class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
-                            title="Fusagasugá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
-                            title="Bogotá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    </div>
+                    Línea Psicoactiva 01 8000 112 439 (Prevención y riesgo de consumo de sustancias psicoactivas).
                     <br>
+                    Línea Púrpura 01 8000 112 137 (Mujeres).
+                    <br>
+                    Línea Calma 01 8000 423 614 (Hombres).
+                    <br>
+                    Línea Diversa 310 864 4214 (Población LGBTI).
+                    <!-- <br>
                     <div style="font-size: 14px" class="sedes">
                         Bogotá - Chía - Fusagasugá 
+                    </div> -->
+                </div>
+                <div class="col-2">
+                <p style="font-size: 15px; text-align: center; color: white">
+                    Estamos para servirte, <br> cuenta con nosotros. WhatsApp</p><br>
+                    <h5 style="text-align: center; color: white">Gestión Humana LIWA</h5>
+                    <div style="font-size: 14px; color: white"class="wp"> 
+                        <div class="icon">
+                            <a href="https://wa.me/573112537491" data-bs-toggle="tooltip" data-placement="top" title="Lizeth Ortega"
+                            class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a> Lizeth Ortega <br>
+                            <a href="https://wa.me/573132203908" data-bs-toggle="tooltip" data-placement="top" title="Paula Hernandez"
+                                class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Paula Hernandez  
+                        </div><br>
+                        <h5 style="text-align: center; color: white">Profesionales HSE</h5>
+                        <div class="icon">
+                           
+                            <a href="https://wa.me/57{{ env('CHIA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                                title="Daniela Cortés-Chía" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Daniela Cortés-Chía<br>
+                            <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                                title="Dennis Tello-Fusa" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>    Dennis Tello-Fusa
+                        </div>
                     </div>
                 </div>
-                
-                <div style="font-size: 14px" class="col-4 ml-3">
+                <div style="font-size: 14px" class="col-3 ml-3">
                     <h5><i style="color: #FE3EB2" class="fa-solid fa-location-dot"></i><strong style="color: #FE3EB2">  Direcciones oficinas</strong></h5>
                     <ul style="color: white">
-                        <li>Oficina Bogotá: Calle 127b bis # 49-48 - Barrio Tierra Linda.</li>
+                        <li>Oficina Bogotá: Calle 163a # 20 - 15 Piso 5 - Toberin.</li>
                         <li>Oficina Navega: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza - Chía, Cundinamarca.</li>
                         <li>Oficina Libre: Carrera 6 # 07-36 Local 317 C.C. Escorial Center Fusagasugá, Cundinamarca.</li>
                     </ul>  
@@ -163,7 +183,7 @@
                     </ul> 
                 </div>
 
-                <div style="font-size: 14px" class="col-4">
+                <div style="font-size: 14px" class="col-3">
                     <h5><i style="color: #FE3EB2" class="fa-solid fa-phone"></i><strong style="color: #FE3EB2"> Línea de reporte de AT (ARL Sura)</strong></h5>
                     <ul style="color: white">
                         <li>Oficina Bogotá, Chía y Fusagasugá: 4055911</li>
