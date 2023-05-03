@@ -511,21 +511,4 @@ class IndexController extends Controller
         return $galeria;
     }
 
-    public function galeriaFotoVue() // -------> Vue
-    {
-        $imagen = Galeria::where('estado', '1')
-        ->select('imagenes')
-        ->orderBy('updated_at', 'desc')
-        ->get();
-        $foto =[];
-        foreach ($imagen as $imagenes)
-        {
-           $a=explode(",", $imagenes->imagenes);
-           $b=$a[0];
-           array_push($foto,$b);
-        }
-        
-        return $foto;
-
-    }
 }

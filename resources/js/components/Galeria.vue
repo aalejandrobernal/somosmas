@@ -11,16 +11,17 @@
             <div class="carrusel-itemss">
                 <div class="carrusel-itemm" v-for="(galeria,index) in galerias" :key="index">
                     <div class="card">
-                        <div class="card_img"> {{  }}
+                        <div class="card_img">
                             <img :src="galeria.inicial">
                         </div>
 
                         <div class="card-body">
                             <h5 class="card-title">{{ galeria.titulo }}</h5>
                             <br>
-                            <button type="button" class="ctn" data-toggle="modal" data-target="#myModal">
+                            <b-button class="ctn" v-b-modal.modal-lg >Ver Fotos</b-button>
+                            <!-- <button type="button" class="ctn" data-toggle="modal" data-target="#myModal">
                                 Ver fotos
-                            </button>
+                            </button> -->
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
                                 Actualización: {{ galeria.updated_at | formato }}
                             </div>
@@ -28,8 +29,14 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal fade bd-example-modal-xl" id="myModal" tabindex="-1" role="dialog"
+                <b-modal id="modal-lg" size="lg">
+                    <div>
+                        <div v-for="(item,index) in galerias.imagenes" :key="index">
+                            <img :src="'/images/galeria1/'+item" alt="">
+                        </div>
+                    </div>
+                </b-modal>
+                <!-- <div class="modal fade bd-example-modal-xl" id="myModal" tabindex="-1" role="dialog"
                     aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl">
                         <div class="modal-content justify-content-center" style="background-color:rgba(0,0,0,0);">
@@ -42,7 +49,7 @@
 
                                         <div class="carousel-item">
                                             <img class="d-block w-100 pl-4"
-                                            src="/images/galeria1/amor1.jpg"
+                                            src="/images/galeria1/salud1.jpg"
                                             style="max-height: 750px" alt="">
                                         </div>
 
@@ -65,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </main>
     </div>
@@ -84,7 +91,6 @@ import moment from 'moment'
     },
     mounted() {
         this.consultaBase();
-        this.consultaBase2();
     },
     methods: {
 
@@ -94,7 +100,7 @@ import moment from 'moment'
                     //console.log(res.data)
                     this.galerias = res.data
                     this.galerias.forEach(elemento => {
-                        console.log(elemento.imagenes.split(','));
+                        // console.log(elemento.imagenes.split(','));
                         elemento['inicial'] = '/images/galeria1/' + elemento.imagenes.split(',')[0];
                     });
                     console.log(this.galerias)
@@ -106,19 +112,6 @@ import moment from 'moment'
             });
         },
 
-        consultaBase2() {
-            axios.get('/galeriaFotoVue').then((res) => {
-                if(res.status == 200) {
-                    //console.log(res.data)
-                    this.imgs = res.data
-
-                }
-            })
-            .catch((res) => {
-                console.log('error de consulta')
-                console.log(res);
-            });
-        }
     },
 
     filters: {

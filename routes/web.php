@@ -236,7 +236,3 @@ Route::get('userdata', [IndexController::class, 'userdata'])
 Route::get('galeriaVue', [IndexController::class, 'galeriaVue'])
     ->middleware('auth')
     ->name('galeriaVue');
-
-    Route::get('galeriaFotoVue', [IndexController::class, 'galeriaFotoVue'])
-    ->middleware('auth')
-    ->name('galeriaFotoVue');
