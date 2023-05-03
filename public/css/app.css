@@ -1484,11 +1484,11 @@ hr.line-title-sunco {
 }
 
 .wp .icon{
-    margin-left: 35px;
+    padding: 0 20%;
 }
 
 
-.wp a{
+.wp .icon a{
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -1503,7 +1503,7 @@ hr.line-title-sunco {
 
 .emergencia{
     color: white;
-    text-align: center;
+    text-align: start;
 }
 
 .foto-video{
