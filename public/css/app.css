@@ -1217,6 +1217,9 @@ hr.line-title-sunco {
     color: #000;
     font-size: medium;
     display: flex;
+    width: 100%;
+    margin: auto;
+    
 }
 
 .carrusel-itemms img {
@@ -1480,13 +1483,14 @@ hr.line-title-sunco {
     background: black;
 }
 
-.wp{
-    text-align: center;
+.wp .icon{
+    margin-left: 35px;
 }
 
+
 .wp a{
-    margin-left: 5%;
     border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .sedes{
