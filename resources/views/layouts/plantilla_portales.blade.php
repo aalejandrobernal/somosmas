@@ -85,7 +85,7 @@
                     </ul> 
                     
                     <h5 class="emergencia"><i class="fa-sharp fa-solid fa-phone-volume"></i>
-                    <strong>Líneas gratuitas de atención <br> en salud mental</strong></h5>
+                    <strong>Líneas gratuitas de atención en salud mental</strong></h5>
                     <ul style="font-size: 14px; color: white">
                         <li>Línea 106 y su chat 300 754 8933 (ciudadanía en general).</li>
                         <li>Línea Psicoactiva 01 8000 112 439 (Prevención y riesgo de consumo de sustancias psicoactivas).</li>
