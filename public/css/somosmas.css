@@ -1544,7 +1544,8 @@ hr.line-title-sunco {
    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.648);
 }
 
-/*
-.btn-editar{
-   background-color;
-  } */
+#foto_modal{
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+}

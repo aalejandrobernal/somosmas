@@ -9,7 +9,7 @@
 
         <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
             <div class="carrusel-itemss">
-                <div class="carrusel-itemm" v-for="(galeria,index) in galerias" :key="index">
+                <div class="carrusel-itemm" v-for="galeria in galerias" :key="galeria.id">
                     <div class="card">
                         <div class="card_img">
                             <img :src="galeria.inicial">
@@ -18,77 +18,44 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ galeria.titulo }}</h5>
                             <br>
-                            <b-button class="ctn" v-b-modal.modal-lg >Ver Fotos</b-button>
-                            <!-- <button type="button" class="ctn" data-toggle="modal" data-target="#myModal">
-                                Ver fotos
-                            </button> -->
+                            <b-button v-b-modal.modal="'my-modal'+galeria.id">Ver Fotos</b-button>
+                            
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
                                 Actualización: {{ galeria.updated_at | formato }}
                             </div>
 
-                        </div>
-                    </div>
-                
-                    <b-modal id="modal-lg" size="lg">
-                        <!-- <p>{{ galeria }}</p> -->
-                        <div class="col" style="position: relative;">
-                                            <b-carousel sty
-                                                id="carousel-fade"
-                                                controls
-                                                style="top: 50%;  left: 50%; transform: translate(-50%, -50%);"
-                                                fade
-                                                indicators
-                                                img-max-width="500"
-                                                img-max-height="500"                          
-                                            >
-                                                <div  v-for="(item, index) in galeria.imagenes.split(',')" :key="index">
+                            <b-modal :id="'my-modal'+galeria.id" hide-footer hide-header>
+                                <div style=" display:flex; justify-content:
+                                center; align-items: center;
+                                padding:20px; height: 600px;" class="row">
+
+                                    <div class="col-md-12" >
+                                        <b-carousel
+                                        id="carousel-1"
+                                        :interval="4000"
+                                        controls
+                                        indicators
+                                        img-width="350"
+                                        img-height="240"
+                                        >
+                                        <div id="foto_modal" v-for="(item,index) in galeria.imagenes.split(',')" :key="index">
+                                            <div >
                                                 <b-carousel-slide
-                                                :img-src="'/images/galeria1/'+item"
+                                            :img-src="'/images/galeria1/'+item"
                                                 ></b-carousel-slide>
-                                                
                                             </div>
-                                            </b-carousel>
                                             
                                         </div>
-                    </b-modal>
-                </div>
-                <!-- <div class="modal fade bd-example-modal-xl" id="myModal" tabindex="-1" role="dialog"
-                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content justify-content-center" style="background-color:rgba(0,0,0,0);">
-                            <div style="display:flex; justify-content:
-                                center; align-items: center;
-                                padding:20px; height: 800px;">
-                                <div id="carouselExampleControls"
-                                    class="carousel slide col-6 noticia" data-ride="carousel">
-                                    <div class="carousel-inner" v-for="galeria in galerias" :key="galeria.id">
-
-                                        <div class="carousel-item">
-                                            <img class="d-block w-100 pl-4"
-                                            :src="'/images/galeria1/'+galeria.imagenes"
-                                            style="max-height: 750px" alt="">
-                                        </div>
-
-                                        <a class="carousel-control-prev"
-                                            href="#carouselExampleControls"
-                                            role="button"
-                                            data-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next"
-                                            href="#carouselExampleControls"
-                                                role="button"
-                                            data-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                        </b-carousel>
                                     </div>
+                                    
                                 </div>
-                            </div>
-                        </div>
+                            </b-modal>
+                        </div>  
                     </div>
-                </div> -->
+                    
+                </div>
+                
             </div>
         </main>
     </div>
@@ -112,13 +79,13 @@ import moment from 'moment'
         consultaBase() {
             axios.get('/galeriaVue').then((res) => {
                 if(res.status == 200) {
-                    console.log(res.data)
+                    // console.log(res.data)
                     this.galerias = res.data
                     this.galerias.forEach(elemento => {
                         // console.log(elemento.imagenes.split(','));
                         elemento['inicial'] = '/images/galeria1/' + elemento.imagenes.split(',')[0];
                     });
-                    // console.log(this.galerias)
+                    console.log(this.galerias)
                 }
             })
             .catch((res) => {

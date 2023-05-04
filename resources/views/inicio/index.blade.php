@@ -575,6 +575,13 @@
                 </section>
 
                 <hr>
+                <section id="formaciones">
+                    <p>
+                        <br>
+                        <br>
+                        <hr>
+                    </p>
+                </section>
 
                 <section id="formaciones" class="">
                     <div class="row">
