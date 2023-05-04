@@ -5555,7 +5555,6 @@ a.close.disabled {
   overflow: hidden;
 }
 .modal-open .modal {
-  background-color: red;
   overflow-x: hidden;
   overflow-y: auto;
 }
