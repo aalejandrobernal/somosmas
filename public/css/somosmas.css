@@ -1161,12 +1161,12 @@ hr.line-title-sunco {
 .carrusel-itemss{
     width: 1104px;
     display: flex;
-    /* overflow-y: hidden; */
-    /* overflow-x: scroll; */
+    overflow-y: hidden;
+    overflow-x: scroll;
     /* justify-content: center; */
 }
 
-/* .carrusel-itemss::-webkit-scrollbar {
+.carrusel-itemss::-webkit-scrollbar {
     width: 2px;
     height: 7px;
 }
@@ -1175,7 +1175,7 @@ hr.line-title-sunco {
 .carrusel-itemss::-webkit-scrollbar-thumb {
     background-color: #FE3EB2;
     border-radius: 8px;
-} */
+}
 
 .carrusel-itemm{
     padding: 10px;
