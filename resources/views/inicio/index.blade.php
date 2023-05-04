@@ -294,7 +294,7 @@
 
 @if (!@empty($listap) && @empty($lista))
     <section id="aniversario" class="">
-       
+
     @empty($listap)
     @else
         <div class="row">
@@ -327,7 +327,6 @@
                     <div class="card" style="height: 28rem;">
                         <div class="tamaño">
                             @if ($new['foto'])
-
                                 <img src="images/fotos/{{ $new['foto'] }}" alt="">
                             @else
                                 <img src="{{ asset('images/fotonone.jpeg') }}" alt="">
