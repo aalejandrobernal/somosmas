@@ -111,7 +111,10 @@ class IndexController extends Controller
                 $data["empresa"] = $cmp['empresa'];
                 $data["inicio"] = $cmp['inicio'];
                 $data["ann"] = Carbon::now()->createFromDate($cmp['fecha_ingreso'])->age;
-                array_push($listap, $data);
+                if( $data["ann"] > 0){
+                     array_push($listap, $data);
+                    };
+               
             }
         }
 
@@ -122,6 +125,7 @@ class IndexController extends Controller
 
         return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
+         
 
         
     }
@@ -145,10 +149,7 @@ class IndexController extends Controller
 
     public function noticia()
     {
-        $not = Noticia::where('estado', '1')
-        ->orderBy('updated_at', 'desc')
-        ->get();
-        return view('inicio.noticia', compact('not'));
+        return view('inicio.noticia');
     }
     public function noticiaVue() // -------> Vue
     {
@@ -158,6 +159,7 @@ class IndexController extends Controller
         foreach ($not as $item ) {
             $item->fecha = Carbon::parse($item->updated_at)->toFormattedDateString();
         }
+        
         return response()->json($not);
     }
 

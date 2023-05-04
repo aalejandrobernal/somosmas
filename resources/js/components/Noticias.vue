@@ -29,6 +29,7 @@
                             </div>
                         <div class="row">
                             <div class="col-3" v-if="noticia.contenido.length>800">
+                                
                                 <b-button v-b-modal="'my-modal-'+noticia.id" type="button" class="ctn"  variant="hi">
                                 Ver más</b-button>
                                 <b-modal size="xl" :id="'my-modal-'+noticia.id" :title="noticia.titulo" >
@@ -85,9 +86,9 @@
                             img-max-height="500"
                         >
                             <div  v-for="(item, index) in noticia.imagenes.split(',')" :key="index">
-                            <b-carousel-slide
-                            :img-src="'../storage/images/noticias/'+item"
-                            ></b-carousel-slide>
+                                <b-carousel-slide
+                                    :img-src="'../storage/images/noticias/'+item"
+                                ></b-carousel-slide>
                             </div>
                         </b-carousel>
                     </div>

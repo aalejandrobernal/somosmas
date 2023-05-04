@@ -208,8 +208,8 @@
                             <hr>
                         </p> --}}
                 </div>
-            </div>
-        </section>
+                </div>
+            </section>
     @endif
 
     @if (!@empty($lista) && @empty($listap))
@@ -294,7 +294,7 @@
 
 @if (!@empty($listap) && @empty($lista))
     <section id="aniversario" class="">
-
+       
     @empty($listap)
     @else
         <div class="row">
@@ -306,6 +306,7 @@
         <br>
         <div class="col-12">
             <p class="texto">
+                {{-- {{  $listap}} --}}
                 Felicitamos a los colaboradores que el dia de hoy
                 <script>
                     var meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre",
