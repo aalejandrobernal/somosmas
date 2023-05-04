@@ -12,7 +12,7 @@
 @section('content')
 
 <div id="app">
-    <noticias/> 
+    <noticias/>
 </div>
 <script src="{{asset('js/app.js')}}"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -21,7 +21,7 @@
 {{-- <script src="{{ asset('js/swiper.js') }}"></script> --}}
 {{-- <script src="{{ asset('js/splider.js') }}"></script> --}}
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
 @endsection

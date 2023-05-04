@@ -508,5 +508,19 @@ class IndexController extends Controller
 
         }
     }*/
+    public function userdata(Request $request) // -------> Vue
+    {
+        $user = Auth::user();
+        return $user;
+    }
+    
+    public function galeriaVue() // -------> Vue
+    {
+        $galeria = Galeria::where('estado', '1')
+        ->orderBy('updated_at', 'desc')
+        ->get();
+
+        return $galeria;
+    }
 
 }

@@ -1161,23 +1161,21 @@ hr.line-title-sunco {
 .carrusel-itemss{
     width: 1104px;
     display: flex;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     /* overflow-x: scroll; */
     /* justify-content: center; */
-
 }
 
-.carrusel-itemss::-webkit-scrollbar {
-    /* width: 2px; */
+/* .carrusel-itemss::-webkit-scrollbar {
+    width: 2px;
     height: 7px;
-
 }
 
 
 .carrusel-itemss::-webkit-scrollbar-thumb {
     background-color: #FE3EB2;
     border-radius: 8px;
-}
+} */
 
 .carrusel-itemm{
     padding: 10px;
@@ -1237,7 +1235,10 @@ hr.line-title-sunco {
     color: #000;
     font-size: medium;
     display: flex;
+    width: 100%;
+    margin: auto;
 }
+
 
 .carrusel-itemms img {
     display: flex;
@@ -1543,7 +1544,8 @@ hr.line-title-sunco {
    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.648);
 }
 
-/*
-.btn-editar{
-   background-color;
-  } */
+#foto_modal{
+    width: 100%;
+    margin: auto;
+    object-fit: contain;
+}
