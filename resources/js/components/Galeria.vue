@@ -18,13 +18,13 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ galeria.titulo }}</h5>
                             <br>
-                            <b-button v-b-modal.modal="'my-modal'+galeria.id">Ver Fotos</b-button>
+                            <b-button v-b-modal.modal-no-backdrop="'my-modal-no-backdrop'+galeria.id">Ver Fotos</b-button>
                             
                             <div class="vermaa" style="padding-top: 10%; padding-left:0%">
                                 Actualización: {{ galeria.updated_at | formato }}
                             </div>
 
-                            <b-modal :id="'my-modal'+galeria.id" hide-footer hide-header>
+                            <b-modal :id="'my-modal-no-backdrop'+galeria.id" hide-backdrop hide-footer hide-header hide-body>
                                 <div style=" display:flex; justify-content:
                                 center; align-items: center;
                                 padding:20px; height: 600px;" class="row">
