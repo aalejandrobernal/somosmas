@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 
-    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.8.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.8.css')}}">
     <link rel="stylesheet" href="{{ asset('css/somosmas.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
     <link rel="stylesheet" href="{{ asset('css/splider-js.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper_noti.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min-5.2.css')}}"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min-4.6.css')}}"> --}}
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min-5.2.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min-4.6.css')}}">
     <link rel="stylesheet" href="{{ asset('css/splide-skyblue.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/swiper-9.0.bundle.min.css') }}">
