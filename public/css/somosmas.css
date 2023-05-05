@@ -470,6 +470,7 @@ hr.line-title-sunco {
     background: rgb(2,0,36);
     border: 1px solid #FE3EB2;
     background: linear-gradient(90deg, rgb(254, 254, 254) 15%, #fe3eb138 90%);
+    padding: 15px;
 }
 
 .fondo img{
@@ -599,6 +600,7 @@ hr.line-title-sunco {
     padding: 8px;
     border-radius: 10px;
     color: white;
+    text-decoration: none;
 }
 
 .btn-spotify:hover {
@@ -1177,6 +1179,11 @@ hr.line-title-sunco {
     border-radius: 8px;
 }
 
+.carrusel-itemss2{
+    width: 1104px;
+    display: flex;
+}
+
 .carrusel-itemm{
     padding: 10px;
     min-width: 25%;
@@ -1352,6 +1359,7 @@ hr.line-title-sunco {
     height: 50px;
     border: 1px solid; color: #FFf;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .usuariofoto {
@@ -1501,14 +1509,7 @@ hr.line-title-sunco {
     background: black;
 }
 
-.wp{
-    text-align: center;
-}
 
-.wp a{
-    margin-left: 5%;
-    border-radius: 50%;
-}
 
 .sedes{
     background-color: transparent;
@@ -1520,7 +1521,7 @@ hr.line-title-sunco {
 
 .emergencia{
     color: white;
-    text-align: center;
+    text-align: start;
 }
 
 .foto-video{
@@ -1548,4 +1549,35 @@ hr.line-title-sunco {
     width: 100%;
     margin: auto;
     object-fit: contain;
+}
+
+#menu_perfil{
+    color: white;
+    margin-right: 80px;
+}
+
+.icon a{
+    background: #0df053;
+    border-radius: 50%;
+    margin-left: 30%;
+    margin-bottom: 5px;
+}
+
+.icon a:hover{
+    color: #0df053;
+     background: white;
+}
+
+#list-item-active{
+    background-color: #FE3EB2;
+    border: 1px solid #FE3EB2;
+    height: 50px;
+    padding-top: 12px;
+}
+
+#list-item-1{
+    background-color: #FE3EB21A;
+    border: 1px solid #FE3EB2;
+    height: 50px;
+    padding-top: 12px;
 }

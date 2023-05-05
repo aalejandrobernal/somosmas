@@ -8,7 +8,7 @@
         </div>
 
         <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
-            <div class="carrusel-itemss">
+            <div class="carrusel-itemss2">
                 <div class="carrusel-itemm" v-for="galeria in galerias" :key="galeria.id">
                     <div class="card">
                         <div class="card_img">
