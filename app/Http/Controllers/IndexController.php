@@ -62,6 +62,7 @@ class IndexController extends Controller
             'users.cargo as cargo',
             'users.fecha_nacimiento')
             ->where('empresas.estado', '1')
+            ->where('users.estado', '1')
             ->get();
 
         //Fecha Cumpleaños

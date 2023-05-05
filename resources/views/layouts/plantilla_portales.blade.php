@@ -73,47 +73,58 @@
         <h2 class="footer_red">RED DE APOYO     <i class="fa-solid fa-circle-info"></i></h2>
             <div class="row p-3">
             
-                <div class="col-3 ml-5">
+                <div class="col-3 pl-5">
                     
-                <h5 class="emergencia">En caso de emergencias   
-                    <i class="fa-sharp fa-solid fa-phone-volume"></i> </h5>
-                    <br>
-                    <p style="font-size: 14px; text-align: center; color: white"> 
-                    Número general de Emergencias: 123
-                    <br>
-                    Número general Cruz Roja: 132
-                    <br>
-                    Número general Policía: 112
-                    <br>
-                    Número general Bomberos: 119
-                    <br>
-                    <br>
-                    Estamos para servirte, cuenta con nosotros WhatsApp profesionales HSE</p>
-                    <div class="wp">   
-                        <a href="https://wa.me/573118076877" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                            class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/573016373640" data-bs-toggle="tooltip" data-placement="top" title="Chía"
-                            class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
-                            title="Fusagasugá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://wa.me/57{{ env('BOGOTA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
-                            title="Bogotá" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>
-                    </div>
-                    <br>
-                    <div style="font-size: 14px" class="sedes">
-                        Bogotá - Chía - Fusagasugá 
+                    <h5 class="emergencia"><i class="fa-sharp fa-solid fa-phone-volume"></i>
+                    <strong>En caso de emergencias</strong></h5> 
+                    <ul style="font-size: 14px; color: white">
+                        <li>Número general de Emergencias: 123</li>
+                        <li>Número general Cruz Roja: 132</li>
+                        <li>Número general Policía: 112</li>
+                        <li>Número general Bomberos: 119</li>
+                    </ul> 
+                    
+                    <h5 class="emergencia"><i class="fa-sharp fa-solid fa-phone-volume"></i>
+                    <strong>Líneas gratuitas de atención en salud mental</strong></h5>
+                    <ul style="font-size: 14px; color: white">
+                        <li>Línea 106 y su chat 300 754 8933 (ciudadanía en general).</li>
+                        <li>Línea Psicoactiva 01 8000 112 439 (Prevención y riesgo de consumo de sustancias psicoactivas).</li>
+                        <li>Línea Púrpura 01 8000 112 137 (Mujeres).</li>
+                        <li>Línea Calma 01 8000 423 614 (Hombres).</li>
+                        <li>Línea Diversa 310 864 4214 (Población LGBTI).</li>
+                    </ul>
+                    
+                </div>
+                <div class="col-3">
+                    <p style="font-size: 16px; text-align: center; color: white">
+                    Estamos para servirte, <br> cuenta con nosotros. WhatsApp</p><br>
+                    <h5 style="text-align: center; color: white"><strong>Gestión Humana LIWA</strong></h5>
+                    <div style="font-size: 14px; color: white"class="wp"> 
+                        <div class="icon">
+                            <a href="https://wa.me/573112537491" data-bs-toggle="tooltip" data-placement="top" title="Lizeth Ortega"
+                            class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a> Lizeth Ortega <br>
+                            <a href="https://wa.me/573132203908" data-bs-toggle="tooltip" data-placement="top" title="Paula Hernandez"
+                                class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Paula Hernandez  
+                        </div><br>
+                        <h5 style="text-align: center; color: white"> <strong>Profesionales HSE</strong></h5>
+                        <div class="icon">
+                           
+                            <a href="https://wa.me/57{{ env('CHIA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                                title="Daniela Cortés-Chía" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>  Daniela Cortés-Chía<br>
+                            <a href="https://wa.me/57{{ env('FUSA_WHASTAPP') }}" data-bs-toggle="tooltip" data-placement="top" 
+                                title="Dennis Tello-Fusa" class="btn btn-success" target="_blank"><i class="bi bi-whatsapp"></i></a>    Dennis Tello-Fusa
+                        </div>
                     </div>
                 </div>
-                
-                <div style="font-size: 14px" class="col-4">
-                    <h5><i style="color: #FE3EB2" class="fa-solid fa-location-dot"></i><strong style="color: #FE3EB2">  Direcciones oficinas</strong></h5>
+                <div style="font-size: 14px; color: white" class="col-3 p-0">
+                    <h5><i style="color: white" class="fa-solid fa-location-dot"></i><strong>  Direcciones oficinas</strong></h5>
                     <ul style="color: white">
-                        <li>Oficina Bogotá: Calle 127b bis # 49-48 - Barrio Tierra Linda.</li>
-                        <li>Oficina Navega: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza - Chía, Cundinamarca.</li>
-                        <li>Oficina Libre: Carrera 6 # 07-36 Local 317 C.C. Escorial Center Fusagasugá, Cundinamarca.</li>
+                        <li>Oficina Bogotá: Calle 163a # 20 - 15 Piso 5 - Toberin.</li>
+                        <li>Oficina Chía: Carrera 10 # 0-49 Sur Local 148 C.C. Vivenza Plaza</li>
+                        <li>Oficina Fusagasugá: Carrera 6 # 07-36 Local 317 C.C. Escorial Center</li>
                     </ul>  
                     
-                    <h5><i style="color: #FE3EB2" class="fa-solid fa-house-medical"></i><strong style="color: #FE3EB2"> Clínicas ARL Sura</strong></h5>
+                    <h5><i style="color: white" class="fa-solid fa-house-medical"></i><strong> Clínicas ARL Sura</strong></h5>
                     <ul style="color: white">
                         <li>Cruz Roja: Autopista Norte con calle 145 - Bogotá.</li>
                         <li>Clínica los Nogales: Calle 95 # 23-61 - Bogotá.</li>
@@ -124,20 +135,20 @@
                     </ul> 
                 </div>
 
-                <div style="font-size: 14px" class="col-4">
-                    <h5><i style="color: #FE3EB2" class="fa-solid fa-phone"></i><strong style="color: #FE3EB2"> Línea de reporte de AT (ARL Sura)</strong></h5>
+                <div style="font-size: 14px; color: white" class="col-3">
+                    <h5><i style="color: white" class="fa-solid fa-phone"></i><strong> Línea de reporte de AT <br> (ARL Sura)</strong></h5>
                     <ul style="color: white">
                         <li>Oficina Bogotá, Chía y Fusagasugá: 4055911</li>
                     </ul>
 
-                    <h5><i style="color: #FE3EB2" class="fa-solid fa-shield-halved"></i><strong style="color: #FE3EB2"> Cuadrantes de Policía</strong></h5>
+                    <h5><i style="color: white" class="fa-solid fa-shield-halved"></i><strong> Cuadrantes de Policía</strong></h5>
                     <ul style="color: white">
                         <li>Oficina Bogotá: Cuadrante = 3002005460</li>
                         <li>Oficina Chía: Caí Guaymaral = 3490791 Cuadrantes 3017791812 3212464768</li>
                         <li>Oficina Fusagasugá: Cuadrante = 3212475311</li>
                     </ul>
                     
-                    <h5><i style="color: #FE3EB2" class="fa-solid fa-fire-extinguisher"></i><strong style="color: #FE3EB2"> Bomberos</strong></h5>
+                    <h5><i style="color: white" class="fa-solid fa-fire-extinguisher"></i><strong> Bomberos</strong></h5>
                     <ul style="color: white">
                         <li>Estación de Bomberos Caobos: 6144105-6143290-3822500 - Bogotá.</li>
                         <li>Estación de Bomberos Cedritos: 6724913 - Bogotá.</li>
