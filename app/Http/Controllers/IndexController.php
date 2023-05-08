@@ -36,10 +36,7 @@ class IndexController extends Controller
 
     public function index1()
     {
-        $contenido = Banner::where('estado', '1')
-        ->orderBy('orden', 'asc')
-        ->get();
-
+       
         $id_noti_des = Noticia_destacada::where('id', '1')
         ->first()
         ->noticias_id;
@@ -52,78 +49,6 @@ class IndexController extends Controller
         $formacion = Formacion::where('estado', '1')
             ->orderBy('orden', 'asc')
             ->get();
-
-        $now = Carbon::now();
-        $currentDate = $now->toDateString();
-
-        $cumple = User::join('empresas', 'empresas.id', '=', 'users.empresa_id')
-            ->select('users.nombre as nombre',
-            'empresas.nombre as empresa',
-            'users.foto as foto',
-            'users.cargo as cargo',
-            'users.fecha_nacimiento')
-            ->where('empresas.estado', '1')
-            ->get();
-
-        //Fecha Cumpleaños
-
-        $lista = [];
-        foreach ($cumple as $cmp) {
-            $data = [];
-            $convert = strtotime($cmp['fecha_nacimiento']);
-            $formato1 = date('m-d', $convert);
-            $now = date('m-d', time());
-
-            if ($formato1 == $now) {
-                $data["nombre"] = $cmp['nombre'];
-                $data["foto"] = $cmp['foto'];
-                $data["cargo"] = $cmp['cargo'];
-                $data["empresa"] = $cmp['empresa'];
-                array_push($lista, $data);
-            }
-        }
-
-        //FECHA INICIO
-
-        $fecha_ingreso = Carbon::now();
-
-        $cumplep = User::join('empresas', 'empresas.id', '=', 'users.empresa_id')
-            ->select('users.nombre as nombre',
-             'empresas.nombre as empresa',
-             'users.foto as foto',
-             'users.cargo as cargo',
-             'users.fecha_nacimiento',
-             'users.fecha_ingreso',
-             'users.fecha_ingreso as inicio')
-            ->where('empresas.estado', '1')
-            ->where('users.estado', '1')
-            ->get();
-
-        $listap = [];
-        foreach ($cumplep as $cmp) {
-            $data = [];
-            $convert = strtotime($cmp['fecha_ingreso']);
-            $formato = date('m-d', $convert);
-            $fecha_ingreso = date('m-d', time());
-
-            if ($formato == $fecha_ingreso) {
-                $data["nombre"] = $cmp['nombre'];
-                $data["foto"] = $cmp['foto'];
-                $data["cargo"] = $cmp['cargo'];
-                $data["empresa"] = $cmp['empresa'];
-                $data["inicio"] = $cmp['inicio'];
-                $data["ann"] = Carbon::now()->createFromDate($cmp['fecha_ingreso'])->age;
-                if( $data["ann"] > 0){
-                     array_push($listap, $data);
-                    };
-
-            }
-        }
-
-        $fecha_hoy= Carbon::now();
-        $fecha_hoy = $fecha_hoy->format('m-d');
-
-        $formatos = $formato == $formato1;
 
         return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
@@ -141,7 +66,6 @@ class IndexController extends Controller
     }
     public function birthday()
     {
-
         $activos = User::join('empresas', 'empresas.id', '=', 'users.empresa_id')
         ->select('users.nombre as nombre',
          'empresas.nombre as empresa',
@@ -176,13 +100,24 @@ class IndexController extends Controller
                 $x=$data2["ann"] = Carbon::now()->createFromDate($cmp['fecha_ingreso'])->age;
                 if( $x > 0 ){
                      array_push($anniversary, $data2);
-                    };
+                };
             }
         }
-        return response()->json([$birthday, $anniversary,$now]);
+        return response()->json([$birthday, $anniversary]);
     }
 
+    public function noticia_des()
+    {
+        $id_noti_des = Noticia_destacada::where('id', '1')
+        ->first()
+        ->noticias_id;
 
+        $noticia = Noticia::where('id', $id_noti_des)
+        ->Limit('1')
+        ->where('estado', '1')
+        ->get();
+        return response()->json($noticia);
+    }
     public function cultura()
     {
         return view('inicio.cultura');

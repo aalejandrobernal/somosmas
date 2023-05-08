@@ -15,6 +15,8 @@ Vue.component('galeria-component', require('./components/Galeria.vue').default);
                                 //Inicio
 Vue.component('banner', require('./components/inicio/Banner.vue').default);
 Vue.component('birthday', require('./components/inicio/Birthday.vue').default);
+Vue.component('noticia_des', require('./components/inicio/noticia_des.vue').default);
+Vue.component('formaciones_mes', require('./components/ExampleComponent.vue').default);
 
 
 
@@ -24,4 +26,10 @@ const app = new Vue({
 
 const birthday = new Vue({
     el: '#birthday',
+});
+const noticia = new Vue({
+    el: '#noticia',
+});
+const formaciones_mes = new Vue({
+    el: '#formaciones_mes',
 });
