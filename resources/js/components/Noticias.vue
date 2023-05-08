@@ -51,7 +51,7 @@
                                                 img-max-width="500"
                                                 img-max-height="500"                          
                                             >
-                                                <div  v-for="(item, index) in noticia.imagenes.split(',')" :key="index">
+                                            <div  v-for="(item, index) in noticia.imagenes.split(',')" :key="index">
                                                 <b-carousel-slide
                                                 :img-src="'../storage/images/noticias/'+item"
                                                 ></b-carousel-slide>

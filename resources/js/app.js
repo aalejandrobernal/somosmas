@@ -12,9 +12,16 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('noticias', require('./components/Noticias.vue').default);
 Vue.component('cultura-component', require('./components/Cultura.vue').default);
 Vue.component('galeria-component', require('./components/Galeria.vue').default);
+                                //Inicio
+Vue.component('banner', require('./components/inicio/Banner.vue').default);
+Vue.component('birthday', require('./components/inicio/Birthday.vue').default);
+
 
 
 const app = new Vue({
     el: '#app',
 });
 
+const birthday = new Vue({
+    el: '#birthday',
+});

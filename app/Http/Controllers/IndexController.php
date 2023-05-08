@@ -23,6 +23,7 @@ use Carbon\Carbon;
 
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Log\Logger;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File;
@@ -33,7 +34,7 @@ use Illuminate\Support\Facades\Log;
 class IndexController extends Controller
 {
 
-    public function index()
+    public function index1()
     {
         $contenido = Banner::where('estado', '1')
         ->orderBy('orden', 'asc')
@@ -126,10 +127,61 @@ class IndexController extends Controller
 
         return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
-
-
-
     }
+    public function index()
+    {
+        return view('inicio.index');
+    }
+    public function inicioVue()
+    {
+        $banners = Banner::where('estado', '1')
+        ->orderBy('orden', 'asc')
+        ->get();
+       return  response()->json($banners);
+    }
+    public function birthday()
+    {
+
+        $activos = User::join('empresas', 'empresas.id', '=', 'users.empresa_id')
+        ->select('users.nombre as nombre',
+         'empresas.nombre as empresa',
+         'users.foto as foto',
+         'users.cargo as cargo',
+         'users.fecha_nacimiento',
+         'users.fecha_ingreso',
+         'users.fecha_ingreso as inicio')
+        ->where('empresas.estado', '1')
+        ->where('users.estado', '1')
+        ->get();
+        $now = date('m-d', time());
+        $birthday = [];
+        $anniversary = [];
+        foreach ($activos as $cmp) {
+            $data = [];
+            $data2 = [];
+            $bird = date('m-d', strtotime($cmp['fecha_nacimiento']));
+            $anni = date('m-d', strtotime($cmp['fecha_ingreso']));
+            if ($bird == $now) {
+                $data["nombre"] = $cmp['nombre'];
+                $data["foto"] = $cmp['foto'];
+                $data["cargo"] = $cmp['cargo'];
+                $data["empresa"] = $cmp['empresa'];
+                array_push($birthday, $data);
+            }
+            if ($anni == $now ) {
+                $data2["nombre"] = $cmp['nombre'];
+                $data2["foto"] = $cmp['foto'];
+                $data2["cargo"] = $cmp['cargo'];
+                $data2["empresa"] = $cmp['empresa'];
+                $x=$data2["ann"] = Carbon::now()->createFromDate($cmp['fecha_ingreso'])->age;
+                if( $x > 0 ){
+                     array_push($anniversary, $data2);
+                    };
+            }
+        }
+        return response()->json([$birthday, $anniversary,$now]);
+    }
+
 
     public function cultura()
     {

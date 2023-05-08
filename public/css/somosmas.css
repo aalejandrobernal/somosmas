@@ -1159,7 +1159,7 @@ hr.line-title-sunco {
 
 
 .carrusel-itemss{
-    width: 1104px;
+    /* width: 1104px; */
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -1234,7 +1234,7 @@ hr.line-title-sunco {
     text-align: center;
     color: #000;
     font-size: medium;
-    display: flex;
+    /* display: flex; */
     width: 100%;
     margin: auto;
 }
@@ -1383,6 +1383,7 @@ hr.line-title-sunco {
 
 
 
+
 .carrusel-itemsss::-webkit-scrollbar {
     width: 3px;
 
@@ -1432,11 +1433,10 @@ hr.line-title-sunco {
     overflow-x: scroll;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding-top: 15px;
     margin-right: 10px;
 }
-
 
 
 .carrusel-itemsssn::-webkit-scrollbar {
