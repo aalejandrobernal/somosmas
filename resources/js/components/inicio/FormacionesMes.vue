@@ -12,9 +12,9 @@
             <div class="">
                 <div class="carrusel-itemss">
                     <div class="carrusel-itemm" v-for="formacion in form" :key="formacion.id">
-                        <div class="card" style="width: 16rem;" >
+                        <div class="card"  >
                             <img :src="'../storage/images/formaciones/'+formacion.imagen" alt="">
-                            <div class="card-body" style="width: 245px ;height:304px;" >
+                            <div class="card-body" style=" height:320px;" >
                                 <h5 class="card-title" style="width: 204px ;height:48px;">{{ formacion.titulo }}</h5>
                                 <div class="card-text" :id="'tooltip-target-'+formacion.id" >
                                     <span v-html="formacion.cuerpo.substring(0,160)+' .....'"></span>
