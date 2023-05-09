@@ -46,10 +46,7 @@ class IndexController extends Controller
         ->where('estado', '1')
         ->get();
 
-        $formacion = Formacion::where('estado', '1')
-            ->orderBy('orden', 'asc')
-            ->get();
-
+       
         return view('inicio.index',compact('contenido','noticia',
          'formacion', 'listap', 'lista', 'formato1', 'formato', 'fecha_hoy', 'formatos'));
     }
@@ -117,6 +114,13 @@ class IndexController extends Controller
         ->where('estado', '1')
         ->get();
         return response()->json($noticia);
+    }
+    public function formaciones_mes()
+    {
+        $formacion = Formacion::where('estado', '1')
+        ->orderBy('orden', 'asc')
+        ->get();
+        return response()->json($formacion);
     }
     public function cultura()
     {

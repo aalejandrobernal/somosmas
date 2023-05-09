@@ -78,7 +78,7 @@
                             </p>
                         <div v-if="anniversary.length>3" class="carrusel-itemsssn"  >
                             <div class="carrusel-itemmms" v-for="user in anniversary" :key="user.foto">
-                                <div class="card shadow p-3 " style="height: 28em;">
+                                <div class="card shadow" style="height: 28em;">
                                     <div class="tamaño" style="width: 9rem;">
                                         <div v-if="user.foto">
                                             <img :src="'images/fotos/'+user.foto" alt="" >
@@ -88,7 +88,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
-                                        <div class="nombre">
+                                        <div class="nombre" style="height: 70px;">
                                             <p class="card-title" style="font-size:medium;">
                                                 <strong>{{ user.nombre }}</strong>
                                             </p>
@@ -99,7 +99,7 @@
                                             </p>
                                         </div>
                                         <div>
-                                            <p style="color: #707b7c; height: 45px; text-align: center;" >
+                                            <p style="color: #707b7c; height: 70px; text-align: center;" >
                                                     <strong>{{user.cargo }}</strong>
                                             </p>
                                         </div>
@@ -122,7 +122,7 @@
                         </div>
                         <div v-else class="carrusel-itemsssn" style="justify-content: center!important; " >
                             <div class="carrusel-itemmms" v-for="user in anniversary" :key="user.foto">
-                                <div class="card shadow p-3 " style="height: 28em;">
+                                <div class="card shadow" style="height: 28em;">
                                     <div class="tamaño" style="width: 9rem;">
                                         <div v-if="user.foto">
                                             <img :src="'images/fotos/'+user.foto" alt="" >
@@ -132,7 +132,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
-                                        <div class="nombre">
+                                        <div class="nombre" style="height: 70px;">
                                             <p class="card-title" style="font-size:medium;">
                                                 <strong>{{ user.nombre }}</strong>
                                             </p>
@@ -143,7 +143,7 @@
                                             </p>
                                         </div>
                                         <div>
-                                            <p style="color: #707b7c; height: 45px; text-align: center;" >
+                                            <p style="color: #707b7c; height: 70px; text-align: center;" >
                                                     <strong>{{user.cargo }}</strong>
                                             </p>
                                         </div>

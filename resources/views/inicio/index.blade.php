@@ -36,7 +36,6 @@
     
     {{-- Contenido Principal --}}
 <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
-        {{-- <div class="row"> --}}
             <div class="col-12">
                 <div id="birthday">
                     <birthday/>
@@ -50,7 +49,7 @@
                 <br>
                 <hr>
                 <br>
-                <section class="">
+                <section class="">{{--formaciones Induccion --}}
                     <div class="row">
                         <div class="col-4 offset-4">
                             <h2 class="titulo">Inducción</h2>
@@ -107,7 +106,7 @@
                 <br>
                 <hr>
                 <br>
-                <section id="formaciones Comites" class="d-flex justify-content-center align-items-center p-2">
+                 <section id="" class="d-flex justify-content-center align-items-center p-2"> {{--formaciones Comites --}}
                     <div class="row">
                         <div class="col-6 offset-3">
                             <h2 class="titulo">Formaciones Comités</h2>
@@ -185,7 +184,7 @@
                 <br>
                 <hr>
                 <br>
-                <section id="Medicina" class="d-flex justify-content-center align-items-center p-2">
+                <section id="" class="d-flex justify-content-center align-items-center p-2"> {{--formaciones Medicina --}}
                     <div class="row">
                         <div class="col-6 offset-3 ">
                             <h2 class="titulo">Medicina Preventiva</h2>
@@ -262,7 +261,7 @@
                 <br>
                 <hr>
                 <br>
-                <section id="SeguridadIndustrial" class="d-flex justify-content-center align-items-center p-2">
+                <section id="" class="d-flex justify-content-center align-items-center p-2"> {{--formaciones Seguridad Industrial--}}
                     <div class="row">
                         <div class="col-6 offset-3">
                             <h2 class="titulo">Seguridad Industrial</h2>
@@ -336,8 +335,126 @@
                         </div>
                     </div>
                 </section>
+                <br>
+                <hr>
+                <br>
+                <section id="" class="d-flex justify-content-center align-items-center p-2"> {{--formaciones Seguridad Vial --}}
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <h2 class="titulo">Seguridad Vial</h2>
+                            <hr class="line-title">
+                            <br>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="texto"> El riesgo vial está presente en nuestro día a día y debemos gestionarlo
+                                de manera
+                                preventiva.</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="cajon col-3 p-2">
+                                <a href="https://forms.gle/xBF7h7eCq8fBxD5z8" target="_blank">
+                                    <button class="botonn">
+                                        <div>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span><i class="fa-solid fa-car"></i></span>
+                                            <h5 class="card-title">Encuesta De Seguridad <br> Vial</h5>
+                                            <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos;
+                                                aplica para todos los colaboradores.</p>
+                                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
+                                                Ingresa</span>
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+
+                            <div class="cajon col-3 p-2">
+                                <a href="https://forms.gle/YDDPqcozj3B8cYoB8" target="_blank">
+                                    <button class="botonn">
+                                        <div>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                                            <h5 class="card-title">Formación teórica para conductores</h5>
+                                            <p class="card-text h6">Dirigida a conductores que se desplazan en ellos con
+                                                fines de la actividad económica de la empresa.</p>
+                                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
+                                                Ingresa</span>
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+
+                            <div class="cajon col-3 p-2">
+                                <a href="https://forms.gle/pTuqrBD4ccGR4e7i6" target="_blank">
+                                    <button class="botonn">
+                                        <div>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span class="hover"></span>
+                                            <span><i class="fa-solid fa-road"></i></span>
+                                            <h5 class="card-title">Reportes de riesgos en la vía</h5>
+                                            <p class="card-text h6">Es importante que conozcas los peligros con el fin de
+                                                prevenir accidentes. Tiempo estimado 5 minutos; aplica para todos.</p>
+                                            <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
+                                                Ingresa</span>
+                                        </div>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br>
+                <hr>
+                <br>
+                <section id="" class="d-flex justify-content-center align-items-center p-2"> {{--formaciones Avance --}}
+                    <div class="row">
+                        <div class="col-6 offset-3">
+                            <h2 class="titulo">Avance del SGSST</h2>
+                            <hr class="line-title">
+                            <br>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4 p-2">
+                                <img src="{{ asset('images/equipo.jpg') }}" alt="">
+                            </div>
+                            <div class="col-8">
+                                <h3> Apoya a tu empresa a llegar a la meta.</h3>
+                                <br>
+                                <p> ¡¡Cuál carrito llegara primero a la meta!! La barra de progreso de cada carrito ira
+                                    avanzando hacia la meta a medida que el 100% de las personas de cada compañía
+                                    realizan las actividades planificadas durante el mes.</p>
+                                <br>
+                                <img src="{{ asset('images/porcentg.jpg') }}" alt="">
+                            </div>
+                            <div class="col-12">
+                                <h3 class="align-items-center">Actividades para que tu SGSTT avance.</h3>
+                                <p style="text-align: justify">Verifica que ya cuentas con tu inducción, de igual modo
+                                    consulta las formaciones
+                                    planificadas durante el mes y cuál te aplica. Para finalizar consulta si ya
+                                    realizaste las encuestas de medicina preventiva, seguridad industrial y seguridad
+                                    vial. Si ya cuentas con tu Inducción, tus formaciones y la participación en las
+                                    encuestas; eres un campeón y has aportado al avance del carrito del sgsst de tu
+                                    empresa hacia la meta. Tienes alguna duda estamos 24/7 para ayudarte a través de
+                                    nuestro canal de WhatsApp en cualquier temática o deseo de participar en nuestras
+                                    diferentes campañas.</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </section>
             </div>
-        {{-- </div> --}}
 </main>
 
 <script src="{{asset('js/app.js')}}"></script>

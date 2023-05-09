@@ -120,6 +120,10 @@ Route::get('noticia_des_Vue', [IndexController::class, 'noticia_des'])// -------
     ->middleware('auth')
     ->name('noticia_des_Vue');
 
+Route::get('formacion_mes_Vue', [IndexController::class, 'formaciones_mes'])// ---------> VISTA Vue inicio
+    ->middleware('auth')
+    ->name('formacion_mes_Vue');
+
 Route::get('inicio/cultura', [IndexController::class, 'cultura'])
     ->middleware('auth')
     ->name('inicio.cultura');

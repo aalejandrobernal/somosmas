@@ -1242,16 +1242,16 @@ hr.line-title-sunco {
 
 .carrusel-itemms img {
     display: flex;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 80%;
     margin: auto;
 }
 
 .carrusel-itemms .card-body .nombre {
-    height: 110px;
+    height: 100px;
 }
 
 .carrusel-itemms .card-body .cargo {
@@ -1406,15 +1406,15 @@ hr.line-title-sunco {
 
 .carrusel-itemmms img {
     display: flex;
-    padding: 15px;
-    width: 100%;
-    height: 100%;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 80%;
 }
 
 .carrusel-itemmms .card-body .nombre {
-    height: 110px;
+    height: 100px;
 }
 
 .carrusel-itemmms .card-body .cargo {
