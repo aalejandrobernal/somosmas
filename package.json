@@ -48,6 +48,7 @@
         "bootstrap-vue": "^2.23.1",
         "moment": "^2.29.4",
         "sweetalert2": "^11.7.3",
-        "swiper": "^8.4.6"
+        "swiper": "^8.4.6",
+        "vue-router": "^3.6.5"
     }
 }

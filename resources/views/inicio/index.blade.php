@@ -30,20 +30,20 @@
 @endsection
 
 @section('content')
-    <div id="app">
+    <div >
         <banner/>
     </div>
     
     {{-- Contenido Principal --}}
-<main class="container d-flex justify-content-center align-items-center p-5 pr-10">
+    <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
             <div class="col-12">
-                <div id="birthday">
+                <div >
                     <birthday/>
                 </div>
                 <br>
                 <hr>
                 <br>
-                <div id="noticia">
+                <div >
                     <noticia_des/>
                 </div>
                 <br>
@@ -467,16 +467,6 @@
                     </section>
                 </div>
             </div>
-</main>
-
-<script src="{{asset('js/app.js')}}"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="{{ asset('js/new.js') }}"></script>
-<script src="{{ asset('js/swiper.js') }}"></script>
-<script src="{{ asset('js/splider.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
+    </main>
+    {{-- Fin Contenido Principal --}}
 @endsection
