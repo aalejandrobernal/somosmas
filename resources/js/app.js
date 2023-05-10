@@ -13,6 +13,7 @@ Vue.component('noticias', require('./components/Noticias.vue').default);
 Vue.component('cultura-component', require('./components/Cultura.vue').default);
 Vue.component('galeria-component', require('./components/Galeria.vue').default);
                                 //Inicio
+Vue.component('navbar', require('./components/plantilla/Navbar.vue').default);
 Vue.component('banner', require('./components/inicio/Banner.vue').default);
 Vue.component('birthday', require('./components/inicio/Birthday.vue').default);
 Vue.component('noticia_des', require('./components/inicio/noticia_des.vue').default);

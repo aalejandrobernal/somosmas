@@ -85,7 +85,7 @@ import moment from 'moment'
                         // console.log(elemento.imagenes.split(','));
                         elemento['inicial'] = '/images/galeria1/' + elemento.imagenes.split(',')[0];
                     });
-                    console.log(this.galerias)
+                    // console.log(this.galerias)
                 }
             })
             .catch((res) => {

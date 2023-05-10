@@ -21,16 +21,6 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.10.css')}}">
     <link rel="stylesheet" href="{{ asset('css/tooltip.css')}}">
     {{-- <link rel="stylesheet" href="{{ asset('css/materialize.min.css') }}"> --}}
-    <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/splide.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap-5.1.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.min.js') }}"> </script>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/fontawesome.js') }}"></script>
-    <script src="{{ asset('js/iconify.min.js') }}"></script>
-    <script src="{{ asset('js/sweetalert.js') }}"></script>
-
 </head>
 
 <body>
@@ -115,8 +105,21 @@
 
         </div>
     </nav>
-    @yield('content')
-
+    <div id="app">
+        {{-- <navbar></navbar> --}}
+        @yield('content')
+    </div>
+    
+    <script src="{{ asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/splide.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-5.1.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.min.js') }}"> </script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/fontawesome.js') }}"></script>
+    <script src="{{ asset('js/iconify.min.js') }}"></script>
+    <script src="{{ asset('js/sweetalert.js') }}"></script>
 </body>
 
 <section id="redapoyo" class="section_footer d-flex justify-content-center align-items-center rounded">

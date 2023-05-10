@@ -19,7 +19,7 @@
                 </div>
             </main>
         </div>
-        <section id="poldeseguridad" class="container d-flex justify-content">
+        <!-- <section id="poldeseguridad" class="container d-flex justify-content">
             <div class="row">
                 <div class="col-6 p-3">
                     <p> 
@@ -60,38 +60,9 @@
                     </p>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
     </div>
 </template>
 
-<script>
-import axios from 'axios';
-export default{
-    name: 'Etapa1_4',
-    data() {
-        return {
-            galerias: [],
-        };
-    },
-    mounted() {
-        this.consultaBase();
-    },
-    methods: {
-
-        consultaBase() {
-            axios.get('/galeriaVue').then((res) => {
-                if(res.status == 200) {
-                    // console.log(res.data)
-                    this.galerias = res.data
-                }
-            })
-            .catch((res) => {
-                console.log('error de consulta')
-                console.log(res);
-            });
-        },
-
-    },
-</script>
