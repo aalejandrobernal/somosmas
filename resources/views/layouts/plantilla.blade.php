@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3"> 
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('inicio.index') }}">
                 <strong style="color: #FE3EB2">Somos</strong>Más</a>
@@ -93,8 +93,8 @@
                 </div>
 
                 <li class="nav-link dropdown p-0">
-                    <a class="nav-link dropdown-toggle text-white mr-5 pt-2 mt-2" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none"></a>
-                        <ul class="dropdown-menu bg" aria-labelledby="navbarDropdown">
+                    <a id="menu_perfil" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                        <ul class="dropdown-menu bg mt-3" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item mr-3" style="" href="{{ route('inicio.editar_perfil') }}">
                             Mi Perfil</a></li>
                             @can('admin')
@@ -150,7 +150,7 @@
                     <p style="font-size: 16px; text-align: center; color: white">
                     Estamos para servirte, <br> cuenta con nosotros. WhatsApp</p><br>
                     <h5 style="text-align: center; color: white"><strong>Gestión Humana LIWA</strong></h5>
-                    <div style="font-size: 14px; color: white"class="wp">
+                    <div style="font-size: 14px; color: white" class="wp">
                         <div class="icon">
                             <a href="https://wa.me/573112537491" data-bs-toggle="tooltip" data-placement="top" title="Lizeth Ortega"
                             class="btn btn-success" target="_blank"> <i class="bi bi-whatsapp"></i></a> Lizeth Ortega <br>
