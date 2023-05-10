@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/somosmas.css')}}">
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min-4.6.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fonts/puget.css')}}">
 
     <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

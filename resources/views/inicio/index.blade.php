@@ -37,13 +37,13 @@
     {{-- Contenido Principal --}}
 <main class="container d-flex justify-content-center align-items-center p-5 pr-10">
             <div class="col-12">
-                <div id="birthday">
+                <div id="app">
                     <birthday/>
                 </div>
                 <br>
                 <hr>
                 <br>
-                <div id="noticia">
+                <div id="app">
                     <noticia_des/>
                 </div>
                 <br>
@@ -51,7 +51,7 @@
                 <br>
                 <section class="">{{--formaciones Induccion --}}
                     <div class="row">
-                        <div class="col-4 offset-4">
+                        <div class="col-4 offset-4"> 
                             <h2 class="titulo">Inducción</h2>
                             <hr class="line-title">
                         </div>
@@ -101,7 +101,7 @@
                 <hr>
                 <br>
                 <div class="row">
-                    <div id="formaciones_mes">
+                    <div id="app">
                         <formaciones_mes/>
                     </div>
                 </div>

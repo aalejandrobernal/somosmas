@@ -17,19 +17,9 @@ Vue.component('banner', require('./components/inicio/Banner.vue').default);
 Vue.component('birthday', require('./components/inicio/Birthday.vue').default);
 Vue.component('noticia_des', require('./components/inicio/noticia_des.vue').default);
 Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue').default);
-
-
+                                //Portal
+Vue.component('etapa1_4', require('./components/Portal/Etapa1_4.vue').default);
 
 const app = new Vue({
     el: '#app',
-});
-
-const birthday = new Vue({
-    el: '#birthday',
-});
-const noticia = new Vue({
-    el: '#noticia',
-});
-const formaciones_mes = new Vue({
-    el: '#formaciones_mes',
 });
