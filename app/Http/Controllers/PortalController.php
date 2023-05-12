@@ -239,4 +239,25 @@ class PortalController extends Controller
              'evidencias' => $evidencias
          ]);
      }
+
+     public function portalObjetivos(){
+        
+        $objetivos = Objetivo::all();
+
+        return $objetivos;
+    }
+
+    public function portalEtapas(){
+
+        $etapas = Etapa::all();
+       
+        return $etapas;
+    }
+
+    public function portalEvidencias(){
+
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+       
+        return $evidencias;
+    }
 }

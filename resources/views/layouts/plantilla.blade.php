@@ -48,8 +48,8 @@
                                     Avance Del SGSST</a></li>
                             <li><a class="dropdown-item" style="" href="{{ route('inicio.actividad') }}">
                                     Actividad Del Mes</a></li>
-                            <li><a class="dropdown-item" style="" href="{{ route('inicio.portales') }}">
-                                    Portales SGSST</a></li>
+                            <li><a class="dropdown-item" style="" href="{{ route('admin.index') }}">
+                                    Portal SGSST</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

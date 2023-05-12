@@ -101,7 +101,7 @@
                 <hr>
                 <br>
                 <div class="row">
-                    <div id="app">
+                    <div>
                         <formaciones_mes/>
                     </div>
                 </div>

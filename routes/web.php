@@ -137,7 +137,7 @@ Route::get('inicio/actividad', [IndexController::class, 'actividad'])
     ->name('inicio.actividad');
 
 Route::get('inicio/portales', [PortalController::class, 'portales'])
-    ->middleware('auth')
+    ->middleware('auth') 
     ->name('inicio.portales');
 
 Route::get('inicio/noticia', [IndexController::class, 'noticia'])
@@ -179,7 +179,7 @@ Route::put('inicio/update-foto', [IndexController::class, 'cambiofoto'])
 // Vistas Portal Liwa
 
 Route::get('inicio/portales/portal-liwa/etapa5', [PortalController::class, 'etapa5liwa'])
-->middleware('auth.admin1') 
+->middleware('auth.admin1')
 ->name('admin.etapa5liwa');
 
 Route::get('inicio/portales/portal-liwa/etapa10', [PortalController::class, 'etapa10liwa'])
@@ -256,3 +256,17 @@ Route::get('userdata', [IndexController::class, 'userdata'])
 Route::get('galeriaVue', [IndexController::class, 'galeriaVue'])
     ->middleware('auth')
     ->name('galeriaVue');
+
+Route::get('portalObjetivos', [PortalController::class, 'portalObjetivos'])
+    ->middleware('auth.admin1')
+    -> name('portalObjetivos');
+
+Route::get('portalEtapas', [PortalController::class, 'portalEtapas'])
+    ->middleware('auth.admin1')
+    -> name('portalEtapas');
+
+Route::get('portalEvidencias', [PortalController::class, 'portalEvidencias'])
+    ->middleware('auth.admin1')
+    -> name('portalEvidencias');
+
+    

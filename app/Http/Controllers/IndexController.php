@@ -310,7 +310,7 @@ class IndexController extends Controller
                 . $th->getMessage()
             );
 
-        }
+        } 
     }*/
     public function userdata(Request $request) // -------> Vue
     {
