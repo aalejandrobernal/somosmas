@@ -7,6 +7,7 @@ use App\Models\Empresa;
 use App\Models\Etapa;
 use App\Models\Evidencia;
 use App\Models\Objetivo;
+use Illuminate\Support\Facades\Log;
 
 class PortalController extends Controller
 {
@@ -67,24 +68,24 @@ class PortalController extends Controller
      {
          return view('inicio.portalliwa');
      }
- 
+
      public function portalsunco()
      {
          return view('inicio.portalsunco');
      }
- 
+
      public function portalnavega()
      {
          return view('inicio.portalnavega');
      }
- 
+
      public function portallibre()
      {
          return view('inicio.portallibre');
      }
- 
+
      /*Vistas Liwa*/
- 
+
      public function etapa5liwa()
      {
          $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
@@ -94,7 +95,7 @@ class PortalController extends Controller
              'evidencias' => $evidencias
          ]);
      }
- 
+
      public function etapa10liwa()
      {
          $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
@@ -122,9 +123,9 @@ class PortalController extends Controller
              'evidencias' => $evidencias
          ]);
      }
- 
+
      /*vistas portal navega */
- 
+
      public function etapa5navega()
      {
          $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
@@ -161,9 +162,9 @@ class PortalController extends Controller
              'evidencias' => $evidencias
          ]);
      }
- 
+
      /*vistas portal Libre */
- 
+
      public function etapa5libre()
      {
          $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
@@ -200,9 +201,9 @@ class PortalController extends Controller
              'evidencias' => $evidencias
          ]);
      }
- 
+
      /*vistas portal SuncoEnergy */
- 
+
      public function etapa5sunco()
      {
          $etapas = Etapa::orderBy('grupo', 'asc')->orderby('id','asc')->get();
@@ -241,23 +242,33 @@ class PortalController extends Controller
      }
 
      public function portalObjetivos(){
-        
+
         $objetivos = Objetivo::all();
 
         return $objetivos;
     }
 
-    public function portalEtapas(){
+    public function portalEtapas() {
 
         $etapas = Etapa::all();
-       
+        $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
+
+        foreach ($etapas as $etapa) {
+            $lista = array();
+            foreach ($evidencias as $evidencia) {
+                if ($etapa['id'] == $evidencia['etapa_id']) {
+                    array_push($lista, $evidencia);
+                }
+            }
+            $etapa['evidencias'] = $lista;
+        }
         return $etapas;
     }
 
     public function portalEvidencias(){
 
         $evidencias = Evidencia::orderBy('etapa_id', 'asc')->get();
-       
+
         return $evidencias;
     }
 }
