@@ -23,7 +23,7 @@ class SessionsController extends Controller
 
             if ($user->password === sha1($request->password)) {
                 Auth::login($user);
-                return redirect()->to('inicio');
+                return redirect()->to('/');
             }else{
                 return back()->withErrors(['message' => 'El usuario y/o contraseña son incorrectos.']);
             }
