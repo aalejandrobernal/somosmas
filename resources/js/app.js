@@ -16,6 +16,7 @@ import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
                                 //Inicio
+Vue.component('footer-component', require('./components/plantilla/Footer.vue').default);
 Vue.component('navbar', require('./components/plantilla/Navbar.vue').default);
 Vue.component('banner', require('./components/inicio/Banner.vue').default);
 Vue.component('birthday', require('./components/inicio/Birthday.vue').default);

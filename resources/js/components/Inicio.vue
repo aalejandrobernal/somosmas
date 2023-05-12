@@ -18,7 +18,7 @@
                 <hr>
                 <br>
                 <!-- {{--formaciones Induccion --}} -->
-                <section class="">
+                <section id="formaciones" class="">
                     <div class="row">
                         <div class="col-4 offset-4">
                             <h2 class="titulo">Inducción</h2>
@@ -59,7 +59,7 @@
                 <hr>
                 <br>
                 <div class="row">
-                    <div id="formaciones_mes">
+                    <div>
                         <formaciones_mes/>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                 <br>
                 <div class="row">
                     <!-- {{--formaciones Comites --}} -->
-                    <section id="" class="d-flex justify-content-center align-items-center p-2">
+                    <section id="formaciones" class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Formaciones Comités</h2>
@@ -146,9 +146,9 @@
                 <br>
                 <hr>
                 <br>
-                <div class="row">
+                <!-- <div class="row"> -->
                     <!-- {{--formaciones Medicina --}}     -->
-                    <section id="" class="d-flex justify-content-center align-items-center p-2"> 
+                    <section id="medicina" class="d-flex justify-content-center align-items-center p-2"> 
                         <div class="row">
                             <div class="col-6 offset-3 ">
                                 <h2 class="titulo">Medicina Preventiva</h2>
@@ -222,13 +222,13 @@
                             </div>
                         </div>
                     </section>
-                </div>
+                <!-- </div> -->
                 <br>
                 <hr>
                 <br>
                 <!-- {{--formaciones Seguridad Industrial--}} -->
                 <div class="row">
-                    <section id="" class="d-flex justify-content-center align-items-center p-2"> 
+                    <section id="seguridadindustrial" class="d-flex justify-content-center align-items-center p-2"> 
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Seguridad Industrial</h2>
@@ -308,7 +308,7 @@
                 <br>
                 <!-- {{--formaciones Seguridad Vial --}} -->
                 <div class="row">
-                    <section id="" class="d-flex justify-content-center align-items-center p-2">
+                    <section id="seguridadvial" class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Seguridad Vial</h2>
@@ -388,7 +388,7 @@
                 <br>
                 <!-- {{--formaciones Avance --}} -->
                 <div class="row">
-                    <section id="" class="d-flex justify-content-center align-items-center p-2"> 
+                    <section id="avance" class="d-flex justify-content-center align-items-center p-2"> 
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Avance del SGSST</h2>

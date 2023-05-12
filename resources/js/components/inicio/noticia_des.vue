@@ -64,8 +64,8 @@
                                
                             </div>
                             <div class="vermas" style="width: 600px; padding-top: 3%; padding-left:77%">
-                                    <a href="/inicio/noticia">Más noticias <i
-                                            class="bi bi-arrow-right-square"></i> </a>
+                                    <a ><router-link to="noticia">Más noticias <i
+                                            class="bi bi-arrow-right-square"></i></router-link>  </a>
                             </div>
                         </div>
                     </div>

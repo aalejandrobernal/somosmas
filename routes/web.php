@@ -104,7 +104,7 @@ Route::resource('admin/formations',FormationsController::class)
 
 //Interfaz De Inicio
 
-Route::get('inicio', [IndexController::class, 'index'])
+Route::get('/', [IndexController::class, 'index'])
     ->middleware('auth')
     ->name('inicio.index');
 
@@ -124,25 +124,25 @@ Route::get('formacion_mes_Vue', [IndexController::class, 'formaciones_mes'])// -
     ->middleware('auth')
     ->name('formacion_mes_Vue');
 
-Route::get('inicio/cultura', [IndexController::class, 'cultura'])
-    ->middleware('auth')
-    ->name('inicio.cultura');
+// Route::get('inicio/cultura', [IndexController::class, 'cultura'])
+//     ->middleware('auth')
+//     ->name('inicio.cultura');
 
-Route::get('inicio/red-de-apoyo', [IndexController::class, 'red'])
-    ->middleware('auth')
-    ->name('inicio.red');
+// Route::get('inicio/red-de-apoyo', [IndexController::class, 'red'])
+//     ->middleware('auth')
+//     ->name('inicio.red');
 
-Route::get('inicio/actividad', [IndexController::class, 'actividad'])
+Route::get('/actividad', [IndexController::class, 'actividad'])
     ->middleware('auth')
     ->name('inicio.actividad');
 
-Route::get('inicio/portales', [IndexController::class, 'portales'])
+Route::get('/portales', [IndexController::class, 'portales'])
     ->middleware('auth')
     ->name('inicio.portales');
 
-Route::get('inicio/noticia', [IndexController::class, 'noticia'])
-    ->middleware('auth')
-    ->name('inicio.noticia');
+// Route::get('inicio/noticia', [IndexController::class, 'noticia'])
+//     ->middleware('auth')
+//     ->name('inicio.noticia');
 
 Route::get('noticiaVue', [IndexController::class, 'noticiaVue'])// ---------> VISTA Vue
     ->middleware('auth')
@@ -168,9 +168,9 @@ Route::post('inicio/cambiocontrasena', [IndexController::class, 'cambiocontrasen
     ->middleware('auth')
     ->name('inicio.cambiocontrasena'); 
     
-Route::get('inicio/galeria', [IndexController::class, 'galeria'])
-    ->middleware('auth')
-    ->name('inicio.galeria');
+// Route::get('inicio/galeria', [IndexController::class, 'galeria'])
+//     ->middleware('auth')
+//     ->name('inicio.galeria');
 
 Route::put('inicio/update-foto', [IndexController::class, 'cambiofoto'])
     ->middleware('auth')

@@ -1,5 +1,4 @@
 <template>
-    <div class="container">
         <section id="formaciones" class="">
             <div class="row">
                 <div class="col-6 offset-3">
@@ -30,7 +29,6 @@
                 </div>
             </div>
         </section>
-    </div>
 </template>
 
 <script>
