@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="user" content="{{ Auth::user() }}">
     <title>@yield('title')</title>
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.icons-1.8.css')}}">
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3"> 
+    {{-- <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3"> 
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('inicio.index') }}">
                 <strong style="color: #FE3EB2">Somos</strong>Más</a>
@@ -104,12 +105,17 @@
             </a>
 
         </div>
-    </nav>
+    </nav> --}}
     <div id="app">
-        {{-- <navbar></navbar> --}}
+        <navbar></navbar>
         @yield('content')
     </div>
-    
+    <script type="text/javascript">
+        window.Laravel = {
+            csrfToken: "{{ csrf_token() }}",
+            jsPermissions: {!! auth()->check()?auth()->user()->jsPermissions():null !!}
+        }
+    </script>
     <script src="{{ asset('js/app.js')}}"></script>
     <script src="{{ asset('js/swiper.bundle.min.js') }}"></script>
     <script src="{{ asset('js/splide.min.js') }}"></script>
@@ -120,6 +126,8 @@
     <script src="{{ asset('js/fontawesome.js') }}"></script>
     <script src="{{ asset('js/iconify.min.js') }}"></script>
     <script src="{{ asset('js/sweetalert.js') }}"></script>
+    <script src="https://unpkg.com/vue"></script>
+    
 </body>
 
 <section id="redapoyo" class="section_footer d-flex justify-content-center align-items-center rounded">
@@ -214,6 +222,7 @@
     </div>
 </section>
 
+ 
 
 
 

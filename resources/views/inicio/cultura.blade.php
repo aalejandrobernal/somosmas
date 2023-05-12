@@ -6,6 +6,4 @@
 <div id="app">
     <cultura-component></cultura-component>
 </div>
-
-
 @endsection
