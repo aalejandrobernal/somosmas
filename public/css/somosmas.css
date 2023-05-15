@@ -225,6 +225,22 @@ hr.line-title-sunco {
     border: 1px solid black;
 }
 
+.buton3{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 306px;
+    height: 80px;
+    background-color: rgb(233, 233, 233);
+    cursor: pointer;
+    transition: 1s ease all;
+    border-radius: 5px;
+    padding: auto;
+    box-shadow: 3px 3px 5px 2px black;
+    border: 1px solid black;
+    margin-right: 330px;
+}
+
 .buton_sunco{
     display: inline-flex;
     align-items: center;
@@ -282,6 +298,14 @@ hr.line-title-sunco {
 } */
 
 .buton:hover{
+    text-decoration: none;
+    background-color: #FE3EB21A;
+    box-shadow: 3px 3px 5px 2px #FE3EB2;
+    border: 1px solid #FE3EB2;
+    color: #343a40;
+}
+
+.buton3:hover{
     text-decoration: none;
     background-color: #FE3EB21A;
     box-shadow: 3px 3px 5px 2px #FE3EB2;

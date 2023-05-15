@@ -4,11 +4,12 @@
             <div class="col-6">
                 <h4 class="subtitulo">Etapas 5 a la 9 del SGSST</h4>
                 <div v-for="(etapa, index) in etapas" :key="index">
-                        <div v-if="etapa.grupo==2">
-                            <a :href="'#etapa'+ index" class="btn"><i class="bi bi-check-circle p-2"></i> {{ index+1 }}. {{ etapa.nombre }}</a>
-                            <br>
-                        </div>
+                    <div v-if="etapa.grupo==2">
+                        <a :href="'#etapa' + (index + 1) " class="btn"><i class="bi bi-check-circle p-2">
+                        </i> {{ index + 1 }}. {{ etapa.nombre }}</a>
+                        <br>
                     </div>
+                </div>
             </div>
         </section>
 
@@ -28,7 +29,7 @@
             <div class="row">
                 <div class="col-12 fs-2">
                     <hr class="line-title">
-                    Fases del sistema de gestión: {{ etapas[4].nombre }}
+                    Fases del sistema de gestión: <span v-if="etapas.length != 0"> {{ etapas[4]['nombre'] }}</span>
                     <hr class="line-title">
                 </div>
             </div>
@@ -43,26 +44,13 @@
                     <br>
                     <h3 class="subtitulo">DOCUMENTACIÓN Y EVIDENCIAS</h3>
                     <br>
-                </div>
-
-                <div class="col-3" v-for="evidencia in evidencias" :key="evidencia.id">
-                    <div v-if="evidencia.etapa_id==5 && evidencia.grupo==1">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==5 && evidencia.grupo==2">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==5 && evidencia.grupo==3">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
+                    <div class="row">
+                        <div class="col-3 mb-4" v-for="(item, index) in etapa5" :key="index">
+                            <button class="buton">
+                                <a id="evidencia" v-bind:href="item.adjunto" target="_blank"><span>
+                                    <i class="fa-solid fa-rocket"></i> {{ item.nombre }}</span></a>
+                            </button>
+                        </div>
                     </div>
                 </div>                
             </div>
@@ -84,7 +72,7 @@
             <div class="row">
                 <div class="col-12 fs-2">
                     <hr class="line-title">
-                    Fases del sistema de gestión: {{ etapas[5].nombre }}
+                    Fases del sistema de gestión: <span v-if="etapas.length != 0"> {{ etapas[5]['nombre'] }}</span>
                     <hr class="line-title">
                 </div>
             </div>
@@ -99,14 +87,13 @@
                     <br>
                     <h3 class="subtitulo">DOCUMENTACIÓN Y EVIDENCIAS</h3>
                     <br>
-                </div>
-
-                <div class="col-3" v-for="evidencia in evidencias" :key="evidencia.id">
-                    <div v-if="evidencia.etapa_id==6 && evidencia.grupo==1">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
+                    <div class="row">
+                        <div class="col-3 mb-4" v-for="(item, index) in etapa6" :key="index">
+                            <button class="buton3">
+                                <a id="evidencia" v-bind:href="item.adjunto" target="_blank"><span>
+                                    <i class="fa-solid fa-rocket"></i> {{ item.nombre }}</span></a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -128,7 +115,7 @@
             <div class="row">
                 <div class="col-12 fs-2">
                     <hr class="line-title">
-                    Conservación de la documentación: {{ etapas[6].nombre }}
+                    Conservación de la documentación: <span v-if="etapas.length != 0"> {{ etapas[6]['nombre'] }}</span>
                     <hr class="line-title">
                 </div>
             </div>
@@ -143,25 +130,13 @@
                     <br>
                     <h3 class="subtitulo">DOCUMENTACIÓN Y EVIDENCIAS</h3>
                     <br>
-                </div>
-                <div class="col-3" v-for="evidencia in evidencias" :key="evidencia.id">
-                    <div v-if="evidencia.etapa_id==7 && evidencia.grupo==1">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==7 && evidencia.grupo==2">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==7 && evidencia.grupo==3">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
+                    <div class="row">
+                        <div class="col-3 mb-4" v-for="(item, index) in etapa7" :key="index">
+                            <button class="buton">
+                                <a id="evidencia" v-bind:href="item.adjunto" target="_blank"><span>
+                                    <i class="fa-solid fa-rocket"></i> {{ item.nombre }}</span></a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,7 +158,7 @@
             <div class="row">
                 <div class="col-12 fs-2">
                     <hr class="line-title">
-                    Fases del sistema de gestión: {{ etapas[7].nombre }}
+                    Fases del sistema de gestión: <span v-if="etapas.length != 0"> {{ etapas[7]['nombre'] }}</span>
                     <hr class="line-title">
                 </div>
             </div>
@@ -198,32 +173,13 @@
                     <br>
                     <h3 class="subtitulo">DOCUMENTACIÓN Y EVIDENCIAS</h3>
                     <br>
-                </div>
-
-                <div class="col-3" v-for="evidencia in evidencias" :key="evidencia.id">
-                    <div v-if="evidencia.etapa_id==8 && evidencia.grupo==1">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==8 && evidencia.grupo==2">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==8 && evidencia.grupo==3">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==8 && evidencia.grupo==4">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
+                    <div class="row">
+                        <div class="col-3 mb-4" v-for="(item, index) in etapa8" :key="index">
+                            <button class="buton">
+                                <a id="evidencia" v-bind:href="item.adjunto" target="_blank"><span>
+                                    <i class="fa-solid fa-rocket"></i> {{ item.nombre }}</span></a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,7 +201,7 @@
             <div class="row">
                 <div class="col-12 fs-2">
                     <hr class="line-title">
-                    Fases del sistema de gestión: {{ etapas[8].nombre }}
+                    Fases del sistema de gestión: <span v-if="etapas.length != 0"> {{ etapas[8]['nombre'] }}</span>
                     <hr class="line-title">
                 </div>
             </div>
@@ -260,19 +216,13 @@
                     <br>
                     <h3 class="subtitulo">DOCUMENTACIÓN Y EVIDENCIAS</h3>
                     <br>
-                </div>
-                <div class="col-3" v-for="evidencia in evidencias" :key="evidencia.id">
-                    <div v-if="evidencia.etapa_id==9 && evidencia.grupo==1">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
-                    </div>
-                    <div v-if="evidencia.etapa_id==9 && evidencia.grupo==2">
-                       <button class="buton">
-                        <a id="evidencia" v-bind:href="evidencia.adjunto" target="_blank"><span><i class="fa-solid fa-rocket"></i>    {{ evidencia.nombre }}</span></a>    
-                        </button>
-                        <p></p> 
+                    <div class="row">
+                        <div class="col-3 mb-4" v-for="(item, index) in etapa9" :key="index">
+                            <button class="buton3">
+                                <a id="evidencia" v-bind:href="item.adjunto" target="_blank"><span>
+                                    <i class="fa-solid fa-rocket"></i> {{ item.nombre }}</span></a>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -283,7 +233,8 @@
                 <h4 class="subtitulo">Etapas 5 a la 9 del SGSST</h4>
                 <div v-for="(etapa, index) in etapas" :key="index">
                     <div v-if="etapa.grupo==2">
-                        <a :href="'#etapa'+index" class="btn"><i class="bi bi-check-circle p-2"></i>{{index+1}}. {{ etapa.nombre }}</a>
+                        <a :href="'#etapa' + (index + 1) " class="btn"><i class="bi bi-check-circle p-2">
+                        </i> {{ index + 1 }}. {{ etapa.nombre }}</a>
                         <br>
                     </div>
                 </div>
@@ -306,10 +257,14 @@ export default{
     name: 'Etapa5a9',
     data() {
         return {
-            index: 0,
             objetivos: [],
             etapas: [],
             evidencias: [],
+            etapa5: [],
+            etapa6: [],
+            etapa7: [],
+            etapa8: [],
+            etapa9: []
         };
     },
     mounted() {
@@ -325,14 +280,24 @@ export default{
             })
             axios.get('/portalEtapas').then((res) => {
                 if(res.status == 200) {
-                    // console.log(res.data)
-                    this.etapas = res.data
-                }
-            })
-            axios.get('/portalEvidencias').then((res) => {
-                if(res.status == 200) {
-                    // console.log(res.data)
-                    this.evidencias = res.data
+                    this.etapas = res.data;
+                    this.etapas.forEach(etapa => {
+                        if(etapa.id == 5) {
+                            this.etapa5 = etapa.evidencias
+                        }
+                        else if(etapa.id == 6) {
+                            this.etapa6 = etapa.evidencias
+                        }
+                        else if(etapa.id == 7) {
+                            this.etapa7 = etapa.evidencias
+                        }
+                        else if(etapa.id == 8) {
+                            this.etapa8 = etapa.evidencias
+                        }
+                        else if(etapa.id == 9) {
+                            this.etapa9 = etapa.evidencias
+                        }
+                    });
                 }
             })
             .catch((res) => {
