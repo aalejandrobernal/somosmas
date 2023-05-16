@@ -37,12 +37,23 @@ const routes = [
         component: galeria
     },
     {   
-        path: '/',      
-        component: inicio
+        path: '',      
+        component: inicio,
+        name: 'inicio'
     }
 ];
 
-const router = new VueRouter({routes});
+const router = new VueRouter({routes ,
+    mode: 'history',
+    scrollBehavior (to, from, savedPosition) 
+{   
+      if (to.hash) {
+        return document.querySelector(to.hash).scrollIntoView();
+      } else {
+        return savedPosition || { x: 0, y: 0 }
+      }
+    }
+    });
 
 
 const app = new Vue({

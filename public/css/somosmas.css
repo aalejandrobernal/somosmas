@@ -1581,3 +1581,9 @@ hr.line-title-sunco {
     height: 50px;
     padding-top: 12px;
 }
+.nav-link:hover{
+    color:  #FE3EB2!important;
+  }
+.dropdown-menu{
+    --bs-dropdown-link-active-bg: #FE3EB2!important;
+}

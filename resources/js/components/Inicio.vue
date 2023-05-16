@@ -146,7 +146,7 @@
                 <br>
                 <hr>
                 <br>
-                <!-- <div class="row"> -->
+                <div class="row">
                     <!-- {{--formaciones Medicina --}}     -->
                     <section id="medicina" class="d-flex justify-content-center align-items-center p-2"> 
                         <div class="row">
@@ -222,7 +222,7 @@
                             </div>
                         </div>
                     </section>
-                <!-- </div> -->
+                </div>
                 <br>
                 <hr>
                 <br>
@@ -436,7 +436,10 @@
 <script>
     export default {
         mounted() {
+           
+            // document.getElementById(this.$route.query.scrollTo).scrollIntoView();
             // console.log('Component mounted.')
+            // document.getElementById('#medicina').scrollIntoView();
         }
     }
 </script>

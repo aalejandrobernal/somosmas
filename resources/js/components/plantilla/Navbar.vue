@@ -10,12 +10,11 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item-dropdown text="Tu SGSST" right>
-          <!-- <b-dropdown-item href="#formaciones">Programas De Formación</b-dropdown-item> -->
-          <b-nav-item  class="dropdown-item pr-0" href="#formaciones"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Programas De Formación</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="#medicina"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Medicina Preventiva</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="#seguridadindustrial"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Industrial</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="#seguridadvial"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Vial</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="#avance"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Avance Del SGSST</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#formaciones'}" ><a  target="_self" style="color: black  !important;" class="nav-link p-0">Programas De Formación</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#medicina'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Medicina Preventiva</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadindustrial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Industrial</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadvial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Vial</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#avance'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Avance Del SGSST</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" href="/actividad"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" href="/portales"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Portales SGSST</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" href="#redapoyo"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Red De Apoyo</a></b-nav-item>
@@ -47,7 +46,7 @@
           <template #button-content >
             <em></em>
           </template>
-          <b-dropdown-item href="/inicio/editar_perfil">Mi Perfil</b-dropdown-item>
+          <b-dropdown-item href="editar_perfil">Mi Perfil</b-dropdown-item>
           <div v-if="can('admin')">
             <b-dropdown-item href="admin">Administrador</b-dropdown-item>
           </div>
@@ -67,10 +66,24 @@
         }
     },
         mounted() {
+            // document.getElementById('contact').scrollIntoView();
+            // document.getElementById(this.$route.query.scrollTo).scrollIntoView();
             // console.log('Component mounted.')
+            // const element = document.getElementById("medicina");
+            // element.scrollIntoView();
+            // document.getElementById(this.$route.query.scrollTo).scrollIntoView();
         }
+        
     }
     
     
 </script>
+<style>
+.nav-link{
+  color: white !important;
+}
+.nav-link:hover{
+  color:  #FE3EB2!important;
+}
 
+</style>

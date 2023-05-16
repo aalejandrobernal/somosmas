@@ -156,15 +156,15 @@ Route::post('inicio/import-users', [IndexController::class, 'uploadUsers'])
     ->middleware('auth')
     ->name('inicio.import');
 
-Route::get('inicio/editar_perfil', [IndexController::class, 'editar_perfil'])
+Route::get('editar_perfil', [IndexController::class, 'editar_perfil'])
     ->middleware('auth')
     ->name('inicio.editar_perfil');
 
-Route::get('inicio/cambio_foto', [IndexController::class, 'cambio_foto'])
+Route::get('cambio_foto', [IndexController::class, 'cambio_foto'])
     ->middleware('auth')
     ->name('inicio.cambio_foto');
 
-Route::post('inicio/cambiocontrasena', [IndexController::class, 'cambiocontrasena'])
+Route::post('cambiocontrasena', [IndexController::class, 'cambiocontrasena'])
     ->middleware('auth')
     ->name('inicio.cambiocontrasena'); 
     
