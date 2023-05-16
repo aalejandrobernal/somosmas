@@ -15,15 +15,15 @@
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadindustrial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Industrial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadvial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Vial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#avance'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Avance Del SGSST</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="/actividad"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" href="/portales"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Portales SGSST</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" to="actividad"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-nav-item>
+          <b-nav-item  class="dropdown-item pr-0" to="portales"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Portales SGSST</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" href="#redapoyo"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Red De Apoyo</a></b-nav-item>
         </b-nav-item-dropdown>
         <b-nav-item to="noticia" >Noticias</b-nav-item>
         <b-nav-item to="cultura">Cultura</b-nav-item>
         <b-nav-item to="galeria" >Galeria</b-nav-item>
         <b-nav-item href="#redapoyo">Red De Apoyo</b-nav-item>
-      
+
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
@@ -40,7 +40,7 @@
             <img src="/images/fotonone.jpeg" class="usuario" alt="">
           </div>
         </div>
-        
+
         <b-nav-item-dropdown right class="p-1">
           <!-- Using 'button-content' slot -->
           <template #button-content >
@@ -73,10 +73,10 @@
             // element.scrollIntoView();
             // document.getElementById(this.$route.query.scrollTo).scrollIntoView();
         }
-        
+
     }
-    
-    
+
+
 </script>
 <style>
 .nav-link{

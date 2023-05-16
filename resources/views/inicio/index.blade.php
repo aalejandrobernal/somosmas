@@ -26,9 +26,9 @@
         </ul>
     </li>
 @endsection --}}
- 
+
 
 @section('content')
-        
+
         <router-view></router-view>
 @endsection

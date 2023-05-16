@@ -3,7 +3,7 @@
 @section('title', 'Cultura')
 
 @section('content')
-<div id="app">
+<div>
     <cultura-component></cultura-component>
 </div>
 @endsection

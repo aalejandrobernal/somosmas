@@ -35,7 +35,7 @@
                         @endsection
 
 @section('content2')             
-                        
-    @yield('content')
 
+    @yield('content')
+               
 @endsection

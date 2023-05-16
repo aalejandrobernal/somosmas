@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/somosmas.css')}}">
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min-4.6.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fonts/puget.css')}}">
 
     <script src="{{ asset('js/jquery.slim.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
@@ -31,7 +30,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-outline-light" style="text-decoration: none"
-                            href="{{ route('inicio.portales') }}"><i class="bi bi-house"></i> Regresar</a>
+                            href="{{ route('inicio.index') }}"><i class="bi bi-house"></i> Regresar</a>
                     </li>
                 </ul>
 
@@ -63,9 +62,10 @@
             </div>
         </div>
     </nav>
-
-@yield('content2')
-
+<div id="app">
+    @yield('content2')
+</div>
+<script src="{{ asset('js/app.js') }}"> </script>
 </body>
 
 <section id="redapoyo" class="section_footer d-flex justify-content-center align-items-center rounded">
