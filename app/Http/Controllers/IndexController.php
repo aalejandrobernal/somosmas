@@ -122,10 +122,10 @@ class IndexController extends Controller
         ->get();
         return response()->json($formacion);
     }
-    public function cultura()
-    {
-        return view('inicio.cultura');
-    }
+    // public function cultura()
+    // {
+    //     return view('inicio.cultura');
+    // }
 
     public function actividad()
     {

@@ -50,6 +50,15 @@
 
                 <div class="col-6">
                     <hr>
+                    <div clas="etapas">
+                        <b-dropdown dropright text="Etapas" right>
+                            <b-nav-item class="dropdown-item pr-0" to="portal1_4"><a  target="_self" style="color: black  !important;" class="nav-link p-0">1 a la 4</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal5_9"><a  target="_self" style="color: black  !important;" class="nav-link p-0">5 a la 9</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal10_14"><a  target="_self" style="color: black  !important;" class="nav-link p-0">10 a la 14</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal15_19"><a  target="_self" style="color: black  !important;" class="nav-link p-0">15 a la 19</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal20_22"><a  target="_self" style="color: black  !important;" class="nav-link p-0">20 a la 22</a></b-nav-item>
+                        </b-dropdown>
+                    </div>
                     <h4 class="subtitulo">Etapas 1 a la 4 del SGSST</h4>
                     <div v-for="(etapa, index) in etapas" :key="index">
                         <div v-if="etapa.grupo==1">
@@ -229,6 +238,15 @@
         <section id="" class="container d-flex justify-content">
             <div class="col-6">
                     <hr>
+                    <div clas="etapas">
+                        <b-dropdown dropright text="Etapas" right>
+                            <b-nav-item class="dropdown-item pr-0" to="portal1_4"><a  target="_self" style="color: black  !important;" class="nav-link p-0">1 a la 4</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal5_9"><a  target="_self" style="color: black  !important;" class="nav-link p-0">5 a la 9</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal10_14"><a  target="_self" style="color: black  !important;" class="nav-link p-0">10 a la 14</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal15_19"><a  target="_self" style="color: black  !important;" class="nav-link p-0">15 a la 19</a></b-nav-item>
+                            <b-nav-item class="dropdown-item pr-0" to="portal20_22"><a  target="_self" style="color: black  !important;" class="nav-link p-0">20 a la 22</a></b-nav-item>
+                        </b-dropdown>
+                    </div>
                     <h4 class="subtitulo">Etapas 1 a la 4 del SGSST</h4>
                     <div v-for="(etapa, index) in etapas" :key="index">
                         <div v-if="etapa.grupo==1">

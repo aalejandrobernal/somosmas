@@ -1,5 +1,5 @@
 <template>
-   <b-navbar :sticky="true" false class="p-3" toggleable="md" type="dark" variant="dark">
+  <b-navbar :sticky="true" false class="p-3" toggleable="md" type="dark" variant="dark">
     <b-navbar-brand to="/">
       <!-- <router-link to="inicio" ></router-link> -->
       <strong style="color: #FE3EB2">Somos</strong>Más
@@ -9,16 +9,23 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item-dropdown text="Tu SGSST" right>
+        <b-nav-item-dropdown text="Tu SGSST">
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#formaciones'}" ><a  target="_self" style="color: black  !important;" class="nav-link p-0">Programas De Formación</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#medicina'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Medicina Preventiva</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadindustrial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Industrial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadvial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Vial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#avance'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Avance Del SGSST</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" to="actividad"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-nav-item>
-          <b-nav-item  class="dropdown-item pr-0" to="portales"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Portales SGSST</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" href="#redapoyo"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Red De Apoyo</a></b-nav-item>
+          <!-- <b-dropdown-item href="#medicina">PRUEBA</b-dropdown-item> -->
         </b-nav-item-dropdown>
+        <b-nav-item-dropdown text="Portal SGSST Liwa" right variant="none">
+            <b-nav-item class="dropdown-item pr-0" to="portal1_4"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 1 a la 4</a></b-nav-item>
+            <b-nav-item class="dropdown-item pr-0" to="portal5_9"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 5 a la 9</a></b-nav-item>
+            <b-nav-item class="dropdown-item pr-0" to="portal10_14"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 10 a la 14</a></b-nav-item>
+            <b-nav-item class="dropdown-item pr-0" to="portal15_19"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 15 a la 19</a></b-nav-item>
+            <b-nav-item class="dropdown-item pr-0" to="portal20_22"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 20 a la 22</a></b-nav-item>
+          </b-nav-item-dropdown>
         <b-nav-item to="noticia" >Noticias</b-nav-item>
         <b-nav-item to="cultura">Cultura</b-nav-item>
         <b-nav-item to="galeria" >Galeria</b-nav-item>

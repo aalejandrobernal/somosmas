@@ -1611,3 +1611,15 @@ hr.line-title-sunco {
 .dropdown-menu{
     --bs-dropdown-link-active-bg: #FE3EB2!important;
 }
+/* 
+#dropdown-dropright{
+    width: 100%; 
+}
+
+#dropdown-dropright:hover{
+   background: #e9ecef;
+} */
+
+.etapas{
+    margin-left: 100px;
+}

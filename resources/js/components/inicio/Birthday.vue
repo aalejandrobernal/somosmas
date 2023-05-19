@@ -48,7 +48,7 @@
                                             </p>
                                         </div>
                                         <div>
-                                            <p style="color: #707b7c; height: 45px; text-align: center;" >
+                                            <p style="color: #707b7c; height: 60px; text-align: center;" >
                                                     <strong>{{user.cargo }}</strong>
                                             </p>
                                         </div>

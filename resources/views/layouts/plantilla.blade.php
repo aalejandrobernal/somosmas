@@ -111,6 +111,7 @@
         @yield('content')
         <footer-component></footer-component>
     </div>
+    
     <script type="text/javascript">
         window.Laravel = {
             csrfToken: "{{ csrf_token() }}",
@@ -128,6 +129,8 @@
     <script src="{{ asset('js/iconify.min.js') }}"></script>
     <script src="{{ asset('js/sweetalert.js') }}"></script>
     <script src="https://unpkg.com/vue"></script>
+    
+    
     
 </body>
 

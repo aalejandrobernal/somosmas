@@ -1,6 +1,6 @@
-@extends('layouts.etapas')
+<!-- @extends('layouts.etapas')
 
-@section('title', 'Portal Liwa')
+@section('title', 'Portal Liwa') -->
 
 @section('content')
  
