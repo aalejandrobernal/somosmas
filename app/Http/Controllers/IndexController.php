@@ -16,6 +16,7 @@ use App\Models\Noticia_destacada;
 use App\Models\Etapa;
 use App\Models\Evidencia;
 use Illuminate\Http\RedirectResponse;
+use Intervention\Image\Facades\Image;
 
 use Genert\BBCode\BBCode;
 
@@ -30,6 +31,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
+use Mockery\Generator\StringManipulation\Pass\Pass;
 
 class IndexController extends Controller
 {
@@ -122,20 +124,8 @@ class IndexController extends Controller
         ->get();
         return response()->json($formacion);
     }
-    public function cultura()
-    {
-        return view('inicio.cultura');
-    }
+  
 
-    public function actividad()
-    {
-        return view('inicio.actividad');
-    }
-
-    public function noticia()
-    {
-        return view('inicio.noticia');
-    }
     public function noticiaVue() // -------> Vue
     {
         $not = Noticia::where('estado', '1')
@@ -148,7 +138,7 @@ class IndexController extends Controller
         return response()->json($not);
     }
 
-    public function editar_perfil()
+    public function ditar_perfil()
     {
         $empresas = DB::table('users')
             ->join('empresas', 'empresas.id', '=', 'users.empresa_id')
@@ -158,6 +148,18 @@ class IndexController extends Controller
 
         return view('inicio.editar_perfil', compact('empresas'));
     }
+    public function editar_perfil()
+    {
+        $empresas = DB::table('users')
+            ->where('users.documento', auth()->user()->documento)
+            ->get();
+            foreach ($empresas as $item ) {
+                $item->nacimiento = Carbon::parse($item->fecha_nacimiento)->formatLocalized('%d, %B %Y');
+                
+            }
+           
+        return response()->json($empresas);
+    }
 
     public function cambio_foto()
     {
@@ -165,123 +167,38 @@ class IndexController extends Controller
     }
 
     public function cambiocontrasena(Request $request) {
-
-        $user           = Auth::user();
-        $userId         = $user->id;
-        $userPassword   = $user->password;
-
-        $NewPass        = $request->password;
-        $confirPass     = $request->confirm_password;
-        $confirmActual  = sha1($request->password_actual);
-
-        // Log::info("Entra a cambio contraseña");
-        // Log::info("Usuario:" . $userPassword);php
-        // Log::info($userEmpresa);
-
-            //valida si la clave actual es la misma del usuario en sesión
-            if ($confirmActual == $userPassword){
-
-                //valida que la nueva contraseña 1 y 2 sean iguales
-                if ($NewPass == $confirPass){
-
-                    //valida que la clave no sea menor a 8 digitos
-                    if(strlen($NewPass) >=8) {
-
-                            $user->password = ($request->password);
-                            $sqlBD = DB::table('users')
-                            ->where('id', $user->id)
-                            ->update(['password' => $user->password]);
-                            return back()->withErrors(['cambio'=>'Tu clave ha sido cambiada exitosamente.']);
-
-                    }else{
-                        return back()->withErrors(['confirm_password'=>'Las claves nuevas deben tener mínimo 8 dígitos.']);
-                    }
-                }else{
-                    return back()->withErrors(['confirm_password'=>'La claves nuevas no coinciden.']);
-                }
-            }else{
-                return back()->withErrors(['password_actual'=>'La clave actual no coincide.']);
-            }
+        log::info($request);
+        if(Auth::user()->password==$request->password){
+            DB::table('users')
+            ->where('id', $request->id)
+            ->update(['password' => $request->new_password]);
+        }else{
+            return 'La clave actual no coincide con la ingresada.';
+        }           
     }
 
     public function cambiofoto(Request $request) {
-
+        
         $user           = Auth::user();
-        $userId         = $user->id;
-        $userFoto       = $user->foto;
-        $userDoc        = $user->documento;
-
-        // Log::info($UserDoc);
-
         $request->validate([
-            'foto' => "image|mimes:jpeg,jpg,png|max:150|"
+            'file' => "image|mimes:jpeg,jpg,png"
         ]);
-
-        if($request->hasfile('foto')){
-            $destino = '../public/images/fotos/'.$userFoto;
-
-            if(File::exists($destino)){
-                File::delete($destino);
-            }
-            $archivo = $request->file('foto');
-            $extension = $archivo ->getClientOriginalExtension();
-            $nombrearchivo = $userDoc.'.'.$extension;
-            $archivo->move('../public/images/fotos/', $nombrearchivo);
-            $userFoto = $nombrearchivo;
-
-            $sqlBD = DB::table('users')
-            ->where('id', $userId)
-            ->update(['foto' => $userFoto]);
-
-            return back()->withErrors(['foto1'=>'Felicitaciones, tu foto ha sido cambiada exitosamente.']);
-        }else{
-            return back()->withErrors(['foto2'=>'No se ha seleccionado ningún archivo']);
-        }
-
+        if($request->hasFile('file')){
+            $nombre_img=$user->documento;
+            $extension= $request->file('file')->getClientOriginalExtension();
+            $nombre_foto=$nombre_img.'.'.$extension;
+            Log::info($nombre_foto);
+            DB::table('users')
+                ->where('id', $user->id)
+                ->update(['foto' => $nombre_foto]);
+            Image::make($request->file('file'))
+            ->resize(1000, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })
+            ->save('images\fotos/'.$nombre_foto);
+         }
     }
 
-    // public function cambiodatos(Request $request) {
-
-    //     $user           = Auth::user();
-    //     $userId         = $user->id;
-    //     $userNombre     = $user->nombre;
-    //     $userDoc        = $user->documento;
-    //     $userNacimiento = $user->fecha_nacimiento;
-    //     $userIngreso    = $user->fecha_ingreso;
-    //     $userCargo      = $user->cargo;
-
-    //     // Log::info($request);
-
-    //     $user->nombre = $request->get('nombre');
-    //     $user->documento = $request->get('documento');
-    //     $user->fecha_nacimiento = $request->get('fecha_nacimiento');
-    //     $user->fecha_ingreso = $request->get('fecha_ingreso');
-    //     $user->save();
-
-    //     return back()->withErrors(['fecha_ingreso'=>'Tus datos han sido actualizado correctamente']);
-    // }
-
-    public function galeria()
-    {
-        $galeria = Galeria::where('estado', '1')
-        ->orderBy('updated_at', 'desc')
-        ->get();
-
-        $imagen = Galeria::where('estado', '1')
-        ->select('imagenes')
-        ->orderBy('updated_at', 'desc')
-        ->get();
-
-        $foto =[];
-        foreach ($imagen as $imagenes)
-        {
-           $a=explode(",", $imagenes->imagenes);
-           $b=$a[0];
-           array_push($foto,$b);
-        }
-
-        return view('inicio.galeria', compact('galeria','foto'));
-    }
 
     public function importUsers()
     {

@@ -11,6 +11,7 @@ import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 import actividad  from './components/Actividad.vue';
 import portales from './components/Portal/Etapa1a4.vue';
+import perfil from './components/Perfil.vue';
 
 Vue.use(VueRouter);
 Vue.use(LaravelPermissionToVueJS);
@@ -62,12 +63,17 @@ const routes = [
         component: portales,
         name: 'portales'
     },
+    {
+        path: '/perfil',
+        component: perfil,
+        name: 'perfil'
+    },
 ];
 
 const router = new VueRouter({routes ,
-    mode: 'history',
-    scrollBehavior (to, from, savedPosition)
-{
+    mode: '',
+    base: process.env.BASE_URL,
+    scrollBehavior (to, from, savedPosition){   
       if (to.hash) {
         return document.querySelector(to.hash).scrollIntoView();
       } else {
