@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    alert('hola')
     $("#modal01").on("hide.bs.modal", function() {
         $(this)
             .find("video")[0]

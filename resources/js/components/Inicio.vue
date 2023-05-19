@@ -18,7 +18,7 @@
                 <hr>
                 <br>
                 <!-- {{--formaciones Induccion --}} -->
-                <section id="formaciones">
+                <section>
                         <br>
                         <br>
                         <br>
@@ -54,7 +54,7 @@
                                 En esta sección conocerás a profundidad la manera de controlar y gestionar los riesgos
                                 asociados a tu actividad,
                                 tu compromiso y el nuestro es velar por tu bienestar.
-    
+
                             </p>
                             <a href="https://forms.gle/3Wiikuws4TMMqEiTA" class="btn btn-outline-dark" target="_blank"><i
                                     class="bi bi-arrow-right"></i> Ingresar</a>
@@ -65,7 +65,7 @@
                 <hr>
                 <br>
                 <div class="row">
-                    <div>
+                    <div id="formaciones">
                         <formaciones_mes/>
                     </div>
                 </div>
@@ -74,14 +74,14 @@
                 <br>
                 <div class="row">
                     <!-- {{--formaciones Comites --}} -->
-                    <section id="formaciones" class="d-flex justify-content-center align-items-center p-2">
+                    <section class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Formaciones Comités</h2>
                                 <hr class="line-title">
                                 <br>
                             </div>
-    
+
                             <div class="comites row">
                                 <div class="col-3 p-2">
                                     <div class="card">
@@ -97,7 +97,7 @@
                                         </div>
                                     </div>
                                 </div>
-    
+
                                 <div class="col-3 p-2">
                                     <div class="card" style="border-color: #FE3EB2">
                                         <img src="images/convivencia.jpg" class="card-img-top"
@@ -111,7 +111,7 @@
                                             <a href="https://forms.gle/426pemCcEFMCFG228" class="btn btn-outline-dark"
                                                 target="_blank"><i class="bi bi-arrow-right"></i> Ingresa</a>
                                         </div>
-    
+
                                     </div>
                                 </div>
                                 <div class="col-3 p-2">
@@ -122,7 +122,7 @@
                                             <p class="card-text">Dirigida a los integrantes del comité. </p>
                                             <p class="text-justify card-text">Conoce los aspectos básicos de entrada del
                                                 comité.
-    
+
                                             </p>
                                             <br>
                                             <a href="https://forms.gle/CzSyNU3jCNRFRFuB8" class="btn btn-outline-dark"
@@ -160,20 +160,20 @@
                         <br>
                     </section>
                     <!-- {{--formaciones Medicina --}}     -->
-                    <section class="d-flex justify-content-center align-items-center p-2"> 
+                    <section class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3 ">
                                 <h2 class="titulo">Medicina Preventiva</h2>
                                 <hr class="line-title">
                                 <br>
                             </div>
-    
+
                             <div class="col-12">
                                 <p class="texto">A través de las actividades de esta sección juntos identificaremos
                                     situaciones de riesgo asociadas al COVID 19 y frente a otras situaciones que puedan
                                     afectar tu salud</p>
                             </div>
-    
+
                             <div class="row">
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/RuYsLP2iRA1N5wEh9" target="_blank">
@@ -193,7 +193,7 @@
                                         </button>
                                     </a>
                                 </div>
-    
+
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/LRGMRZASXysFLKKj9" target="_blank">
                                         <button class="botonn">
@@ -212,7 +212,7 @@
                                         </button>
                                     </a>
                                 </div>
-    
+
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/3jxiPHVHRMWnivkp7" target="_blank">
                                         <button class="botonn">
@@ -246,7 +246,7 @@
                 </section>
                 <!-- {{--formaciones Seguridad Industrial--}} -->
                 <div class="row">
-                    <section class="d-flex justify-content-center align-items-center p-2"> 
+                    <section class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Seguridad Industrial</h2>
@@ -339,13 +339,13 @@
                                 <hr class="line-title">
                                 <br>
                             </div>
-    
+
                             <div class="col-12">
                                 <p class="texto"> El riesgo vial está presente en nuestro día a día y debemos gestionarlo
                                     de manera
                                     preventiva.</p>
                             </div>
-    
+
                             <div class="row">
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/xBF7h7eCq8fBxD5z8" target="_blank">
@@ -365,7 +365,7 @@
                                         </button>
                                     </a>
                                 </div>
-    
+
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/YDDPqcozj3B8cYoB8" target="_blank">
                                         <button class="botonn">
@@ -384,7 +384,7 @@
                                         </button>
                                     </a>
                                 </div>
-    
+
                                 <div class="cajon col-3 p-2">
                                     <a href="https://forms.gle/pTuqrBD4ccGR4e7i6" target="_blank">
                                         <button class="botonn">
@@ -418,14 +418,14 @@
                 </section>
                 <!-- {{--formaciones Avance --}} -->
                 <div class="row">
-                    <section class="d-flex justify-content-center align-items-center p-2"> 
+                    <section class="d-flex justify-content-center align-items-center p-2">
                         <div class="row">
                             <div class="col-6 offset-3">
                                 <h2 class="titulo">Avance del SGSST</h2>
                                 <hr class="line-title">
                                 <br>
                             </div>
-    
+
                             <div class="row">
                                 <div class="col-4 p-2">
                                     <img src="images/equipo.jpg" alt="">
@@ -451,10 +451,10 @@
                                         nuestro canal de WhatsApp en cualquier temática o deseo de participar en nuestras
                                         diferentes campañas.</p>
                                 </div>
-    
-    
+
+
                             </div>
-    
+
                         </div>
                     </section>
                 </div>
@@ -466,7 +466,7 @@
 <script>
     export default {
         mounted() {
-           
+
             // document.getElementById(this.$route.query.scrollTo).scrollIntoView();
             // console.log('Component mounted.')
             // document.getElementById('#medicina').scrollIntoView();
