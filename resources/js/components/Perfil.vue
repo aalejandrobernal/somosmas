@@ -26,6 +26,7 @@
                                         accept="image/*"
                                         placeholder="Elija un archivo o suéltelo aquí..."
                                         drop-placeholder="Suelta el archivo aquí..."
+                                        browse-text = "Buscar"
                                     ></b-form-file>
                                     <p v-if="errorMessage3" style="color:red">{{ errorMessage3}}</p>
                                 </div>
@@ -69,14 +70,20 @@
                                 :placeholder="user.cargo"
                                 ></b-form-input>
                             </b-form-group>
-                            
-                            </div>
-                            <div class="col-6 px-5 pt-5">
-                                <b-form-group id="input-group-5" label="Fecha de nacimeinto :" label-for="input-5">
+                            <b-form-group id="input-group-5" label="Fecha de nacimiento :" label-for="input-5">
                                     <b-form-input
                                     disabled
                                     id="input-5"
                                     :placeholder="user.fecha_nacimiento"
+                                    ></b-form-input>
+                                </b-form-group>
+                            </div>
+                            <div class="col-6 px-5 pt-5">
+                                <b-form-group id="input-group-8" label="Fecha de ingreso :" label-for="input-8">
+                                    <b-form-input
+                                    disabled
+                                    id="input-8"
+                                    :placeholder="user.fecha_ingreso"
                                     ></b-form-input>
                                 </b-form-group>
                                 <b-form-group id="input-group-6" label="Contraseña actual :" label-for="input-6">
@@ -88,9 +95,9 @@
                                     placeholder="Ingrese la actual contraseña"
                                     required
                                     ></b-form-input>
-                                    <p v-if="errorMessage1" style="color:red">{{ errorMessage1 }}</p>
+                                    <p v-if="errorMessage1" style="color:red; font-size: 12px; margin: 3px;">{{ errorMessage1 }}</p>
                                 </b-form-group>
-                                <b-form-group id="input-group-7" label="Contraseña Nueva :" label-for="input-7">
+                                <b-form-group id="input-group-7" label="Contraseña nueva :" label-for="input-7">
                                     <b-form-input
                                     @input="validateNewPassword"
                                     type="password"
@@ -99,7 +106,18 @@
                                     placeholder="Ingrese nueva contraseña"
                                     required
                                     ></b-form-input>
-                                    <p v-if="errorMessage2" style="color:red">{{ errorMessage2 }}</p>
+                                    <p v-if="errorMessage2" style="color:red; font-size: 12px; margin: 3px; ">{{ errorMessage2 }}</p>
+                                </b-form-group>
+                                <b-form-group id="input-group-9" label="Confirmar contraseña nueva :" label-for="input-9">
+                                    <b-form-input
+                                    @input="confirmNewPassword"
+                                    type="password"
+                                    id="input-9"
+                                    v-model="confirm_new_password"
+                                    placeholder="Ingrese nueva contraseña"
+                                    required
+                                    ></b-form-input>
+                                    <p v-if="errorMessage3" style="color:red; font-size: 12px; margin: 3px; ">{{ errorMessage3 }}</p>
                                 </b-form-group>
                                 <p class="caracteres">*Si deseas actualizar algún dato personal por favor contacta al administrador.* </p>
                             </div>
@@ -131,8 +149,10 @@
                 this.user.foto=res.data[0].foto;
                 this.fotonone=res.data[0].foto;
                 this.user.cargo=res.data[0].cargo;
-                this.user.fecha_nacimiento=res.data[0].nacimiento;
+                this.user.fecha_nacimiento=res.data[0].fecha_nacimiento;
+                this.user.fecha_ingreso=res.data[0].fecha_ingreso;
                 this.password_old=res.data[0].password;
+                // console.log(this.user)
             })
             .catch((err) => console.log(err))
         },
@@ -151,6 +171,7 @@
                 password_old:"",
                 password:"",
                 new_password:"",
+                confirm_new_password:"",
                 variants: ['cnt'],
                 user: {
                     id: '',
@@ -172,6 +193,19 @@
         created(){
        },
        methods:{
+            ActualizarPass(){
+                axios.post('/cambiocontrasena',this.pass)
+                .then((res) => { })
+                .catch((err) => console.log(err))
+            },
+            confirmNewPassword(){
+                if (this.new_password !== this.confirm_new_password) {
+                    this.errorMessage3 = 'Las contraseñas no coinciden';
+                    return false;
+                }
+                this.errorMessage3 = '';
+                return true;
+            },
             validateNewPassword(){
                 if (this.new_password.length < 8) {
                     this.errorMessage2 = 'La contraseña debe tener al menos 8 caracteres';
@@ -186,7 +220,7 @@
             },
             validateForm() {
                 if (this.password_old !== sha1(this.password)) {
-                    this.errorMessage1 = 'La contraseña no coinciden con la actual ';
+                    this.errorMessage1 = 'La contraseña no coincide con la actual ';
                     return false;
                 }
                     this.errorMessage1 = '';
@@ -215,19 +249,28 @@
 
             onSubmit(event) {
                 event.preventDefault()
-                this.pass.new_password=sha1(this.new_password);
+                this.pass.new_password=sha1(this.confirm_new_password);
                 this.pass.password=sha1(this.password);
-                axios.post('/cambiocontrasena',this.pass)
-                .then((res) => { })
-                .catch((err) => console.log(err))
-                swal.fire({
+                if(this.confirmNewPassword() && this.validateNewPassword() && this.validateForm()){
+                    this.ActualizarPass();
+                    swal.fire({
                     icon : "success",
                     title: "La contraseña se ha actualizado correctamente",
                     allowEscapeKey: false,
                     allowOutsideClick: false,
                     showConfirmButton: true,
                                 });
-                },
+                }
+                else{
+                    swal.fire({
+                    icon : "error",
+                    title: "La contraseña no se ha actualizado ",
+                    allowEscapeKey: false,
+                    allowOutsideClick: false,
+                    showConfirmButton: true,
+                                });
+                }
+            },
             EnviarImagen(event){
                 event.preventDefault()
                 let formData = new FormData();
@@ -262,7 +305,7 @@
                 // Reset our form values
                 this.password = ''
                 this.new_password = ''
-                // Trick to reset/clear native browser form validation state
+                this.confirm_new_password = ''
                 
             }
        },

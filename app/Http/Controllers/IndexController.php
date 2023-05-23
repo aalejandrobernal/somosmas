@@ -153,10 +153,7 @@ class IndexController extends Controller
         $empresas = DB::table('users')
             ->where('users.documento', auth()->user()->documento)
             ->get();
-            foreach ($empresas as $item ) {
-                $item->nacimiento = Carbon::parse($item->fecha_nacimiento)->formatLocalized('%d, %B %Y');
-                
-            }
+            
            
         return response()->json($empresas);
     }
@@ -167,14 +164,17 @@ class IndexController extends Controller
     }
 
     public function cambiocontrasena(Request $request) {
-        log::info($request);
-        if(Auth::user()->password==$request->password){
-            DB::table('users')
+        
+         if(Auth::user()->password==$request->password){
+            // log::info($request);
+            // Log::info(Auth::user()->password);
+            $result= DB::table('users')
             ->where('id', $request->id)
             ->update(['password' => $request->new_password]);
+            Log::info($result);
         }else{
             return 'La clave actual no coincide con la ingresada.';
-        }           
+         }           
     }
 
     public function cambiofoto(Request $request) {
