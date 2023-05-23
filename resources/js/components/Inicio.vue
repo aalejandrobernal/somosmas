@@ -18,12 +18,7 @@
                 <hr>
                 <br>
                 <!-- {{--formaciones Induccion --}} -->
-                <section>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                </section>
+                
                 <section class="">
                     <div class="row">
                         <div class="col-4 offset-4">
@@ -64,8 +59,14 @@
                 <br>
                 <hr>
                 <br>
+                <section id="formaciones">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                </section>
                 <div class="row">
-                    <div id="formaciones">
+                    <div >
                         <formaciones_mes/>
                     </div>
                 </div>
