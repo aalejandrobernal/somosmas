@@ -58,7 +58,7 @@
                 <div class="col-6">
                     <img class="logo_portal" src="/images/portales/about1.jpg" alt="">
                 </div>
-            </div>    
+            </div>
         </section>
         <etapa1a4 v-if="etapa_1"></etapa1a4>
         <etapa5a9 v-if="etapa_5"></etapa5a9>
@@ -111,18 +111,42 @@ export default{
             });
         },
         cargarEtapas(etapa) {
-            this.etapa_1 = (etapa == 1) ? true : false;
-            this.etapa_1 = (etapa == 2) ? false : true;
+           if(etapa == 1) {
+            this.etapa_1 = true
+            this.etapa_5 = false
+            this.etapa_10 = false
+            this.etapa_15 = false
+            this.etapa_20 = false
+           }
+           else if(etapa == 2) {
+            this.etapa_1 = false
+            this.etapa_5 = true
+            this.etapa_10 = false
+            this.etapa_15 = false
+            this.etapa_20 = false
+           }
+           else if(etapa == 3) {
+            this.etapa_1 = false
+            this.etapa_5 = false
+            this.etapa_10 = true
+            this.etapa_15 = false
+            this.etapa_20 = false
+           }
+           else if(etapa == 4) {
+            this.etapa_1 = false
+            this.etapa_5 = false
+            this.etapa_10 = false
+            this.etapa_15 = true
+            this.etapa_20 = false
+           }
+           else if(etapa == 5) {
+            this.etapa_1 = false
+            this.etapa_5 = false
+            this.etapa_10 = false
+            this.etapa_15 = false
+            this.etapa_20 = true
+           }
 
-            
-            this.etapa_5 = (etapa == 2) ? true : false;
-            this.etapa_5 = (etapa == 1) ? false : true;
-
-       
-
-
-            
-            
         }
     }
 }
