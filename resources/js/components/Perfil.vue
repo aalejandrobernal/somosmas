@@ -28,7 +28,6 @@
                                         drop-placeholder="Suelta el archivo aquí..."
                                         browse-text = "Buscar"
                                     ></b-form-file>
-                                    <p v-if="errorMessage3" style="color:red">{{ errorMessage3}}</p>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
@@ -123,8 +122,8 @@
                             </div>
                         </div>
                         <div class="row justify-content-center p-3">
-                            <b-button v-if="validateNewPassword() && validateForm()" type="submit" style="width: 150px !important;" class="ctn ">Actualizar</b-button>
-                            <b-button v-else class="ctn " style="width: 150px !important;" disabled>Actualizar</b-button>
+                            <b-button  type="submit" style="width: 150px !important;" class="ctn ">Actualizar</b-button>
+                            <!-- <b-button v-else class="ctn " style="width: 150px !important;" disabled>Actualizar</b-button> -->
                         </div>
                     </b-form>
             </b-card-text>

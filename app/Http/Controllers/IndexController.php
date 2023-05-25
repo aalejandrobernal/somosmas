@@ -166,12 +166,9 @@ class IndexController extends Controller
     public function cambiocontrasena(Request $request) {
         
          if(Auth::user()->password==$request->password){
-            // log::info($request);
-            // Log::info(Auth::user()->password);
-            $result= DB::table('users')
+            DB::table('users')
             ->where('id', $request->id)
             ->update(['password' => $request->new_password]);
-            Log::info($result);
         }else{
             return 'La clave actual no coincide con la ingresada.';
          }           
