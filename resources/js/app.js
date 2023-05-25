@@ -10,11 +10,12 @@ import cultura from './components/Cultura.vue';
 import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 import actividad  from './components/Actividad.vue';
-import portal1_4 from './components/Portal/Etapa1a4.vue';
-import portal5_9 from './components/Portal/Etapa5a9.vue';
-import portal10_14 from './components/Portal/Etapa10a14.vue';
-import portal15_19 from './components/Portal/Etapa15a19.vue';
-import portal20_22 from './components/Portal/Etapa20a22.vue';
+import inicio_portal from './components/Portal/InicioPortal.vue';
+import etapa1a4 from './components/Portal/Etapa1a4.vue';
+import etapa5a9 from './components/Portal/Etapa5a9.vue';
+import etapa10a14 from './components/Portal/Etapa10a14.vue';
+import etapa15a19 from './components/Portal/Etapa15a19.vue';
+import etapa20a22 from './components/Portal/Etapa20a22.vue';
 
 Vue.use(VueRouter);
 Vue.use(LaravelPermissionToVueJS);
@@ -33,6 +34,7 @@ Vue.component('noticia_des', require('./components/inicio/noticia_des.vue').defa
 Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue').default);
 
                                 //Portal
+Vue.component('inicio_portal', require('./components/Portal/InicioPortal.vue').default);
 Vue.component('etapa1a4', require('./components/Portal/Etapa1a4.vue').default);
 Vue.component('etapa5a9', require('./components/Portal/Etapa5a9.vue').default);
 Vue.component('etapa10a14', require('./components/Portal/Etapa10a14.vue').default);
@@ -64,34 +66,39 @@ const routes = [
         name: 'actividad'
     },
     {
-        path: '/portal1_4',
-        component: portal1_4,
-        name: 'portal1_4'
+        path: '/inicio_portal',
+        component: inicio_portal,
+        name: 'inicio_portal'
     },
     {
-        path: '/portal5_9',
-        component: portal5_9,
-        name: 'portal5_9'
+        path: '/etapa1a4',
+        component: etapa1a4,
+        name: 'etapa1a4'
     },
     {
-        path: '/portal10_14',
-        component: portal10_14,
-        name: 'portal10_14'
+        path: '/etapa5a9',
+        component: etapa5a9,
+        name: 'etapa5a9'
     },
     {
-        path: '/portal15_19',
-        component: portal15_19,
-        name: 'portal15_19'
+        path: '/etapa10a14',
+        component: etapa10a14,
+        name: 'etapa10a14'
     },
     {
-        path: '/portal20_22',
-        component: portal20_22,
-        name: 'portal20_22'
+        path: '/etapa15a19',
+        component: etapa15a19,
+        name: 'etapa15a19'
+    },
+    {
+        path: '/etapa20a22',
+        component: etapa20a22,
+        name: 'etapa20a22'
     },
 ];
 
 const router = new VueRouter({routes ,
-    mode: 'history',
+    mode: '',
     scrollBehavior (to, from, savedPosition)
 {
       if (to.hash) {
