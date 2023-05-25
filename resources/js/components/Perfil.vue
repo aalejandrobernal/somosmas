@@ -87,7 +87,7 @@
                                 </b-form-group>
                                 <b-form-group id="input-group-6" label="Contraseña actual :" label-for="input-6">
                                     <b-form-input
-                                    @input="validateForm"
+                                    @change="validateForm"
                                     type="password"
                                     id="input-6"
                                     v-model="password"
@@ -122,8 +122,8 @@
                             </div>
                         </div>
                         <div class="row justify-content-center p-3">
-                            <b-button  type="submit" style="width: 150px !important;" class="ctn ">Actualizar</b-button>
-                            <!-- <b-button v-else class="ctn " style="width: 150px !important;" disabled>Actualizar</b-button> -->
+                            <b-button v-if="validateNewPassword() && validateForm()" type="submit" style="width: 150px !important;" class="ctn ">Actualizar</b-button>
+                            <b-button v-else class="ctn " style="width: 150px !important;" disabled>Actualizar</b-button>
                         </div>
                     </b-form>
             </b-card-text>
