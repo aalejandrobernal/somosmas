@@ -229,8 +229,8 @@ hr.line-title-sunco {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 306px;
-    height: 80px;
+    width: 261px;
+    height: 90px;
     background-color: rgb(233, 233, 233);
     cursor: pointer;
     transition: 1s ease all;
@@ -238,7 +238,7 @@ hr.line-title-sunco {
     padding: auto;
     box-shadow: 3px 3px 5px 2px black;
     border: 1px solid black;
-    margin-right: 330px;
+    margin-right: 350px;
 }
 
 .buton_sunco{
@@ -1611,15 +1611,13 @@ hr.line-title-sunco {
 .dropdown-menu{
     --bs-dropdown-link-active-bg: #FE3EB2!important;
 }
-/* 
-#dropdown-dropright{
-    width: 100%; 
+
+#item_drop{
+    padding: 8px;
 }
 
-#dropdown-dropright:hover{
-   background: #e9ecef;
-} */
-
 .etapas{
-    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
 }
