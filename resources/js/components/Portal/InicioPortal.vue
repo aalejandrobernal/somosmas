@@ -87,6 +87,7 @@ export default{
     },
     data() {
         return {
+            idetapa : this.$route.params.id,
             objetivos: [],
             etapa_1: false,
             etapa_5: false,
@@ -94,10 +95,13 @@ export default{
             etapa_15: false,
             etapa_20: false,
             
-        };
+            
+        };console.log(this.idetapa)
     },
     mounted() {
         this.consultaBase();
+        this.cargarEtapas(this.idetapa)
+        
     },
     methods: {
         consultaBase() {
@@ -148,7 +152,6 @@ export default{
             this.etapa_15 = false
             this.etapa_20 = true
            }
-           return this.cargarEtapas(etapa)
         }
     }
 }

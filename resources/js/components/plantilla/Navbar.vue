@@ -19,11 +19,11 @@
           <b-nav-item  class="dropdown-item pr-0" href="#redapoyo"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Red De Apoyo</a></b-nav-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown text="Portal SGSST Liwa" right variant="none">
-          <b-dropdown-item class="dropdown-item pr-0" to="inicio_portal"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 1 a la 4</a></b-dropdown-item>
-          <b-dropdown-item class="dropdown-item pr-0" to="inicio_portal"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 5 a la 9</a></b-dropdown-item>
-          <b-dropdown-item class="dropdown-item pr-0" to="inicio_portal"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 10 a la 14</a></b-dropdown-item>
-          <b-dropdown-item class="dropdown-item pr-0" to="inicio_portal"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 15 a la 19</a></b-dropdown-item>
-          <b-dropdown-item class="dropdown-item pr-0" to="inicio_portal"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 20 a la 22</a></b-dropdown-item>
+          <b-dropdown-item class="dropdown-item pr-0" :to="{ name: 'inicio_portal',  params: {id:'1'}}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 1 a la 4</a></b-dropdown-item>
+          <b-dropdown-item class="dropdown-item pr-0" :to="{ name: 'inicio_portal',  params: {id:'2'}}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 5 a la 9</a></b-dropdown-item>
+          <b-dropdown-item class="dropdown-item pr-0" :to="{ name: 'inicio_portal',  params: {id:'3'}}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 10 a la 14</a></b-dropdown-item>
+          <b-dropdown-item class="dropdown-item pr-0" :to="{ name: 'inicio_portal',  params: {id:'4'}}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 15 a la 19</a></b-dropdown-item>
+          <b-dropdown-item class="dropdown-item pr-0" :to="{ name: 'inicio_portal',  params: {id:'5'}}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 20 a la 22</a></b-dropdown-item>
         </b-nav-item-dropdown>
         <!-- <b-nav-item to="inicio_portal" >Portal SGSST</b-nav-item>   -->
         <b-nav-item to="noticia" >Noticias</b-nav-item>
@@ -66,9 +66,9 @@
 <script>
   let user = document.head.querySelector('meta[name="user"]');
   export default {
-    data(){
-      return cargarEtapas(etapa)
-    },
+    // data(){
+    //   return cargarEtapas(etapa)
+    // },
     computed : {
       user () {
         return JSON.parse(user.content);
