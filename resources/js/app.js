@@ -66,7 +66,7 @@ const routes = [
         name: 'actividad'
     },
     {
-        path: '/inicio_portal',
+        path: '/:id',
         component: inicio_portal,
         name: 'inicio_portal'
     },
@@ -75,6 +75,7 @@ const routes = [
 
 const router = new VueRouter({routes ,
     mode: '',
+
     scrollBehavior (to, from, savedPosition)
 {
       if (to.hash) {
