@@ -11,11 +11,11 @@ import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 import actividad  from './components/Actividad.vue';
 import inicio_portal from './components/Portal/InicioPortal.vue';
-import etapa1a4 from './components/Portal/Etapa1a4.vue';
-import etapa5a9 from './components/Portal/Etapa5a9.vue';
-import etapa10a14 from './components/Portal/Etapa10a14.vue';
-import etapa15a19 from './components/Portal/Etapa15a19.vue';
-import etapa20a22 from './components/Portal/Etapa20a22.vue';
+// import etapa1a4 from './components/Portal/Etapa1a4.vue';
+// import etapa5a9 from './components/Portal/Etapa5a9.vue';
+// import etapa10a14 from './components/Portal/Etapa10a14.vue';
+// import etapa15a19 from './components/Portal/Etapa15a19.vue';
+// import etapa20a22 from './components/Portal/Etapa20a22.vue';
 
 Vue.use(VueRouter);
 Vue.use(LaravelPermissionToVueJS);
@@ -35,11 +35,11 @@ Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue
 
                                 //Portal
 Vue.component('inicio_portal', require('./components/Portal/InicioPortal.vue').default);
-Vue.component('etapa1a4', require('./components/Portal/Etapa1a4.vue').default);
-Vue.component('etapa5a9', require('./components/Portal/Etapa5a9.vue').default);
-Vue.component('etapa10a14', require('./components/Portal/Etapa10a14.vue').default);
-Vue.component('etapa15a19', require('./components/Portal/Etapa15a19.vue').default);
-Vue.component('etapa20a22', require('./components/Portal/Etapa20a22.vue').default);
+// Vue.component('etapa1a4', require('./components/Portal/Etapa1a4.vue').default);
+// Vue.component('etapa5a9', require('./components/Portal/Etapa5a9.vue').default);
+// Vue.component('etapa10a14', require('./components/Portal/Etapa10a14.vue').default);
+// Vue.component('etapa15a19', require('./components/Portal/Etapa15a19.vue').default);
+// Vue.component('etapa20a22', require('./components/Portal/Etapa20a22.vue').default);
 const routes = [
     {
         path: '/noticia',
@@ -70,31 +70,7 @@ const routes = [
         component: inicio_portal,
         name: 'inicio_portal'
     },
-    {
-        path: '/etapa1a4',
-        component: etapa1a4,
-        name: 'etapa1a4'
-    },
-    {
-        path: '/etapa5a9',
-        component: etapa5a9,
-        name: 'etapa5a9'
-    },
-    {
-        path: '/etapa10a14',
-        component: etapa10a14,
-        name: 'etapa10a14'
-    },
-    {
-        path: '/etapa15a19',
-        component: etapa15a19,
-        name: 'etapa15a19'
-    },
-    {
-        path: '/etapa20a22',
-        component: etapa20a22,
-        name: 'etapa20a22'
-    },
+   
 ];
 
 const router = new VueRouter({routes ,

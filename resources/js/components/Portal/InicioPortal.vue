@@ -45,14 +45,14 @@
                     </div>
 
                     <div class="etapas">
-                    <b-dropdown dropright text="Etapas" right>
-                        <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(1)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 1 a la 4</a></b-dropdown-item>
-                        <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(2)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 5 a la 9</a></b-dropdown-item>
-                        <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(3)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 10 a la 14</a></b-dropdown-item>
-                        <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(4)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 15 a la 19</a></b-dropdown-item>
-                        <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(5)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 20 a la 22</a></b-dropdown-item>
-                    </b-dropdown>
-                </div>
+                        <b-dropdown dropright text="Etapas" right>
+                            <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(1)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 1 a la 4</a></b-dropdown-item>
+                            <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(2)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 5 a la 9</a></b-dropdown-item>
+                            <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(3)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 10 a la 14</a></b-dropdown-item>
+                            <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(4)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 15 a la 19</a></b-dropdown-item>
+                            <b-dropdown-item class="dropdown-item pr-0" @click="cargarEtapas(5)"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Etapa 20 a la 22</a></b-dropdown-item>
+                        </b-dropdown>
+                    </div>
                 </div>
 
                 <div class="col-6">
@@ -67,6 +67,7 @@
         <etapa20a22 v-if="etapa_20"></etapa20a22>
     </div>
 </template>
+
 <script>
 import axios from 'axios';
 import etapa1a4 from '../../components/Portal/Etapa1a4.vue';
@@ -92,6 +93,7 @@ export default{
             etapa_10: false,
             etapa_15: false,
             etapa_20: false,
+            
         };
     },
     mounted() {
@@ -146,7 +148,7 @@ export default{
             this.etapa_15 = false
             this.etapa_20 = true
            }
-
+           return this.cargarEtapas(etapa)
         }
     }
 }
