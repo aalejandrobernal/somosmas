@@ -148,7 +148,6 @@ export default{
             this.etapa_15 = false
             this.etapa_20 = true
            }
-           return this.cargarEtapas(etapa)
         }
     }
 }
