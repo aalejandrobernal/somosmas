@@ -78,6 +78,7 @@ import etapa15a19 from '../../components/Portal/Etapa15a19.vue';
 import etapa20a22 from '../../components/Portal/Etapa20a22.vue';
 export default{
     name: 'inicio_portal',
+    
     components: {
         etapa1a4,
         etapa5a9,
