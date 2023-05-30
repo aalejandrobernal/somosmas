@@ -75,9 +75,24 @@ import etapa5a9 from '../../components/Portal/Etapa5a9.vue';
 import etapa10a14 from '../../components/Portal/Etapa10a14.vue';
 import etapa15a19 from '../../components/Portal/Etapa15a19.vue';
 import etapa20a22 from '../../components/Portal/Etapa20a22.vue';
-
+var url = (""+window.location);
 export default{
     name: 'inicio_portal',
+    beforeRouteUpdate(to, from, next) {
+        console.log(to)
+        console.log(from)
+        
+        // to=from
+        // console.log(window.location.href)
+        this.cargarEtapas(to.path.slice(1))
+        from=to
+        console.log(to)
+
+        // window.location.href=to.path
+        // console.log(window.location.href)
+     
+
+     },
     components: {
         etapa1a4,
         etapa5a9,
@@ -94,20 +109,18 @@ export default{
             etapa_10: false,
             etapa_15: false,
             etapa_20: false,
-            
-            
-        };console.log(this.idetapa)
+        };
     },
+    
     mounted() {
         this.consultaBase();
         this.cargarEtapas(this.idetapa)
-        
     },
     methods: {
         consultaBase() {
             axios.get('/portalObjetivos').then((res) => {
                 if(res.status == 200) {
-                    // console.log(res.data)
+                    //  console.log(res.data)
                     this.objetivos = res.data
                 }
             })
@@ -117,6 +130,7 @@ export default{
             });
         },
         cargarEtapas(etapa) {
+            // console.log(url)
            if(etapa == 1) {
             this.etapa_1 = true
             this.etapa_5 = false
@@ -152,6 +166,7 @@ export default{
             this.etapa_15 = false
             this.etapa_20 = true
            }
+          
         }
     }
 }
