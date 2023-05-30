@@ -75,14 +75,15 @@ const routes = [
 
 const router = new VueRouter({routes ,
     mode: '',
-
+    
     scrollBehavior (to, from, savedPosition)
-{
+    {
       if (to.hash) {
         return document.querySelector(to.hash).scrollIntoView();
       } else {
         return savedPosition || { x: 0, y: 0 }
       }
+      
     }
     });
 

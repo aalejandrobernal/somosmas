@@ -27,6 +27,7 @@
                         <hr>
 
                     <h4 class="subtitulo">Política de seguridad y salud en el trabajo</h4><br>
+                    {{this.$route.params.id=evento}}
                     <p>
                         "Desde la dirección de Liwa estamos comprometidos con la implementación, desarrollo, mejora continua y
                         cumplimiento legal del sistema de gestión de Seguridad y salud en el trabajo como en nuestra gestión
@@ -75,24 +76,8 @@ import etapa5a9 from '../../components/Portal/Etapa5a9.vue';
 import etapa10a14 from '../../components/Portal/Etapa10a14.vue';
 import etapa15a19 from '../../components/Portal/Etapa15a19.vue';
 import etapa20a22 from '../../components/Portal/Etapa20a22.vue';
-var url = (""+window.location);
 export default{
     name: 'inicio_portal',
-    beforeRouteUpdate(to, from, next) {
-        console.log(to)
-        console.log(from)
-        
-        // to=from
-        // console.log(window.location.href)
-        this.cargarEtapas(to.path.slice(1))
-        from=to
-        console.log(to)
-
-        // window.location.href=to.path
-        // console.log(window.location.href)
-     
-
-     },
     components: {
         etapa1a4,
         etapa5a9,
@@ -111,11 +96,16 @@ export default{
             etapa_20: false,
         };
     },
-    
+    computed: {
+        evento() {
+            this.cargarEtapas(this.$route.params.id)
+        }
+    },
     mounted() {
         this.consultaBase();
         this.cargarEtapas(this.idetapa)
     },
+    
     methods: {
         consultaBase() {
             axios.get('/portalObjetivos').then((res) => {
@@ -130,7 +120,6 @@ export default{
             });
         },
         cargarEtapas(etapa) {
-            // console.log(url)
            if(etapa == 1) {
             this.etapa_1 = true
             this.etapa_5 = false
