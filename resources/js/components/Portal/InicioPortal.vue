@@ -79,19 +79,7 @@ var url = (""+window.location);
 export default{
     name: 'inicio_portal',
     beforeRouteUpdate(to, from, next) {
-        console.log(to)
-        console.log(from)
-        
-        // to=from
-        // console.log(window.location.href)
-        this.cargarEtapas(to.path.slice(1))
-        from=to
-        console.log(to)
-
-        // window.location.href=to.path
-        // console.log(window.location.href)
-     
-
+        this.cargarEtapas(to.params.id)
      },
     components: {
         etapa1a4,
