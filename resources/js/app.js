@@ -1,4 +1,3 @@
-// require('./bootstrap');
 import Vue from 'vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
@@ -10,7 +9,7 @@ import cultura from './components/Cultura.vue';
 import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 import actividad  from './components/Actividad.vue';
-import portales from './components/Portal/Etapa1a4.vue';
+import inicio_portal from './components/Portal/InicioPortal.vue';
 import perfil from './components/Perfil.vue';
 
 Vue.use(VueRouter);
@@ -31,11 +30,7 @@ Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue
 
                                 //Portal
 Vue.component('inicio_portal', require('./components/Portal/InicioPortal.vue').default);
-// Vue.component('etapa1a4', require('./components/Portal/Etapa1a4.vue').default);
-// Vue.component('etapa5a9', require('./components/Portal/Etapa5a9.vue').default);
-// Vue.component('etapa10a14', require('./components/Portal/Etapa10a14.vue').default);
-// Vue.component('etapa15a19', require('./components/Portal/Etapa15a19.vue').default);
-// Vue.component('etapa20a22', require('./components/Portal/Etapa20a22.vue').default);
+
 const routes = [
     {
         path: '/noticia',
