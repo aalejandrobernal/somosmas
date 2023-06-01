@@ -132,13 +132,13 @@ Route::get('formacion_mes_Vue', [IndexController::class, 'formaciones_mes'])// -
 //     ->middleware('auth')
 //     ->name('inicio.red');
 
-Route::get('/actividad', [IndexController::class, 'actividad'])
-    ->middleware('auth')
-    ->name('inicio.actividad');
+// Route::get('/actividad', [IndexController::class, 'actividad'])
+//     ->middleware('auth')
+//     ->name('inicio.actividad');
 
-Route::get('inicio/portales', [PortalController::class, 'portales'])
-    ->middleware('auth')
-    ->name('inicio.portales');
+// Route::get('inicio/portales', [PortalController::class, 'portales'])
+//     ->middleware('auth')
+//     ->name('inicio.portales');
 
 // Route::get('inicio/noticia', [IndexController::class, 'noticia'])
 //     ->middleware('auth')
@@ -160,9 +160,9 @@ Route::get('editar_perfil', [IndexController::class, 'editar_perfil'])
     ->middleware('auth')
     ->name('inicio.editar_perfil');
 
-Route::get('cambio_foto', [IndexController::class, 'cambio_foto'])
+Route::post('cambio_foto', [IndexController::class, 'cambio_foto'])
     ->middleware('auth')
-    ->name('inicio.cambio_foto');
+    ->name('cambio_foto');
 
 Route::post('cambiocontrasena', [IndexController::class, 'cambiocontrasena'])
     ->middleware('auth')
@@ -172,7 +172,7 @@ Route::post('cambiocontrasena', [IndexController::class, 'cambiocontrasena'])
 //     ->middleware('auth')
 //     ->name('inicio.galeria');
 
-Route::put('inicio/update-foto', [IndexController::class, 'cambiofoto'])
+Route::post('update-foto', [IndexController::class, 'cambiofoto'])
     ->middleware('auth')
     ->name('inicio.update-foto');
 

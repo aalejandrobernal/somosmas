@@ -51,7 +51,7 @@
           <template #button-content >
             <em></em>
           </template>
-          <b-dropdown-item href="editar_perfil">Mi Perfil</b-dropdown-item>
+          <b-dropdown-item :to="{ name: 'perfil'}">Mi Perfil</b-dropdown-item>
           <div v-if="can('admin')">
             <b-dropdown-item href="admin">Administrador</b-dropdown-item>
           </div>

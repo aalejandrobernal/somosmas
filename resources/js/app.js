@@ -10,12 +10,17 @@ import cultura from './components/Cultura.vue';
 import galeria from './components/Galeria.vue';
 import inicio  from './components/Inicio.vue';
 import actividad  from './components/Actividad.vue';
+<<<<<<< HEAD
 import inicio_portal from './components/Portal/InicioPortal.vue';
 // import etapa1a4 from './components/Portal/Etapa1a4.vue';
 // import etapa5a9 from './components/Portal/Etapa5a9.vue';
 // import etapa10a14 from './components/Portal/Etapa10a14.vue';
 // import etapa15a19 from './components/Portal/Etapa15a19.vue';
 // import etapa20a22 from './components/Portal/Etapa20a22.vue';
+=======
+import portales from './components/Portal/Etapa1a4.vue';
+import perfil from './components/Perfil.vue';
+>>>>>>> 557e3cbfdf1078fdd251d3e912d765717136d1d5
 
 Vue.use(VueRouter);
 Vue.use(LaravelPermissionToVueJS);
@@ -70,20 +75,23 @@ const routes = [
         component: inicio_portal,
         name: 'inicio_portal'
     },
-   
+    {
+        path: '/perfil',
+        component: perfil,
+        name: 'perfil'
+    },
 ];
 
 const router = new VueRouter({routes ,
     mode: '',
-    
-    scrollBehavior (to, from, savedPosition)
-    {
+    base: process.env.BASE_URL,
+    scrollBehavior (to, from, savedPosition){
       if (to.hash) {
         return document.querySelector(to.hash).scrollIntoView();
       } else {
         return savedPosition || { x: 0, y: 0 }
       }
-      
+
     }
     });
 
