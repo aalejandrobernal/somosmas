@@ -306,7 +306,7 @@
 
 .caracteres{
     margin-top: 10px;
-    margin-left: 35px;
+    /* margin-left: 35px; */
     font-size: 10px;
     color: rgb(168, 162, 162);
 }

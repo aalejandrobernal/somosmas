@@ -58,8 +58,6 @@ class FormationsIndex extends Component
         Storage::disk('local')->put('public/images/formaciones' . '/' . $avatarName, $img, 'public');
         
         if($this->estado_nuevo==1){
-            Log::info('Publicado');
-            Log::info($this->estado_nuevo);
              $banner->update(['orden' => $this->ordenar_sin()]);
         }
         $this->reset(['imagen','titulo','adjunto','estado_nuevo','cuerpo']);

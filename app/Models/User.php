@@ -8,11 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use LaravelAndVueJS\Traits\LaravelPermissionToVueJS;
 
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable,HasRoles;
+    use LaravelPermissionToVueJS;
 
 
     protected $fillable = [
@@ -51,4 +53,5 @@ class User extends Authenticatable
     public function setPasswordAttribute($password) {
         $this->attributes['password'] = sha1($password);
     }
+    
 }
