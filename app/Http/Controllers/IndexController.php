@@ -3,20 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Banner;
-use App\Models\Content;
 use App\Models\Formacion;
 use App\Models\User;
-use App\Models\Empresa;
 use App\Models\Galeria;
 use Illuminate\Support\Facades\Redirect;
 use Maatwebsite\Excel\Facades\Excel;
-use App\Imports\UsersImport;
 use App\Models\Noticia;
 use App\Models\Noticia_destacada;
-use App\Models\Etapa;
-use App\Models\Evidencia;
-use Illuminate\Http\RedirectResponse;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 
 use Genert\BBCode\BBCode;
 
@@ -158,10 +153,7 @@ class IndexController extends Controller
         return response()->json($empresas);
     }
 
-    public function cambio_foto()
-    {
-        return view('inicio.cambio_foto');
-    }
+   
 
     public function cambiocontrasena(Request $request) {
         
@@ -188,11 +180,14 @@ class IndexController extends Controller
             DB::table('users')
                 ->where('id', $user->id)
                 ->update(['foto' => $nombre_foto]);
-            Image::make($request->file('file'))
-            ->resize(1000, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save('images\fotos/'.$nombre_foto);
+            $image = $request->file('file');
+            $img = Image::make($image->getRealPath())->encode('jpg', 65)
+            ->fit(591, 591,function ($c) {
+                $c->aspectRatio();
+                $c->upsize();
+            });
+            $img->stream();
+            Storage::disk('local')->put('public/images/fotos' . '/' . $nombre_foto, $img, 'public');
          }
     }
 

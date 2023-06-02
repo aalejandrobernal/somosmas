@@ -60,11 +60,13 @@ use PhpParser\Node\Stmt\Return_;
             $nombre_foto=$nombre_img.'.'.$extension;
             $request->merge(['foto'=>$nombre_foto]);
             $request->merge(['password'=>$nombre_img]);
-            Image::make($request->file('imagen'))
-            ->resize(1000, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save('images\fotos/'.$nombre_foto);
+            $image = $request->file('imagen');
+            $img = Image::make($image->getRealPath())->encode('jpg', 65)
+            ->fit(591, 591,function ($c) {
+                $c->aspectRatio();
+                $c->upsize();
+            });
+            Storage::disk('local')->put('public/images/fotos' . '/' . $nombre_foto, $img, 'public');
         }
         $user=User::create($request->all());
         $user->roles()->sync($request->roles);
@@ -98,11 +100,13 @@ use PhpParser\Node\Stmt\Return_;
             $nombre_foto=$nombre_img.'.'.$extension;
             $request->merge(['foto'=>$nombre_foto]);
             $request->merge(['password'=>$nombre_img]);
-            Image::make($request->file('imagen'))
-            ->resize(1000, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save('images\fotos/'.$nombre_foto);
+            $image = $request->file('imagen');
+            $img = Image::make($image->getRealPath())->encode('jpg', 65)
+            ->fit(591, 591,function ($c) {
+                $c->aspectRatio();
+                $c->upsize();
+            });
+            Storage::disk('local')->put('public/images/fotos' . '/' . $nombre_foto, $img, 'public');
         }
         $request->merge(['cargo'=>mb_strtoupper($request->cargo)]);
         $request->merge(['nombre'=>mb_strtoupper($request->nombre)]);
