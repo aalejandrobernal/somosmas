@@ -172,7 +172,7 @@
                             <div class="col-12">
                                 <p class="texto">A través de las actividades de esta sección juntos identificaremos
                                     situaciones de riesgo asociadas al COVID 19 y frente a otras situaciones que puedan
-                                    afectar tu salud</p>
+                                    afectar tu salud.</p>
                             </div>
 
                             <div class="row">
@@ -257,7 +257,7 @@
 
                             <div class="col-12">
                                 <p class="texto">Eres el actor principal en la identificación de los peligros y riesgos
-                                    que se puedan presentar en tu área de trabajo; con tu ayuda los identificaremos y
+                                    que se puedan presentar en tu área de trabajo, con tu ayuda los identificaremos y
                                     gestionaremos mucho mejor.</p>
                             </div>
 
@@ -434,14 +434,14 @@
                                 <div class="col-8">
                                     <h3> Apoya a tu empresa a llegar a la meta.</h3>
                                     <br>
-                                    <p> ¡¡Cuál carrito llegara primero a la meta!! La barra de progreso de cada carrito ira
+                                    <p> ¡¡Cuál carrito llegará primero a la meta!! La barra de progreso de cada carrito ira
                                         avanzando hacia la meta a medida que el 100% de las personas de cada compañía
                                         realizan las actividades planificadas durante el mes.</p>
                                     <br>
                                     <img src="images/porcentg.jpg" alt="">
                                 </div>
                                 <div class="col-12">
-                                    <h3 class="align-items-center">Actividades para que tu SGSTT avance.</h3>
+                                    <h3 class="align-items-center">Actividades para que tu SGSST avance.</h3>
                                     <p style="text-align: justify">Verifica que ya cuentas con tu inducción, de igual modo
                                         consulta las formaciones
                                         planificadas durante el mes y cuál te aplica. Para finalizar consulta si ya

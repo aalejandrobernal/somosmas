@@ -16,7 +16,7 @@
                             <div class="card-body" style=" height:320px;" >
                                 <h5 class="card-title" style="width: 204px ;height:48px;">{{ formacion.titulo }}</h5>
                                 <div class="card-text" :id="'tooltip-target-'+formacion.id" >
-                                    <span v-html="formacion.cuerpo.substring(0,160)+' .....'"></span>
+                                    <span v-html="formacion.cuerpo.substring(0,200)"></span>
                                 </div>
                                 <a style="position: absolute;top: 88%" :href="formacion.adjunto" class="btn btn-outline-dark"
                                 target="_blank"><i class="bi bi-arrow-right"></i> Ingresa</a>

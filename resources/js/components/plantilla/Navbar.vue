@@ -27,7 +27,7 @@
         </b-nav-item-dropdown>
         <b-nav-item to="noticia" >Noticias</b-nav-item>
         <b-nav-item to="cultura">Cultura</b-nav-item>
-        <b-nav-item to="galeria" >Galeria</b-nav-item>
+        <b-nav-item to="galeria" >Galería</b-nav-item>
         <b-nav-item href="#redapoyo">Red De Apoyo</b-nav-item>
       </b-navbar-nav>
 

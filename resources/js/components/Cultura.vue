@@ -189,7 +189,7 @@
                             <div class="bordes">
                                 <a href="https://open.spotify.com/episode/31wpAQW8tTaMMQYWdwE2FT" class="btn-spotify"
                                     target="_blank">
-                                    <i class="bi bi-arrow-right"></i>Ingresar</a>
+                                    <i class="bi bi-arrow-right"></i>   Ingresar</a>
                             </div>
                         </div>
 
@@ -204,7 +204,7 @@
                             <div class="bordes">
                                 <a href="https://open.spotify.com/episode/6PQZIHp9RfUZiEB0sCXBOT" class="btn-spotify"
                                     target="_blank">
-                                    <i class="bi bi-arrow-right"></i> Ingresar</a>
+                                    <i class="bi bi-arrow-right"></i>   Ingresar</a>
                             </div>
                         </div>
 
@@ -319,7 +319,7 @@
                                     todos, hoy les
                                     quiero compartir el valor de la experiencia en la vida profesional lo cual
                                     podrás comprender a través de un libro que te recomiendo mucho. Además te
-                                    brindare unos tips de crecimiento personal y laboral. Descúbrelos !!"</p>
+                                    brindaré unos tips de crecimiento personal y laboral. Descúbrelos !!"</p>
                                 <br>
                                 <div class="padrevideo1">
                                     <div class="video1">
