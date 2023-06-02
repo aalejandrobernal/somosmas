@@ -11,7 +11,7 @@
                                 <b-img style="height: 175px; width: 175px;" :src="imagen" class="rounded-circle mx-auto d-block shadow" fluid alt="Responsive image"></b-img>
                             </div>
                             <div v-else>
-                                <b-img style="height: 175px; width: 175px;" :src="'../images/fotos/'+user.foto" class="rounded-circle mx-auto d-block shadow" fluid alt="Responsive image"></b-img>
+                                <b-img style="height: 175px; width: 175px;" :src="'storage/images/fotos/'+user.foto" class="rounded-circle mx-auto d-block shadow" fluid alt="Responsive image"></b-img>
                             </div>
                         </div>
                             

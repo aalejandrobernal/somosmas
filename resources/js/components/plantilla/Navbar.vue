@@ -39,7 +39,7 @@
         </div>
         <div class="pr-0">
           <div v-if="user.foto">
-            <img :src="'../images/fotos/'+user.foto" alt="" class="usuario">
+            <img :src="'storage/images/fotos/'+user.foto" alt="" class="usuario">
           </div>
           <div v-else>
             <img src="/images/fotonone.jpeg" class="usuario" alt="">

@@ -84,8 +84,8 @@
                         </div>
                         <div class="form-group col-2">
                             <div class="" >
-                                @if (is_file('images/fotos/'.$user->foto))
-                                <img src="../../../images/fotos/{{$user->foto}}" alt=""style="width:70px; height:70px" class="brand-xs img-circle elevation-4 img-responsive mx-auto d-block">
+                                @if (is_file('storage/images/fotos/'.$user->foto))
+                                <img src="../../../storage/images/fotos/{{$user->foto}}" alt=""style="width:70px; height:70px" class="brand-xs img-circle elevation-4 img-responsive mx-auto d-block">
                                 @else
                                 <img src="{{asset('../images/fotonone.jpeg')}}" class="usuario mx-auto d-block" alt="" style="width:60px;height:60px border-radius:50%;">
                                 @endif
