@@ -54,7 +54,7 @@
                     @enderror
                 </div>
                 <div class="form-group col-8">
-                    {!! Form::label('nombre', 'Nombre y Apellidos') !!}
+                    {!! Form::label('nombre', 'Nombres y Apellidos') !!}
                     {!! Form::text('nombre',null, ['class'=>'form-control','placeholder'=>'Ingrese Nombres y Apellidos']) !!}
                     @error('nombre')
                         <span class="text-danger">{{$message }}</span>

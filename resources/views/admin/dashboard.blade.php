@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido al panel administrador de somos más.</p>
+    <p>Bienvenido al panel administrador de SomosMás.</p>
 @stop
 
 

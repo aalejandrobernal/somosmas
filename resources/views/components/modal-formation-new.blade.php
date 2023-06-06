@@ -23,7 +23,7 @@
                             {!! Form::text('titulo', null, [
                                 'class' => 'form-control',
                                 'wire:model' => 'titulo',
-                                'placeholder' => 'Ingrese el titúlo de la formación',
+                                'placeholder' => 'Ingrese el título de la formación',
                                 'maxlength'=>'40'
                             ]) !!}
                             @error('titulo')
@@ -53,7 +53,7 @@
                             {!! Form::textarea('cuerpo', null, [
                                 'class' => 'form-control',
                                 'wire:model' => 'cuerpo',
-                                'placeholder' => 'Ingrese la noticia',
+                                'placeholder' => 'Ingrese el contenido',
                                 'id' => 'cuerpo',
                             ]) !!}
                             @error('cuerpo')

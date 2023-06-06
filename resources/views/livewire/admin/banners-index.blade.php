@@ -53,7 +53,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Orden</th>
+                            <th>Posición</th>
                             <th>Nombre</th>
                             <th>Adjunto</th>
                             <th></th>

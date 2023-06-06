@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-personal"data-toggle="modal"data-target="#myModal{{ $registro->id }}">
-    Actualizar
+    Editar
 </button>
 <!-- Modal -->
 <div class="modal fade" id="myModal{{ $registro->id }}" tabindex="-1" role="dialog"
@@ -51,7 +51,7 @@
                 {{-- {{ $orden }}      --}}
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-gris" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-gris" data-dismiss="modal">Cerrar</button>
                 <button type="submit" formmethod="post" class="btn btn-personal">Guardar cambios</button>
             </div>
             {!! Form::close() !!}
