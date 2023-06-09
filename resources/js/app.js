@@ -12,11 +12,13 @@ import actividad  from './components/Actividad.vue';
 import inicio_portal from './components/Portal/InicioPortal.vue';
 import perfil from './components/Perfil.vue';
 
+
 Vue.use(VueRouter);
 Vue.use(LaravelPermissionToVueJS);
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 window.Vue = require('vue').default;
+window.$ = window.jQuery = require('jquery')
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -44,7 +46,8 @@ const routes = [
     },
     {
         path: '/galeria',
-        component: galeria
+        component: galeria,
+        name: 'galeria'
     },
     {
         path: '',
@@ -57,7 +60,7 @@ const routes = [
         name: 'actividad'
     },
     {
-        path: '/:id',
+        path: 'inicio_portal/:id',
         component: inicio_portal,
         name: 'inicio_portal'
     },

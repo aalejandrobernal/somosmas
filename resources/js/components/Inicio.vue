@@ -205,7 +205,7 @@
                                                 <span class="hover"></span>
                                                 <span><i class="fa-solid fa-user-pen"></i></span>
                                                 <h5 class="card-title">Encuesta de perfil sociodemográfico</h5>
-                                                <p class="card-text h6">Debes realizarla en Enero 2022. Tiempo estimado 5
+                                                <p class="card-text h6">Debes realizarla en Enero. Tiempo estimado 5
                                                     minutos.</p>
                                                 <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
                                                     Ingresa</span>
@@ -272,7 +272,7 @@
                                                 <span class="hover"></span>
                                                 <span><i class="fa-solid fa-file-pen"></i></span>
                                                 <h5 class="card-title">Reportes de peligros y riesgos</h5>
-                                                <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos;
+                                                <p class="card-text h6">Realízala en enero. Tiempo estimado 5 minutos;
                                                     aplica para todos los colaboradores.</p>
                                                 <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
                                                     Ingresa</span>
@@ -291,7 +291,7 @@
                                                 <span class="hover"></span>
                                                 <span><i class="fa-solid fa-hand-holding-heart"></i></span>
                                                 <h5 class="card-title">Como es tu gestión frente al SGSST</h5>
-                                                <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos;
+                                                <p class="card-text h6">Realízala en enero. Tiempo estimado 5 minutos;
                                                     aplica para todos los colaboradores.</p>
                                                 <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
                                                     Ingresa</span>
@@ -358,7 +358,7 @@
                                                 <span class="hover"></span>
                                                 <span><i class="fa-solid fa-car"></i></span>
                                                 <h5 class="card-title">Encuesta De Seguridad <br> Vial</h5>
-                                                <p class="card-text h6">Realízala en enero 2022. Tiempo estimado 5 minutos;
+                                                <p class="card-text h6">Realízala en enero. Tiempo estimado 5 minutos;
                                                     aplica para todos los colaboradores.</p>
                                                 <span class="btn btn-outline-dark"><i class="bi bi-arrow-right"></i>
                                                     Ingresa</span>

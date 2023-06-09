@@ -253,14 +253,8 @@
                                     class="fa-solid fa-circle-check"></i> Secretaria: Catalina
                                 Gallego – Suncolombia</li>
                             <li id="list-item-active" class="list-group-item active"><i
-                                    class="fa-solid fa-circle-check"></i> Promotor: Ivon Romero –
-                                Liwa</li>
-                            <li id="list-item-1" class="list-group-item"><i style="color: #FE3EB2"
                                     class="fa-solid fa-circle-check"></i> Contenidos: Irana Carrión –
                                 Suncolombia</li>
-                            <li id="list-item-active" class="list-group-item active"><i
-                                    class="fa-solid fa-circle-check"></i> Integrante: Liliana Ravelo
-                                – Suncolombia</li>
                             <li id="list-item-1" class="list-group-item"><i style="color: #FE3EB2"
                                     class="fa-solid fa-circle-check"></i> Integrante: Juan Diego
                                 Gómez - Suncolombia</li>
@@ -623,6 +617,7 @@
 </template>
 
 <script>
+
 export default {
     components: {
 
