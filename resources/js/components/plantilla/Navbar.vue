@@ -15,7 +15,7 @@
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadindustrial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Industrial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#seguridadvial'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Seguridad Vial</a></b-nav-item>
           <b-nav-item  class="dropdown-item pr-0" :to="{ name: 'inicio',  hash: '#avance'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Avance Del SGSST</a></b-nav-item>
-          <b-dropdown-item id="item_drop" class="dropdown-item pr-0" to="actividad"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-dropdown-item>
+          <b-dropdown-item id="item_drop" class="dropdown-item pr-0" :to="{ name: 'actividad'}"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Actividad Del Mes</a></b-dropdown-item>
           <b-nav-item  class="dropdown-item pr-0" href="#redapoyo"><a  target="_self" style="color: black  !important;" class="nav-link p-0">Red De Apoyo</a></b-nav-item>
         </b-nav-item-dropdown>
         <b-nav-item-dropdown text="Portal SGSST Liwa" right variant="none">

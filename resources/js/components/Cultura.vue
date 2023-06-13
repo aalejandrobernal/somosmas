@@ -28,95 +28,53 @@
 
             <section id="momentos">
                 <!-- Image1 !-->
-                <div tabindex="-1" aria-labelledby="modal01" aria-hidden="true" class="modal fade" id="modal01">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/bleidy.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal01'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/bleidy.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image2 !-->
-                <div tabindex="-1" aria-labelledby="modal02" aria-hidden="true" class="modal fade" id="modal02">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/catalina.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal02'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/catalina.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image3 !-->
-                <div tabindex="-1" aria-labelledby="modal03" aria-hidden="true" class="modal fade" id="modal03">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/claudiap.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal03'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/claudiap.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image4 !-->
-                <div tabindex="-1" aria-labelledby="modal04" aria-hidden="true" class="modal fade" id="modal04">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/liliana.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal04'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/liliana.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image5 !-->
-                <div tabindex="-1" aria-labelledby="modal05" aria-hidden="true" class="modal fade" id="modal05">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/maribel.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal05'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/maribel.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image6 !-->
-                <div tabindex="-1" aria-labelledby="modal06" aria-hidden="true" class="modal fade" id="modal06">
-                    <div class="modal-dialog modal-lg modal-dialog-center">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/monica.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal06'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/monica.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
                 <!-- Image7 !-->
-                <div tabindex="-1" aria-labelledby="modal07" aria-hidden="true" class="modal fade" id="modal07">
-                    <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <video id="video" class="video"
-                                src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/olga.mp4" title=""
-                                allowfullscreen="" type="video/mp4" controls=""></video>
-                        </div>
-                    </div>
+                <div class="modal-video">
+                    <b-modal size="xl" :id="'my-modal07'" hide-footer>
+                        <video id="video_m" class="video_m" src="https://liwarepo.s3.us-west-2.amazonaws.com/somosmas/olga.mp4"
+                            type="video/mp4" controls=""></video>
+                    </b-modal>
                 </div>
             </section>
 
@@ -125,37 +83,37 @@
                     <div class="carrusel-items1">
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal01">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/bleidy.jpg" alt="">
+                                <img v-b-modal="'my-modal01'" class="w-100 mb-4 rounded nn" src="/images/galeriav/bleidy.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal02">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/catalina.jpg" alt="">
+                                <img v-b-modal="'my-modal02'" class="w-100 mb-4 rounded nn" src="/images/galeriav/catalina.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal03">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/claudia.jpg" alt="">
+                                <img v-b-modal="'my-modal03'" class="w-100 mb-4 rounded nn" src="/images/galeriav/claudia.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal04">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/liliana.jpg" alt="">
+                                <img v-b-modal="'my-modal04'" class="w-100 mb-4 rounded nn" src="/images/galeriav/liliana.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal05">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/maribel.jpg" alt="">
+                                <img v-b-modal="'my-modal05'" class="w-100 mb-4 rounded nn" src="/images/galeriav/maribel.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal06">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/monica.jpg" alt="">
+                                <img v-b-modal="'my-modal06'" class="w-100 mb-4 rounded nn" src="/images/galeriav/monica.jpg" alt="">
                             </a>
                         </div>
                         <div class="carrusel-item1">
                             <a href="#!" data-bs-toggle="modal" data-bs-target="#modal07">
-                                <img class="w-100 mb-4 rounded nn" src="/images/galeriav/olga.jpg" alt="">
+                                <img v-b-modal="'my-modal07'" class="w-100 mb-4 rounded nn" src="/images/galeriav/olga.jpg" alt="">
                             </a>
                         </div>
                     </div>
