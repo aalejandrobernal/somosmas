@@ -33,6 +33,13 @@ Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue
                                 //Portal
 Vue.component('inicio_portal', require('./components/Portal/InicioPortal.vue').default);
 
+                               //Cultura
+Vue.component('fechas', require('./components/cultura/Fechas.vue').default);
+Vue.component('podcast', require('./components/cultura/Podcast.vue').default);
+Vue.component('diversidad', require('./components/cultura/Diversidad.vue').default);
+Vue.component('visible', require('./components/cultura/Visible.vue').default);
+Vue.component('momentos', require('./components/cultura/Momentos.vue').default);
+
 const routes = [
     {
         path: '/noticia',
