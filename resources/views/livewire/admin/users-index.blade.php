@@ -157,7 +157,7 @@
         if (result.isConfirmed) {
                 Livewire.emitTo('admin.users-index','eliminar',posId);
                 Swal.fire(
-                '¡Deshabilitado!',
+                '¡Eliminado!',
                 'El usuario ha sido eliminado.',
                 'success'
             )
