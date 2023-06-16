@@ -30,10 +30,10 @@
                                 <div class="card shadow p-3" style="height: 28em;">
                                     <div class="tamaño" >
                                         <div v-if="user.foto">
-                                            <img :src="'images/fotos/'+user.foto" alt="" >
+                                            <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                         </div>
                                         <div v-else >
-                                            <img src="images/fotonone.jpeg"  alt=""> 
+                                            <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
@@ -81,10 +81,10 @@
                                 <div class="card shadow" style="height: 28em;">
                                     <div class="tamaño" style="width: 9rem;">
                                         <div v-if="user.foto">
-                                            <img :src="'images/fotos/'+user.foto" alt="" >
+                                            <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                         </div>
                                         <div v-else >
-                                            <img src="images/fotonone.jpeg"  alt=""> 
+                                            <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
@@ -125,10 +125,10 @@
                                 <div class="card shadow" style="height: 28em;">
                                     <div class="tamaño" style="width: 9rem;">
                                         <div v-if="user.foto">
-                                            <img :src="'images/fotos/'+user.foto" alt="" >
+                                            <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                         </div>
                                         <div v-else >
-                                            <img src="images/fotonone.jpeg"  alt=""> 
+                                            <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
@@ -179,10 +179,10 @@
                                 <div class="card shadow p-3 " style="height: 28em;" >
                                     <div class="tamaño" style="width: 9rem;">
                                         <div v-if="user.foto">
-                                            <img :src="'images/fotos/'+user.foto" alt="" >
+                                            <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                         </div>
                                         <div v-else >
-                                            <img src="images/fotonone.jpeg"  alt=""> 
+                                            <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                         </div>
                                     </div>
                                     <div class="card-body pt-0">
@@ -218,10 +218,10 @@
                                     <div class="card shadow p-3 " style="height: 28em;" >
                                         <div class="tamaño" style="width: 9rem;">
                                             <div v-if="user.foto">
-                                                <img :src="'images/fotos/'+user.foto" alt="" >
+                                                <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                             </div>
                                             <div v-else >
-                                                <img src="images/fotonone.jpeg"  alt=""> 
+                                                <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                             </div>
                                         </div>
                                         <div class="card-body pt-0">
@@ -249,10 +249,10 @@
                                     <div class="card shadow p-3 " style="height: 28em;">
                                         <div class="tamaño" style="width: 9rem;">
                                             <div v-if="user.foto">
-                                                <img :src="'images/fotos/'+user.foto" alt="" >
+                                                <img :src="'/storage/images/fotos/'+user.foto" alt="" >
                                             </div>
                                             <div v-else >
-                                                <img src="images/fotonone.jpeg"  alt=""> 
+                                                <img :src="'/images/fotonone.jpeg'"  alt=""> 
                                             </div>
                                         </div>
                                         <div class="card-body pt-0">
