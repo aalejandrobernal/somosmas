@@ -372,6 +372,13 @@ return [
 
         ],
         [
+            'text'        => 'Inducciones',
+            'url'         => 'admin/inductions',
+            'icon'        => 'fas fa-solid fa-book',
+            'label_color' => 'success',
+
+        ],
+        [
             'text'        => 'Salir',
             'url'         => '/',
             'icon'        => 'fas fa-solid fa-times-circle',

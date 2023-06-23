@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Noticia;
 use App\Models\Noticia_destacada;
+use App\Models\Induccion;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
@@ -119,10 +120,13 @@ class IndexController extends Controller
         ->get();
         return response()->json($formacion);
     }
-    // public function cultura()
-    // {
-    //     return view('inicio.cultura');
-    // }
+    public function inducciones ()
+    {
+        $inductions = Induccion::where('estado', '1')
+        ->orderBy('orden', 'asc')
+        ->get();
+        return response()->json($inductions);
+    }
 
     public function noticiaVue() // -------> Vue
     {

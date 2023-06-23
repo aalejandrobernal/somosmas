@@ -29,6 +29,7 @@ Vue.component('banner', require('./components/inicio/Banner.vue').default);
 Vue.component('birthday', require('./components/inicio/Birthday.vue').default);
 Vue.component('noticia_des', require('./components/inicio/noticia_des.vue').default);
 Vue.component('formaciones_mes', require('./components/inicio/FormacionesMes.vue').default);
+Vue.component('inducciones', require('./components/inicio/Inducciones.vue').default);
 
                                 //Portal
 Vue.component('inicio_portal', require('./components/Portal/InicioPortal.vue').default);

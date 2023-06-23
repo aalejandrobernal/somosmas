@@ -39,20 +39,20 @@
             return{
                 form: [],
                 
-        }
+            }
         },
         created(){
             this.getFormaciones(); 
              
-       },
-       methods:{
-           getFormaciones(){
-            axios.get('/formacion_mes_Vue')
-            .then((res) => this.form=res.data)
-            // .then((res) => console.log(this.form))
-            .catch((err) => console.log(err))
-           },
-       },
+        },
+        methods:{
+            getFormaciones(){
+                axios.get('/formacion_mes_Vue')
+                .then((res) => this.form=res.data)
+                // .then((res) => console.log(this.form))
+                .catch((err) => console.log(err))
+            },
+        },
     }
    
 

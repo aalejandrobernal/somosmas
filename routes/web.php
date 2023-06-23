@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\NewController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\FormationsController;
+use App\Http\Controllers\Admin\InductionsController;
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware('auth');
@@ -94,12 +95,20 @@ Route::resource('admin/banners',BannerController::class)
 ->only('index','edit','create','store','update','show')
 ->middleware('can:admin')
 ->names('admin.banners');
-//Interfaz Admin Banners
+
+//Interfaz Admin Formaciones
 
 Route::resource('admin/formations',FormationsController::class)
 ->only('index')
 ->middleware('can:admin')
 ->names('admin.formations');
+
+//Interfaz Admin Inducciones
+
+Route::resource('admin/inductions',InductionsController::class)
+->only('index')
+->middleware('can:admin')
+->names('admin.inductions');
 
 
 //Interfaz De Inicio
@@ -123,6 +132,10 @@ Route::get('noticia_des_Vue', [IndexController::class, 'noticia_des'])// -------
 Route::get('formacion_mes_Vue', [IndexController::class, 'formaciones_mes'])// ---------> VISTA Vue inicio
     ->middleware('auth')
     ->name('formacion_mes_Vue');
+
+Route::get('inductions', [IndexController::class, 'inducciones'])// ---------> VISTA Vue inicio
+    ->middleware('auth')
+    ->name('inducciones_Vue');
 
 // Route::get('inicio/cultura', [IndexController::class, 'cultura'])
 //     ->middleware('auth')
