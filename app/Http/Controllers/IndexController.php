@@ -11,6 +11,7 @@ use Maatwebsite\Excel\Facades\Excel;
 use App\Models\Noticia;
 use App\Models\Noticia_destacada;
 use App\Models\Induccion;
+use App\Models\Comites;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 
@@ -126,6 +127,14 @@ class IndexController extends Controller
         ->orderBy('orden', 'asc')
         ->get();
         return response()->json($inductions);
+    }
+
+    public function committees ()
+    {
+        $comites = Comites::where('estado', '1')
+        ->orderBy('orden', 'asc')
+        ->get();
+        return response()->json($comites);
     }
 
     public function noticiaVue() // -------> Vue

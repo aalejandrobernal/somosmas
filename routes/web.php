@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\NewController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\FormationsController;
 use App\Http\Controllers\Admin\InductionsController;
+use App\Http\Controllers\Admin\CommitteesController;
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware('auth');
@@ -110,6 +111,13 @@ Route::resource('admin/inductions',InductionsController::class)
 ->middleware('can:admin')
 ->names('admin.inductions');
 
+//Interfaz Admin Comites
+
+Route::resource('admin/committees',CommitteesController::class)
+->only('index')
+->middleware('can:admin')
+->names('admin.committees');
+
 
 //Interfaz De Inicio
 
@@ -134,6 +142,10 @@ Route::get('formacion_mes_Vue', [IndexController::class, 'formaciones_mes'])// -
     ->name('formacion_mes_Vue');
 
 Route::get('inductions', [IndexController::class, 'inducciones'])// ---------> VISTA Vue inicio
+    ->middleware('auth')
+    ->name('inducciones_Vue');
+
+Route::get('committees', [IndexController::class, 'committees'])// ---------> VISTA Vue inicio
     ->middleware('auth')
     ->name('inducciones_Vue');
 

@@ -24,50 +24,6 @@
         <section class="">
           <div class="row">
             <inducciones />
-            <!-- <div class="col-4 offset-4">
-              <h2 class="titulo">Inducción</h2>
-              <hr class="line-title" />
-            </div>
-          </div>
-          <br />
-          <div class="container-1">
-            <div class="card-1">
-              <img src="images/induccion1.jpg" alt="" />
-              <h4 style="text-align: justify">
-                Inducción Colaboradores áreas administrativas.
-              </h4>
-              <p style="text-align: justify">
-                Bienvenido! Para nosotros tu bienestar es muy importante,
-                disfruta de esta sección donde podrás entender conceptos básicos
-                de nuestro sistema de gestión de seguridad y salud en el
-                trabajo. Tu compromiso y el nuestro es velar por tu seguridad.
-              </p>
-              <a
-                href="https://forms.gle/yCHoN6QrjfK2RVZC9"
-                class="btn btn-outline-dark"
-                target="_blank"
-                ><i class="bi bi-arrow-right"></i> Ingresar</a
-              >
-            </div>
-            <div class="card-1">
-              <img src="images/induccion2.jpg" alt="" />
-              <h4 style="text-align: justify">
-                Inducción Colaboradores técnicos y operativos.
-              </h4>
-              <p style="text-align: justify">
-                Bienvenido! Tu trabajo es fundamental para el desarrollo del
-                negocio, queremos garantizar que lo realices con seguridad. En
-                esta sección conocerás a profundidad la manera de controlar y
-                gestionar los riesgos asociados a tu actividad, tu compromiso y
-                el nuestro es velar por tu bienestar.
-              </p>
-              <a
-                href="https://forms.gle/3Wiikuws4TMMqEiTA"
-                class="btn btn-outline-dark"
-                target="_blank"
-                ><i class="bi bi-arrow-right"></i> Ingresar</a
-              >
-            </div> -->
           </div>
         </section>
         <br />
@@ -88,8 +44,9 @@
         <hr />
         <br />
         <div class="row">
+          <comites />
           <!-- {{--formaciones Comites --}} -->
-          <section class="d-flex justify-content-center align-items-center p-2">
+          <!-- <section class="d-flex justify-content-center align-items-center p-2">
             <div class="row">
               <div class="col-6 offset-3">
                 <h2 class="titulo">Formaciones Comités</h2>
@@ -205,7 +162,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </div>
         <br />
         <hr />
